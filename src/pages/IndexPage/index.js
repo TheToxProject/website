@@ -11,8 +11,16 @@ import distributed from "./../../assets/illustrations/distributed-illustration.p
 import distributed2x from "./../../assets/illustrations/distributed-illustration@2x.png";
 import freeLibre from "./../../assets/illustrations/free-libre-illustration.png";
 import freeLibre2x from "./../../assets/illustrations/free-libre-illustration@2x.png";
-import instantMessaging from "./../../assets/illustrations/messaging-illustration.png?v2";
+import instantMessaging from "./../../assets/illustrations/messaging-illustration.png";
 import instantMessaging2x from "./../../assets/illustrations/messaging-illustration@2x.png";
+import videoCall from "./../../assets/illustrations/video-illustration.png";
+import videoCall2x from "./../../assets/illustrations/video-illustration@2x.png";
+import voiceCall from "./../../assets/illustrations/voice-illustration.png";
+import voiceCall2x from "./../../assets/illustrations/voice-illustration@2x.png";
+import fileSharing from "./../../assets/illustrations/file-sharing-illustration.png";
+import fileSharing2x from "./../../assets/illustrations/file-sharing-illustration@2x.png";
+import groupChats from "./../../assets/illustrations/group-chats-illustration.png";
+import groupChats2x from "./../../assets/illustrations/group-chats-illustration@2x.png";
 
 import Button from "../../components/Button";
 import Hero from "../../components/Hero";
@@ -54,29 +62,29 @@ export class IndexPage extends React.Component {
         lead: t("indexPage:features.instant-messaging.lead")
       },
       {
-        image: instantMessaging,
-        image_2x: instantMessaging2x,
+        image: groupChats,
+        image_2x: groupChats2x,
         alt: t("indexPage:features.groups.alt"),
         tagline: t("indexPage:features.groups.tagline"),
         lead: t("indexPage:features.groups.lead")
       },
       {
-        image: instantMessaging,
-        image_2x: instantMessaging2x,
+        image: voiceCall,
+        image_2x: voiceCall2x,
         alt: t("indexPage:features.voice-call.alt"),
         tagline: t("indexPage:features.voice-call.tagline"),
         lead: t("indexPage:features.voice-call.lead")
       },
       {
-        image: instantMessaging,
-        image_2x: instantMessaging2x,
+        image: videoCall,
+        image_2x: videoCall2x,
         alt: t("indexPage:features.video-call.alt"),
         tagline: t("indexPage:features.video-call.tagline"),
         lead: t("indexPage:features.video-call.lead")
       },
       {
-        image: instantMessaging,
-        image_2x: instantMessaging2x,
+        image: fileSharing,
+        image_2x: fileSharing2x,
         alt: t("indexPage:features.file-sharing.alt"),
         tagline: t("indexPage:features.file-sharing.tagline"),
         lead: t("indexPage:features.file-sharing.lead")
