@@ -1,32 +1,73 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {
+  FaGithub,
+  FaTwitter,
+  FaFacebook,
+  FaForumbee // No Spectrum icon :(
+} from "react-icons/lib/fa";
 
 import styles from "./styles";
+import Theme from "../../config/theme";
+
+const START_YEAR = 2013;
 
 export class Footer extends React.Component {
   render() {
-    const { copyright, tagline /*, showSocial, editUrl*/ } = this.props;
+    const { t /*, showSocial, editUrl*/ } = this.props;
+    const currentYear = new Date().getUTCFullYear();
 
     return (
       <div style={styles.footerContainer}>
-        <p>
-          {copyright.replace("#copy", "&copy;")} &mdash; {tagline}
+        <p style={styles.copyright}>
+          Copyright &copy; {START_YEAR} - {currentYear} The Tox Project.
         </p>
+        <p style={styles.credits}>{t("footer:credits")}</p>
+        <div style={styles.social}>
+          <a
+            href="https://github.com/TokTok/c-toxcore"
+            target="_blank"
+            title={t("footer:links.github")}
+            style={styles.socialLink}
+          >
+            <FaGithub color={Theme.Colors.BACKGROUND} size={24} />
+          </a>
+          <a
+            href="https://www.facebook.com/toxproject"
+            target="_blank"
+            title={t("footer:links.facebook")}
+            style={styles.socialLink}
+          >
+            <FaFacebook color={Theme.Colors.BACKGROUND} size={24} />
+          </a>
+          <a
+            href="https://twitter.com/projecttox"
+            target="_blank"
+            title={t("footer:links.twitter")}
+            style={styles.socialLink}
+          >
+            <FaTwitter color={Theme.Colors.BACKGROUND} size={24} />
+          </a>
+          <a
+            href="https://spectrum.chat/tox"
+            target="_blank"
+            title={t("footer:links.spectrum")}
+            style={styles.socialLink}
+          >
+            <FaForumbee color={Theme.Colors.BACKGROUND} size={24} />
+          </a>
+        </div>
       </div>
     );
   }
 }
 
 Footer.propTypes = {
-  copyright: PropTypes.string,
-  tagline: PropTypes.string,
   showSocial: PropTypes.bool,
   editUrl: PropTypes.string
 };
 
 Footer.defaultProps = {
-  copyright: "",
-  tagline: "",
   showSocial: true,
   editUrl: ""
 };

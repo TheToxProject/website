@@ -2,7 +2,7 @@ import Theme from "./../../config/theme";
 
 const styles = {
   pageWrapper: {
-    margin: "36px 25px",
+    margin: "36px 25px 0 25px",
     textAlign: "center",
     width: "100%"
   },

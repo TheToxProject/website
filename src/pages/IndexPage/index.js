@@ -21,6 +21,8 @@ import fileSharing from "./../../assets/illustrations/file-sharing-illustration.
 import fileSharing2x from "./../../assets/illustrations/file-sharing-illustration@2x.png";
 import groupChats from "./../../assets/illustrations/group-chats-illustration.png";
 import groupChats2x from "./../../assets/illustrations/group-chats-illustration@2x.png";
+import screenSharing from "./../../assets/illustrations/screen-sharing-illustration.png";
+import screenSharing2x from "./../../assets/illustrations/screen-sharing-illustration@2x.png";
 
 import Button from "../../components/Button";
 import Hero from "../../components/Hero";
@@ -90,8 +92,8 @@ export class IndexPage extends React.Component {
         lead: t("indexPage:features.file-sharing.lead")
       },
       {
-        image: instantMessaging,
-        image_2x: instantMessaging2x,
+        image: screenSharing,
+        image_2x: screenSharing2x,
         alt: t("indexPage:features.screen-sharing.alt"),
         tagline: t("indexPage:features.screen-sharing.tagline"),
         lead: t("indexPage:features.screen-sharing.lead")

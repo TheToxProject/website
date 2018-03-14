@@ -7,12 +7,9 @@ import Header from "../Header";
 import Footer from "../Footer";
 import styles from "./styles";
 
-const START_YEAR = 2013;
-
 export class Layout extends React.Component {
   render() {
     const { t, component: Component, ...rest } = this.props;
-    const currentYear = new Date();
 
     return (
       <Route
@@ -23,11 +20,7 @@ export class Layout extends React.Component {
             <div style={styles.contentWrapper}>
               <Component t={t} {...matchProps} />
             </div>
-            <Footer
-              t={t}
-              copyright={`Copyright (c) Tox & contributors ${START_YEAR}-${currentYear.getUTCFullYear()}.`}
-              tagline="Made with 💖 around the Earth."
-            />
+            <Footer t={t} />
           </div>
         )}
       />
