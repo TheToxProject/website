@@ -54,7 +54,13 @@ export class SystemDetector extends React.Component {
 
     /**
      * Platform detection.
+     * @note Order matters for correct & accurate detection.
      */
+
+    // Linux
+    if (window.navigator.userAgent.indexOf("Linux") !== -1) {
+      this.setState({ os: SystemOS.LINUX });
+    }
 
     // Mac OSX
     if (window.navigator.userAgent.indexOf("Mac") !== -1) {
@@ -95,11 +101,6 @@ export class SystemDetector extends React.Component {
       window.navigator.userAgent.indexOf("Jolla") !== -1
     ) {
       this.setState({ os: SystemOS.SAILFISH });
-    }
-
-    // Linux
-    if (window.navigator.userAgent.indexOf("Linux") !== -1) {
-      this.setState({ os: SystemOS.LINUX });
     }
 
     console.log(this.state);
