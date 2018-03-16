@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "alt": "Illustration téléchargements",
+    "tagline": "Télécharger Tox",
+    "lead": "Fonctionne sur tous les appareils récents."
+  },
+  "download-for": "Télécharger pour",
+  "unavailable-platform":
+    "Oups! Vous utilisez un appareil/système d'exploitation qui n'est pas supporté. Essayez avec les téléchargements ci-dessous ou signalez nous le problème afin que nous puissions supporter votre appareil si assez d'utilisateurs nous le demandent."
+}

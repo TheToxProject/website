@@ -13,7 +13,9 @@ const styles = {
     textDecoration: "none",
     fontWeight: 200,
     fontSize: 18,
-    transition: "background 0.2s ease-in-out"
+    transition: "background 0.2s ease-in-out",
+    paddingLeft: 16,
+    paddingRight: 16
   },
   buttonHover: {
     backgroundColor: Theme.Colors.PRIMARY
