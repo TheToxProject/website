@@ -92,7 +92,7 @@ export class Header extends React.Component {
                   ...{ marginLeft: 8, cursor: "pointer" }
                 }}
               >
-                <span>{this.state.lang.toUpperCase()}</span>
+                <span>{String(this.state.lang).substr(0,2).toUpperCase()}</span>
               </a>
             </div>
           )}
