@@ -11,8 +11,8 @@ const styles = {
   heroIllustration: {
     width: 698,
     height: "auto",
-    maxWidth: "100%",
-    maxHeight: 325
+    maxWidth: "100%"
+    //maxHeight: 325
   },
   tagline: {
     fontSize: 40,
