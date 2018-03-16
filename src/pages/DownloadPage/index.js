@@ -28,7 +28,10 @@ export class DownloadPage extends React.Component {
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://tox.chat" />
-          <meta property="og:image" content={hero} />
+          <meta
+            property="og:image"
+            content={null /* @todo Put the download illustration here */}
+          />
           <meta property="og:site_name" content="Tox" />
           <meta
             property="og:description"
