@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import styles from "./styles";
 
@@ -102,6 +103,19 @@ export class IndexPage extends React.Component {
 
     return (
       <div style={styles.pageWrapper}>
+        <Helmet>
+          <title>Tox &mdash; {t("indexPage:hero.tagline")}</title>
+          <meta name="description" content={t("indexPage:hero.lead")} />
+          <meta
+            property="og:title"
+            content={`Tox - ${t("indexPage:hero.tagline")}`}
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://tox.chat" />
+          <meta property="og:image" content={hero} />
+          <meta property="og:site_name" content="Tox" />
+          <meta property="og:description" content={t("indexPage:hero.lead")} />
+        </Helmet>
         <Hero
           image={hero}
           image_2x={hero2x}
