@@ -3,8 +3,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import i18n from "i18next";
 
 // Language Folders
-import en from "./en";
-import fr from "./fr";
+import languages from "./languages";
 
 const defaultLanguage = navigator.language.substr(0, 2);
 const moment = require("moment");
@@ -16,10 +15,7 @@ i18n
     fallbackLng: "en",
     ns: ["translations"],
     defaultNS: "translations",
-    resources: {
-      en,
-      fr
-    },
+    resources: { ...languages },
     interpolation: {
       escapeValue: false,
       function(value, format, lng) {
