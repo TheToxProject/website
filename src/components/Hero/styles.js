@@ -6,12 +6,17 @@ const styles = {
     flexFlow: "column nowrap",
     justifyContent: "center",
     alignItems: "center",
-    padding: "0 30%"
+    padding: "0 24px"
   },
   heroIllustration: {
-    width: 698,
-    height: "auto",
-    maxWidth: "100%"
+    minWidth: 698,
+    maxWidth: 698,
+    width: "100%",
+    height: "auto"
+    //maxHeight: 325
+  },
+  heroIllustrationMobile: {
+    width: "100%"
     //maxHeight: 325
   },
   tagline: {
@@ -26,7 +31,8 @@ const styles = {
     letterSpacing: 1.15,
     lineHeight: 1.4,
     padding: "20px 0 30px 0",
-    margin: 0
+    margin: 0,
+    maxWidth: 750
   }
 };
 
