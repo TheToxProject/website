@@ -1,5 +1,3 @@
-import Theme from "./../../config/theme";
-
 const styles = {
   languagesContainer: {
     position: "absolute",

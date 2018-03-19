@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { getI18n } from "react-i18next";
 import MediaQuery from "react-responsive";
 import { MdMenu } from "react-icons/lib/md";
 
@@ -10,7 +9,6 @@ import logo from "./../../assets/logo/logo-white.png";
 import logo2x from "./../../assets/logo/logo-white@2x.png";
 
 import Button from "./../Button";
-import buttonStyle from "./../Button/styles";
 import LangSwitcher from "./../LangSwitcher";
 
 const Logo = props => (
@@ -27,37 +25,10 @@ const Logo = props => (
 export class Header extends React.Component {
   constructor(props, context) {
     super(props);
-
-    this.changeLanguage = this.changeLanguage.bind(this);
-    this.handleHover = this.handleHover.bind(this);
-
-    this.state = {
-      lang: "en",
-      langSwitchHover: false
-    };
-  }
-
-  componentWillMount() {
-    const i18n = getI18n();
-    this.setState({ lang: i18n.language });
-  }
-
-  handleHover(e) {
-    this.setState({ langSwitchHover: !this.state.langSwitchHover });
-  }
-
-  changeLanguage() {
-    const i18n = getI18n();
-    i18n.changeLanguage(this.state.lang === "en" ? "fr" : "en");
-    this.setState({ lang: this.state.lang === "en" ? "fr" : "en" });
   }
 
   render() {
     const { t, showLogo, showNavigation } = this.props;
-    const { langSwitchHover } = this.state;
-
-    const hoverStyle = langSwitchHover ? buttonStyle.buttonHover : {};
-
     const menuLinks = [
       { text: t("menu:links.download"), to: "/download" },
       { text: t("menu:links.about"), to: "/about" },
@@ -95,26 +66,6 @@ export class Header extends React.Component {
             )}
           </MediaQuery>
           <LangSwitcher t={t} />
-          {/*<a
-            onClick={this.changeLanguage}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHover}
-            style={{
-              ...buttonStyle.button,
-              ...styles.link,
-              ...hoverStyle,
-              ...{
-                marginLeft: 8,
-                cursor: "pointer"
-              }
-            }}
-          >
-            <span>
-              {String(this.state.lang)
-                .substr(0, 2)
-                .toUpperCase()}
-            </span>
-              </a>*/}
         </div>
       </div>
     );
