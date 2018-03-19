@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import MediaQuery from "react-responsive";
 
 import styles from "./styles";
 
@@ -29,6 +28,7 @@ import screenSharing2x from "./../../assets/illustrations/screen-sharing-illustr
 import Button from "../../components/Button";
 import Hero from "../../components/Hero";
 import Feature from "../../components/Feature";
+import ResponsiveContainer from "../../components/ResponsiveContainer";
 
 export class IndexPage extends React.Component {
   render() {
@@ -102,18 +102,6 @@ export class IndexPage extends React.Component {
       }
     ];
 
-    const ResponsiveDiv = props => (
-      <MediaQuery maxWidth={768}>
-        {matches => {
-          if (matches) {
-            return <div style={props.mobileStyles}>{props.children}</div>;
-          } else {
-            return <div style={props.styles}>{props.children}</div>;
-          }
-        }}
-      </MediaQuery>
-    );
-
     return (
       <div style={styles.pageWrapper}>
         <Helmet>
@@ -149,7 +137,7 @@ export class IndexPage extends React.Component {
           />
         </div>
         <div style={styles.featuresContainer}>
-          <ResponsiveDiv
+          <ResponsiveContainer
             styles={styles.featuresWrapper}
             mobileStyles={styles.featuresWrapperMobile}
           >
@@ -164,7 +152,7 @@ export class IndexPage extends React.Component {
                 lead={feature.lead}
               />
             ))}
-          </ResponsiveDiv>
+          </ResponsiveContainer>
         </div>
         <div style={styles.darkContainer}>
           <div style={styles.darkWrapper}>
@@ -173,7 +161,7 @@ export class IndexPage extends React.Component {
           </div>
         </div>
         <div style={styles.featuresContainer}>
-          <ResponsiveDiv
+          <ResponsiveContainer
             styles={styles.featuresWrapper}
             mobileStyles={styles.featuresWrapperMobile}
           >
@@ -190,8 +178,8 @@ export class IndexPage extends React.Component {
                   lead={feature.lead}
                 />
               ))}
-          </ResponsiveDiv>
-          <ResponsiveDiv
+          </ResponsiveContainer>
+          <ResponsiveContainer
             styles={styles.featuresWrapper}
             mobileStyles={styles.featuresWrapperMobile}
           >
@@ -208,7 +196,7 @@ export class IndexPage extends React.Component {
                   lead={feature.lead}
                 />
               ))}
-          </ResponsiveDiv>
+          </ResponsiveContainer>
         </div>
       </div>
     );
