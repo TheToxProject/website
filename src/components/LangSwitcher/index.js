@@ -1,17 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import { getI18n } from "react-i18next";
-import MediaQuery from "react-responsive";
-import { MdMenu } from "react-icons/lib/md";
 
 import styles from "./styles";
-import logo from "./../../assets/logo/logo-white.png";
-import logo2x from "./../../assets/logo/logo-white@2x.png";
 
 import { languagesInfos } from "./../../i18n/languages";
 
-import Button from "./../Button";
 import buttonStyle from "./../Button/styles";
 import Theme from "../../config/theme";
 
