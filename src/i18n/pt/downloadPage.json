@@ -1,0 +1,9 @@
+{
+  "hero": {
+    "alt": "Ilustração de downloads",
+    "tagline": "Baixar Tox",
+    "lead": "Funciona em todas as plataformas mais usadas."
+  },
+  "download-for": "Baixar para",
+  "unavailable-platform": "Parece que você está usando um dispositivo/sistema operacional não suportado. Procure na lista de downloads abaixo ou submeta um problema para que possamos tentar desenvolver o Tox para o seu dispositivo se um número suficiente de usuários pedir"
+}
