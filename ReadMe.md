@@ -1,6 +1,6 @@
 # 🌐 The Tox Website
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/TheToxProject/website.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/TheToxProject/website.svg?branch=master)](https://travis-ci.org/TheToxProject/website) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Greenkeeper badge](https://badges.greenkeeper.io/TheToxProject/website.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/TheToxProject/website.svg?branch=master)](https://travis-ci.org/TheToxProject/website) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Crowdin](https://d322cqt584bo4o.cloudfront.net/tox-website/localized.svg)](https://crowdin.com/project/tox-website)
 
 This project aims to provide a simple yet useful promotional website for Tox. I found that the current website is **not** user-friendly nor gives a strong brand image to Tox. So I decided to start a fresh brand-new website, written with React, and to design illustrations that convey the right message. Branding is an important part of a project, as it permits to build a community, to deliver a message and to give people more choice.
 
