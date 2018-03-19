@@ -30,7 +30,7 @@ const styles = {
     display: "flex",
     flexFlow: "row wrap",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "flex-start",
     maxWidth: Theme.Constants.MAX_WIDTH,
     padding: 12
   },
