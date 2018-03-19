@@ -4,7 +4,9 @@ import {
   FaGithub,
   FaTwitter,
   FaFacebook,
-  FaForumbee // No Spectrum icon :(
+  FaForumbee, // No Spectrum icon :(
+  FaReddit,
+  FaHashtag
 } from "react-icons/lib/fa";
 
 import styles from "./styles";
@@ -59,6 +61,24 @@ export class Footer extends React.Component {
             style={styles.socialLink}
           >
             <FaForumbee color={Theme.Colors.BACKGROUND} size={24} />
+          </a>
+          <a
+            href="https://www.reddit.com/r/projecttox/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title={t("footer:links.reddit")}
+            style={styles.socialLink}
+          >
+            <FaReddit color={Theme.Colors.BACKGROUND} size={24} />
+          </a>
+          <a
+            href="https://webchat.freenode.net/?channels=tox,tox-dev,toktok"
+            rel="noopener noreferrer"
+            target="_blank"
+            title={t("footer:links.irc")}
+            style={styles.socialLink}
+          >
+            <FaHashtag color={Theme.Colors.BACKGROUND} size={24} />
           </a>
         </div>
       </div>
