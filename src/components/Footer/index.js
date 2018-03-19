@@ -26,6 +26,7 @@ export class Footer extends React.Component {
         <div style={styles.social}>
           <a
             href="https://github.com/TokTok/c-toxcore"
+            rel="noopener noreferrer"
             target="_blank"
             title={t("footer:links.github")}
             style={styles.socialLink}
@@ -34,6 +35,7 @@ export class Footer extends React.Component {
           </a>
           <a
             href="https://www.facebook.com/toxproject"
+            rel="noopener noreferrer"
             target="_blank"
             title={t("footer:links.facebook")}
             style={styles.socialLink}
@@ -42,6 +44,7 @@ export class Footer extends React.Component {
           </a>
           <a
             href="https://twitter.com/projecttox"
+            rel="noopener noreferrer"
             target="_blank"
             title={t("footer:links.twitter")}
             style={styles.socialLink}
@@ -50,6 +53,7 @@ export class Footer extends React.Component {
           </a>
           <a
             href="https://spectrum.chat/tox"
+            rel="noopener noreferrer"
             target="_blank"
             title={t("footer:links.spectrum")}
             style={styles.socialLink}

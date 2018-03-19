@@ -8,22 +8,29 @@ const styles = {
     alignItems: "center",
     height: Theme.Constants.HEADER_HEIGHT,
     width: "100%",
-    backgroundColor: Theme.Colors.HEADER
+    backgroundColor: Theme.Colors.HEADER,
+    padding: "0 24px"
   },
   navWrapper: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     alignItems: "center",
     maxWidth: Theme.Constants.MAX_WIDTH,
     width: "100%"
   },
+  mobileMenu: {
+    marginRight: 24
+  },
   logo: {
-    height: Theme.Constants.LOGO_HEIGHT
+    height: Theme.Constants.LOGO_HEIGHT,
+    flex: "1"
   },
   menu: {
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    flex: 1
   },
   link: {
     color: "white",
