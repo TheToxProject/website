@@ -11,6 +11,7 @@ import logo2x from "./../../assets/logo/logo-white@2x.png";
 
 import Button from "./../Button";
 import buttonStyle from "./../Button/styles";
+import LangSwitcher from "./../LangSwitcher";
 
 const Logo = props => (
   <Link to={"/"} style={styles.logo}>
@@ -93,7 +94,8 @@ export class Header extends React.Component {
               </div>
             )}
           </MediaQuery>
-          <a
+          <LangSwitcher t={t} />
+          {/*<a
             onClick={this.changeLanguage}
             onMouseEnter={this.handleHover}
             onMouseLeave={this.handleHover}
@@ -112,7 +114,7 @@ export class Header extends React.Component {
                 .substr(0, 2)
                 .toUpperCase()}
             </span>
-          </a>
+              </a>*/}
         </div>
       </div>
     );
