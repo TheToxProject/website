@@ -1,62 +1,62 @@
 {
   "hero": {
-    "alt": "Ilustração da marca Tox",
-    "tagline": "Uma nova forma de mensagens instantâneas",
-    "lead": "Tox é um novo tipo de programa de troca de mensagens. Simples, seguro e bem projetado. Converse com pessoas que são importantes para você, grátis!"
+    "alt": "Tox brand illustration",
+    "tagline": "A New Kind of Instant Messaging",
+    "lead": "Tox is a new kind of messenger app. Simple, secure and well-designed. Chat with people who matters to you, for free!"
   },
   "1st-callout": {
-    "download": "Baixar",
-    "try-the-app": "Experimente o aplicativo web"
+    "download": "Download",
+    "try-the-app": "Try the web app"
   },
   "2nd-callout": {
-    "tagline": "O que faz o Tox diferente dos outros?",
-    "lead": "O Tox é feito pelas pessoas que o usam — pessoas que discordam das opções existentes que nos espionam, controlam, censuram e impedem de inovar. Sem interesses corporativos nem agendas ocultas. Apenas um mensageiro simples e seguro que é fácil de usar."
+    "tagline": "What makes Tox different?",
+    "lead": "Tox is made by the people who use it — people fed up with the existing options that spy on us, track us, censor us, and keep us from innovating. There are no corporate interests, and no hidden agendas. Just simple and secure messaging that is easy to use."
   },
   "features": {
     "encrypted": {
-      "alt": "Ilustração de criptografia",
-      "tagline": "Criptografado",
-      "lead": "Tudo que você faz com o Tox é criptografado usando bibliotecas de código-fonte aberto. As únicas pessoas que podem ver suas conversas são as pessoas com quem você está falando."
+      "alt": "Encrypted illustration",
+      "tagline": "Encrypted",
+      "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
     },
     "distributed": {
-      "alt": "Ilustração de distribuído",
-      "tagline": "Distribuído",
-      "lead": "Tox não tem nenhum servidor central que pode ser invadido, desligado ou forçado a entregar dados — a rede é composta por seus usuários. Diga adeus a paralisações de servidor!"
+      "alt": "Distributed illustration",
+      "tagline": "Distributed",
+      "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
     },
     "free": {
-      "alt": "Ilustração de grátis e livre",
-      "tagline": "Grátis e Livre",
-      "lead": "Tox é software livre. É livre como em liberdade, bem como no preço. Isto significa que o Tox é seu — para usar, modificar e compartilhar — porque Tox é feito por e para os usuários."
+      "alt": "Free & libre illustration",
+      "tagline": "Free & Libre",
+      "lead": "Tox is free software. That's free as in freedom, as well as in price. This means Tox is yours — to use, modify, and share — because Tox is made by and for the users."
     },
     "instant-messaging": {
-      "alt": "Ilustração de mensagem instantânea",
-      "tagline": "Mensagens instantâneas",
-      "lead": "Conversar instantaneamente em todo o mundo com mensagens seguras do Tox."
+      "alt": "Instant messaging illustration",
+      "tagline": "Instant messaging",
+      "lead": "Chat instantly across the globe with Tox's secure messages."
     },
     "groups": {
-      "alt": "Ilustração de grupos",
-      "tagline": "Batepapo em grupo",
-      "lead": "Converse, ligue e compartilhe arquivos e vídeo com a turma toda nos bate-papos de grupo do Tox."
+      "alt": "Groups illustration",
+      "tagline": "Group chats",
+      "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
     },
     "voice-call": {
-      "alt": "Ilustração de chamada de voz",
-      "tagline": "Voz",
-      "lead": "Manter contato com amigos e familiares usando as chamadas de voz completamente grátis e criptografadas do Tox."
+      "alt": "Voice call illustration",
+      "tagline": "Voice",
+      "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
     },
     "video-call": {
-      "alt": "Ilustração de chamada de vídeo",
-      "tagline": "Vídeo",
-      "lead": "Encontro face a face, com as chamadas de vídeo seguras do Tox."
+      "alt": "Video call illustration",
+      "tagline": "Video",
+      "lead": "Catch up face to face, over Tox's secure video calls."
     },
     "file-sharing": {
-      "alt": "Ilustração de compartilhamento de arquivos",
-      "tagline": "Compartilhamento de arquivos",
-      "lead": "Troque arquivos, sem limites artificiais ou quotas."
+      "alt": "File sharing illustration",
+      "tagline": "File sharing",
+      "lead": "Trade files, with no artificial limits or caps."
     },
     "screen-sharing": {
-      "alt": "Ilustração de compartilhamento de tela",
-      "tagline": "Compartilhamento de tela",
-      "lead": "Compartilhe sua área de trabalho com os seus amigos com o compartilhamento de tela do Tox."
+      "alt": "Screen sharing illustration",
+      "tagline": "Screen sharing",
+      "lead": "Share your desktop with your friends with Tox's screen sharing."
     }
   }
 }
