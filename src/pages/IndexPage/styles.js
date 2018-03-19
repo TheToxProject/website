@@ -11,7 +11,11 @@ const styles = {
     flexFlow: "row wrap",
     justifyContent: "center",
     width: "100%",
-    marginBottom: 36
+    marginBottom: 36,
+    padding: 8
+  },
+  button: {
+    margin: 8
   },
   featuresContainer: {
     display: "flex",
@@ -19,20 +23,29 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    padding: "36px 25px",
+    padding: "36px 0",
     backgroundColor: Theme.Colors.SECONDARY_BACKGROUND
   },
   featuresWrapper: {
     display: "flex",
     flexFlow: "row wrap",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    maxWidth: Theme.Constants.MAX_WIDTH
+    justifyContent: "center",
+    alignItems: "center",
+    maxWidth: Theme.Constants.MAX_WIDTH,
+    padding: 12
+  },
+  featuresWrapperMobile: {
+    display: "flex",
+    flexFlow: "column wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    maxWidth: Theme.Constants.MAX_WIDTH,
+    padding: 12
   },
   feature: {
-    flex: 1,
-    paddingLeft: 15,
-    paddingRight: 15
+    //flex: 1,
+    margin: 12,
+    flex: "1"
   },
   darkContainer: {
     display: "flex",

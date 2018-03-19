@@ -62,6 +62,7 @@ export class DownloadPage extends React.Component {
                         "downloadPage:download-for"
                       )} Linux ${arch} bits`}
                     />
+                    <p>Ubuntu, Fedora, ArchLinux, AppImage, Flatpak</p>
                   </div>
                 );
               } else if (os === SystemOS.WINDOWS) {

@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import MediaQuery from "react-responsive";
 
 import styles from "./styles";
 
@@ -101,6 +102,18 @@ export class IndexPage extends React.Component {
       }
     ];
 
+    const ResponsiveDiv = props => (
+      <MediaQuery maxWidth={768}>
+        {matches => {
+          if (matches) {
+            return <div style={props.mobileStyles}>{props.children}</div>;
+          } else {
+            return <div style={props.styles}>{props.children}</div>;
+          }
+        }}
+      </MediaQuery>
+    );
+
     return (
       <div style={styles.pageWrapper}>
         <Helmet>
@@ -126,13 +139,20 @@ export class IndexPage extends React.Component {
         <div style={styles.buttonsContainer}>
           <Button
             to="/download"
-            buttonStyle={{ marginRight: 24 }}
+            buttonStyle={styles.button}
             text={t("indexPage:1st-callout.download")}
           />
-          <Button to="/webapp" text={t("indexPage:1st-callout.try-the-app")} />
+          <Button
+            to="/webapp"
+            text={t("indexPage:1st-callout.try-the-app")}
+            buttonStyle={styles.button}
+          />
         </div>
         <div style={styles.featuresContainer}>
-          <div style={styles.featuresWrapper}>
+          <ResponsiveDiv
+            styles={styles.featuresWrapper}
+            mobileStyles={styles.featuresWrapperMobile}
+          >
             {mainFeatures.map((feature, index) => (
               <Feature
                 key={index}
@@ -144,7 +164,7 @@ export class IndexPage extends React.Component {
                 lead={feature.lead}
               />
             ))}
-          </div>
+          </ResponsiveDiv>
         </div>
         <div style={styles.darkContainer}>
           <div style={styles.darkWrapper}>
@@ -153,7 +173,10 @@ export class IndexPage extends React.Component {
           </div>
         </div>
         <div style={styles.featuresContainer}>
-          <div style={styles.featuresWrapper}>
+          <ResponsiveDiv
+            styles={styles.featuresWrapper}
+            mobileStyles={styles.featuresWrapperMobile}
+          >
             {imFeatures
               .slice(0, 3)
               .map((feature, index) => (
@@ -167,10 +190,11 @@ export class IndexPage extends React.Component {
                   lead={feature.lead}
                 />
               ))}
-          </div>
-        </div>
-        <div style={styles.featuresContainer}>
-          <div style={styles.featuresWrapper}>
+          </ResponsiveDiv>
+          <ResponsiveDiv
+            styles={styles.featuresWrapper}
+            mobileStyles={styles.featuresWrapperMobile}
+          >
             {imFeatures
               .slice(3, 6)
               .map((feature, index) => (
@@ -184,7 +208,7 @@ export class IndexPage extends React.Component {
                   lead={feature.lead}
                 />
               ))}
-          </div>
+          </ResponsiveDiv>
         </div>
       </div>
     );

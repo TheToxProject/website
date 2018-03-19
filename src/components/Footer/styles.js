@@ -17,12 +17,14 @@ const styles = {
     fontSize: 14,
     fontStyle: "italic",
     fontWeight: 300,
+    textAlign: "center",
     color: Theme.Colors.SECONDARY_BACKGROUND
   },
   credits: {
     margin: "0 0 16px 0",
     padding: 0,
-    fontSize: 14
+    fontSize: 14,
+    textAlign: "center"
   },
   social: {
     display: "flex",
