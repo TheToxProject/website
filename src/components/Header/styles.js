@@ -55,7 +55,7 @@ const styles = {
     cursor: "pointer"
   },
   drawer: {
-    backgroundColor: Theme.Colors.HEADER,
+    backgroundColor: Theme.Colors.BACKGROUND,
     position: "absolute",
     top: 0,
     left: 0,
@@ -90,17 +90,27 @@ const styles = {
     margin: "8px 0",
     width: "100%",
     height: "100%",
-    backgroundColor: Theme.Colors.BUTTON
+    backgroundColor: Theme.Colors.BACKGROUND
   },
   drawerLink: {
     display: "flex",
     height: "48px",
     width: "100%",
-    padding: "0 32px",
+    padding: "0 16px",
     flex: "0 0 48px",
     borderRadius: 0,
     textAlign: "left",
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
+    backgroundColor: Theme.Colors.BACKGROUND,
+    color: Theme.Colors.TEXT_DARK,
+    transition: "all 0.3s cubic-bezier(.25,.8,.25,1)"
+  },
+  drawerLinkHover: {
+    backgroundColor: Theme.Colors.SECONDARY_BACKGROUND,
+    color: Theme.Colors.TEXT_PRIMARY
+  },
+  drawerLinkIcon: {
+    marginRight: 16
   }
 };
 

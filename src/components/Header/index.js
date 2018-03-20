@@ -2,7 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import MediaQuery from "react-responsive";
-import { MdMenu } from "react-icons/lib/md";
+import { FaConnectdevelop } from "react-icons/lib/fa";
+import {
+  MdMenu,
+  MdFileDownload,
+  MdInfoOutline,
+  MdLightbulbOutline,
+  MdChatBubbleOutline
+} from "react-icons/lib/md";
 
 import styles from "./styles";
 import logo from "./../../assets/logo/logo-white.png";
@@ -11,6 +18,7 @@ import logo2x from "./../../assets/logo/logo-white@2x.png";
 import Button from "./../Button";
 import LangSwitcher from "./../LangSwitcher";
 import ResponsiveContainer from "../ResponsiveContainer";
+import Theme from "../../config/theme";
 
 const Logo = props => (
   <Link to={"/"} style={props.style}>
@@ -65,11 +73,32 @@ export class Header extends React.Component {
     const { t, showLogo, showNavigation } = this.props;
     const { drawerOpened, deviceWidth } = this.state;
     const menuLinks = [
-      { text: t("menu:links.download"), to: "/download" },
-      { text: t("menu:links.about"), to: "/about" },
-      { text: t("menu:links.wiki"), to: "/wiki" },
-      { text: t("menu:links.blog"), to: "/blog" },
-      { text: "TokTok", to: "/toktok" }
+      {
+        text: t("menu:links.download"),
+        to: "/download",
+        icon: props => <MdFileDownload {...props} />
+      },
+      {
+        text: t("menu:links.about"),
+        to: "/about",
+        icon: props => <MdLightbulbOutline {...props} />
+      },
+      {
+        text: t("menu:links.wiki"),
+        to: "/wiki",
+        icon: props => <MdInfoOutline {...props} />
+      },
+      {
+        text: t("menu:links.blog"),
+        to: "/blog",
+        icon: props => <MdChatBubbleOutline {...props} />
+      },
+      {
+        text: "TokTok",
+        to: "",
+        href: "https://toktok.ltd/",
+        icon: props => <FaConnectdevelop {...props} />
+      }
     ];
 
     const drawerStyle = drawerOpened
@@ -130,15 +159,25 @@ export class Header extends React.Component {
             />
           </div>
           <div style={styles.drawerLinks}>
-            {menuLinks.map((link, index) => (
-              <Button
-                key={index}
-                text={link.text}
-                to={link.to}
-                buttonStyle={styles.drawerLink}
-                onClick={this.toggleDrawer}
-              />
-            ))}
+            {menuLinks.map((link, index) => {
+              console.log(link);
+              const LinkIcon = link.icon;
+              return (
+                <Button
+                  key={index}
+                  to={link.to}
+                  href={link.href}
+                  buttonStyle={styles.drawerLink}
+                  hoverStyle={styles.drawerLinkHover}
+                  onClick={this.toggleDrawer}
+                >
+                  <div>
+                    <LinkIcon size={20} style={styles.drawerLinkIcon} />
+                    <span>{link.text}</span>
+                  </div>
+                </Button>
+              );
+            })}
           </div>
         </ResponsiveContainer>
       </div>
