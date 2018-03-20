@@ -96,7 +96,7 @@ const styles = {
     display: "flex",
     height: "48px",
     width: "100%",
-    padding: "0 16px",
+    padding: "0 16px 0 24px",
     flex: "0 0 48px",
     borderRadius: 0,
     textAlign: "left",
