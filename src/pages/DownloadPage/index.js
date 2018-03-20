@@ -15,6 +15,10 @@ import SystemDetector, { SystemOS } from "../../components/SystemDetector";
 import Theme from "../../config/theme";
 
 export class DownloadPage extends React.Component {
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const { t } = this.props;
     return (
