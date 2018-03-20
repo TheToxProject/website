@@ -15,7 +15,7 @@ export class LangSwitcher extends React.Component {
   constructor(props, context) {
     super(props);
 
-    this.openSwitch = this.openSwitch.bind(this);
+    this.toggleSwitch = this.toggleSwitch.bind(this);
     this.changeLanguage = this.changeLanguage.bind(this);
     this.handleHover = this.handleHover.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -56,9 +56,10 @@ export class LangSwitcher extends React.Component {
     const i18n = getI18n();
     i18n.changeLanguage(lang);
     this.setState({ lang });
+    this.toggleSwitch();
   }
 
-  openSwitch() {
+  toggleSwitch() {
     this.setState({ toggled: !this.state.toggled });
   }
 
@@ -80,7 +81,7 @@ export class LangSwitcher extends React.Component {
         }}
       >
         <a
-          onClick={this.openSwitch}
+          onClick={this.toggleSwitch}
           onMouseEnter={this.handleHover}
           onMouseLeave={this.handleHover}
           style={{
