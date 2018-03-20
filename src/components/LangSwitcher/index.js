@@ -71,7 +71,14 @@ export class LangSwitcher extends React.Component {
       : { opacity: 0, transform: "translate(0px, -300px)" };
 
     return (
-      <div style={{ position: "relative" }}>
+      <div
+        style={{
+          position: "relative",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "flex-end"
+        }}
+      >
         <a
           onClick={this.openSwitch}
           onMouseEnter={this.handleHover}

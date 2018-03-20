@@ -143,7 +143,7 @@ export class DownloadPage extends React.Component {
                     />
                   </div>
                 );
-              } else {
+              } else if (SystemOS.UNKNOWN) {
                 return (
                   <div style={{ width: "auto" }}>
                     <FaInternetExplorer
@@ -151,7 +151,7 @@ export class DownloadPage extends React.Component {
                       color={Theme.Colors.TEXT_DARK}
                       style={{ margin: 16 }}
                     />
-                    <p>${t("downloadPage:unavailable-platform")}</p>
+                    <p>{t("downloadPage:unavailable-platform")}</p>
                   </div>
                 );
               }
