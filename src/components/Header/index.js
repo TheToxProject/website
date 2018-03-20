@@ -18,7 +18,6 @@ import logo2x from "./../../assets/logo/logo-white@2x.png";
 import Button from "./../Button";
 import LangSwitcher from "./../LangSwitcher";
 import ResponsiveContainer from "../ResponsiveContainer";
-import Theme from "../../config/theme";
 
 const Logo = props => (
   <Link to={"/"} style={props.style}>
