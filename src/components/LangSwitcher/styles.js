@@ -11,8 +11,7 @@ const styles = {
     boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
     transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
     width: 425,
-    maxWidth: 425,
-    transform: [{ translateY: -200 }]
+    maxWidth: 425
   },
   link: {
     color: "white",
