@@ -31,10 +31,11 @@ const styles = {
     flexFlow: "row nowrap",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 16
+    marginTop: 16,
+    padding: 8
   },
   socialLink: {
-    marginRight: 16
+    margin: 8
   }
 };
 
