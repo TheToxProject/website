@@ -32,6 +32,7 @@ export class Button extends React.Component {
         style={style}
         onMouseEnter={this.handleHover}
         onMouseLeave={this.handleHover}
+        onClick={props.onClick}
       >
         {text && !children ? (
           text

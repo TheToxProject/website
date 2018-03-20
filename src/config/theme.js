@@ -11,7 +11,7 @@ const Theme = {
   Constants: {
     MAX_WIDTH: 1170,
     HEADER_HEIGHT: 70,
-    LOGO_HEIGHT: 40
+    LOGO_HEIGHT: 38
   }
 };
 

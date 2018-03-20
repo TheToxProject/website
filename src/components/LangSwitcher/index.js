@@ -65,7 +65,7 @@ export class LangSwitcher extends React.Component {
   render() {
     const { t } = this.props;
     const { handleHover, lang, toggled } = this.state;
-    const hoverStyle = handleHover ? buttonStyle.buttonHover : {};
+    const hoverStyle = handleHover || toggled ? buttonStyle.buttonHover : {};
     const switchVisibilityStyle = toggled
       ? { opacity: 1, transform: "translate(0px, 0px)" }
       : { opacity: 0, transform: "translate(0px, -300px)" };
@@ -95,7 +95,7 @@ export class LangSwitcher extends React.Component {
             ...switchVisibilityStyle,
             ...{
               maxWidth: "auto",
-              width: this.state.deviceWidth - 48, // 24px each side.
+              width: this.state.deviceWidth - 60, // 30px each side.
               right: 0,
               justifyCcontent: "space-around"
             }
