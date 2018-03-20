@@ -63,8 +63,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "npm run build && npm run start:server",
-    "dev": "node scripts/start.js",
+    "start": "node scripts/start/js",
     "start:server": "export NODE_ENV=production && node scripts/server.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
