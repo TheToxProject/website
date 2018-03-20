@@ -11,20 +11,24 @@ export class Hero extends React.Component {
     return (
       <div style={styles.heroContainer}>
         <MediaQuery minWidth={768}>
-          <img
-            src={image}
-            srcSet={`${image_2x} 2x`}
-            style={styles.heroIllustration}
-            alt={alt}
-          />
+          {image != null && (
+            <img
+              src={image}
+              srcSet={`${image_2x} 2x`}
+              style={styles.heroIllustration}
+              alt={alt}
+            />
+          )}
         </MediaQuery>
         <MediaQuery maxWidth={768}>
-          <img
-            src={image}
-            srcSet={`${image_2x} 2x`}
-            style={styles.heroIllustrationMobile}
-            alt={alt}
-          />
+          {image != null && (
+            <img
+              src={image}
+              srcSet={`${image_2x} 2x`}
+              style={styles.heroIllustrationMobile}
+              alt={alt}
+            />
+          )}
         </MediaQuery>
         <h1 style={styles.tagline}>{tagline}</h1>
         <p style={styles.lead}>{lead}</p>

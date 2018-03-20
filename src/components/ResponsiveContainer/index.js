@@ -6,9 +6,13 @@ const ResponsiveContainer = props => (
     {matches => {
       let children = React.Children.toArray(props.children);
       return matches ? (
-        <div style={{ ...props.mobileStyles }}>{children}</div>
+        <div style={{ ...props.mobileStyles }} {...props}>
+          {children}
+        </div>
       ) : (
-        <div style={{ ...props.styles }}>{children}</div>
+        <div style={{ ...props.styles }} {...props}>
+          {children}
+        </div>
       );
     }}
   </MediaQuery>

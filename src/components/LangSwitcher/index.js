@@ -6,7 +6,8 @@ import styles from "./styles";
 import { languagesInfos } from "./../../i18n/languages";
 
 import buttonStyle from "./../Button/styles";
-import Theme from "../../config/theme";
+import Theme from "./../../config/theme";
+import ResponsiveContainer from "./../ResponsiveContainer";
 
 const BASE_URL = "https://d2srrzh48sp2nh.cloudfront.net/1966b824/images/flags/";
 
@@ -17,21 +18,38 @@ export class LangSwitcher extends React.Component {
     this.openSwitch = this.openSwitch.bind(this);
     this.changeLanguage = this.changeLanguage.bind(this);
     this.handleHover = this.handleHover.bind(this);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 
     this.state = {
       lang: "en",
-      langSwitchHover: false,
-      toggled: false
+      handleHover: false,
+      toggled: false,
+      deviceWidth: 0,
+      deviceHeight: 0
     };
   }
 
   componentWillMount() {
     const i18n = getI18n();
     this.setState({ lang: i18n.language });
+
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({
+      deviceWidth: window.innerWidth,
+      deviceHeight: window.innerHeight
+    });
   }
 
   handleHover(e) {
-    this.setState({ langSwitchHover: !this.state.langSwitchHover });
+    this.setState({ handleHover: !this.state.handleHover });
   }
 
   changeLanguage(lang) {
@@ -46,11 +64,11 @@ export class LangSwitcher extends React.Component {
 
   render() {
     const { t } = this.props;
-    const { langSwitchHover, lang, toggled } = this.state;
-    const hoverStyle = langSwitchHover ? buttonStyle.buttonHover : {};
+    const { handleHover, lang, toggled } = this.state;
+    const hoverStyle = handleHover ? buttonStyle.buttonHover : {};
     const switchVisibilityStyle = toggled
-      ? { display: "flex", opacity: 1 }
-      : { opacity: 0, display: "none" };
+      ? { opacity: 1, transform: "translate(0px, 0px)" }
+      : { opacity: 0, transform: "translate(0px, -300px)" };
 
     return (
       <div style={{ position: "relative" }}>
@@ -70,7 +88,19 @@ export class LangSwitcher extends React.Component {
               .toUpperCase()}
           </span>
         </a>
-        <div style={{ ...styles.languagesContainer, ...switchVisibilityStyle }}>
+        <ResponsiveContainer
+          styles={{ ...styles.languagesContainer, ...switchVisibilityStyle }}
+          mobileStyles={{
+            ...styles.languagesContainer,
+            ...switchVisibilityStyle,
+            ...{
+              maxWidth: "auto",
+              width: this.state.deviceWidth - 48, // 24px each side.
+              right: 0,
+              justifyCcontent: "space-around"
+            }
+          }}
+        >
           {Object.keys(languagesInfos).map((key, index) => {
             const language = languagesInfos[key];
             const isLanguageActive = lang === language.twoLettersCode;
@@ -78,12 +108,17 @@ export class LangSwitcher extends React.Component {
               ? { backgroundColor: Theme.Colors.SECONDARY_BACKGROUND }
               : {};
             return (
-              <a
+              <ResponsiveContainer
                 key={language.twoLettersCode}
                 onClick={() =>
                   this.changeLanguage.call(this, language.twoLettersCode)
                 }
-                style={{ ...styles.languageLink, ...activeStyle }}
+                styles={{ ...styles.languageLink, ...activeStyle }}
+                mobileStyles={{
+                  ...styles.languageLink,
+                  ...activeStyle,
+                  ...{ maxWidth: "auto", width: "100%" }
+                }}
               >
                 <img
                   style={styles.languageImage}
@@ -91,7 +126,7 @@ export class LangSwitcher extends React.Component {
                   alt={language.name}
                 />
                 {language.name}
-              </a>
+              </ResponsiveContainer>
             );
           })}
           <a
@@ -102,7 +137,7 @@ export class LangSwitcher extends React.Component {
           >
             {t("commons:lang-switch.help-us-translating")}
           </a>
-        </div>
+        </ResponsiveContainer>
       </div>
     );
   }

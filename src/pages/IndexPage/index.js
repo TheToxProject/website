@@ -14,6 +14,10 @@ import ResponsiveContainer from "../../components/ResponsiveContainer";
 import { getFeatures } from "./features";
 
 export class IndexPage extends React.Component {
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const { t } = this.props;
     const features = getFeatures(t);
