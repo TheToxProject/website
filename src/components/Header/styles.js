@@ -75,7 +75,7 @@ const styles = {
     display: "flex",
     height: 200,
     width: "100%",
-    backgroundColor: Theme.Colors.PRIMARY,
+    backgroundColor: Theme.Colors.HEADER,
     justifyContent: "center",
     alignItems: "center"
   },
@@ -90,7 +90,8 @@ const styles = {
     margin: "8px 0",
     width: "100%",
     height: "100%",
-    backgroundColor: Theme.Colors.BACKGROUND
+    backgroundColor: Theme.Colors.BACKGROUND,
+    fontWeight: 500
   },
   drawerLink: {
     display: "flex",

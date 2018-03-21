@@ -159,7 +159,6 @@ export class Header extends React.Component {
           </div>
           <div style={styles.drawerLinks}>
             {menuLinks.map((link, index) => {
-              console.log(link);
               const LinkIcon = link.icon;
               return (
                 <Button

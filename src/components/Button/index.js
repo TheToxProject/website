@@ -36,7 +36,6 @@ export class Button extends React.Component {
 
     const child = children ? React.Children.only(children) : null;
     const buttonContent = child == null ? text : child;
-    console.log(child, buttonContent);
 
     const LinkButton = props => {
       if (href) {

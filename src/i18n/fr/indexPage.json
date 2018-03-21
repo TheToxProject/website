@@ -2,46 +2,54 @@
   "hero": {
     "alt": "Illustration marque Tox",
     "tagline": "La messagerie instantanée réinventée",
-    "lead": "Tox est une nouvelle façon de communiquer. Simple, sécurisé et bien conçu. Discutez avec vos proches, gratuitement!"
+    "lead":
+      "Tox est une nouvelle façon de communiquer. Simple, sécurisé et bien conçu. Discutez avec vos proches, gratuitement!"
   },
   "1st-callout": {
-    "download": "Télécharger",
+    "download": "Télécharger Tox",
     "try-the-app": "Version web"
   },
   "2nd-callout": {
     "tagline": "Qu'est-ce qui rend Tox différent?",
-    "lead": "Tox est conçu et développé par les personnes qui l'utilisent — des personnes qui en ont marre des options actuelles qui nous espionnent, nous traquent, nous censurent, et qui nous empêchent d'innover. Il n'y a aucun intérêt privé, pas d'agenda caché. Juste une messagerie instantanée simple, sécurisée et facile à utiliser."
+    "lead":
+      "Tox est conçu et développé par les personnes qui l'utilisent — des personnes qui en ont marre des options actuelles qui nous espionnent, nous traquent, nous censurent, et qui nous empêchent d'innover. Il n'y a aucun intérêt privé, pas d'agenda caché. Juste une messagerie instantanée simple, sécurisée et facile à utiliser."
   },
   "features": {
     "encrypted": {
       "alt": "Illustration chiffrement",
       "tagline": "Chiffrement",
-      "lead": "Tout ce que vous faites sur Tox est chiffré à l'aide de logiciels open-source. La seule personne qui peut lire vos conversations, c'est vous!"
+      "lead":
+        "Tout ce que vous faites sur Tox est chiffré à l'aide de logiciels open-source. La seule personne qui peut lire vos conversations, c'est vous !"
     },
     "distributed": {
       "alt": "Illustration chiffrement",
       "tagline": "Distribution",
-      "lead": "Tox ne dépend d'aucun serveur central qui pourrait s'arrêter ou être forcé de révéler vos données privées — le réseau est fait de ses utilisateurs! Au revoir lenteur."
+      "lead":
+        "Tox ne dépend d'aucun serveur central qui pourrait s'arrêter ou être forcé de révéler vos données privées — le réseau est fait de ses utilisateurs. Au revoir lenteur !"
     },
     "free": {
       "alt": "Illustration gratuit & libre",
       "tagline": "Gratuit & Libre",
-      "lead": "Tox est un logiciel libre & gratuit. Cela signifie que Tox est à vous — pour utilisation, modification ou partage — parce que Tox est créé par et pour ses utilisateurs."
+      "lead":
+        "Tox est un logiciel libre & gratuit. Cela signifie que Tox vous appartient — pour utilisation, modification et partage — parce que Tox est créé pour, mais aussi par, ses utilisateurs."
     },
     "instant-messaging": {
       "alt": "Illustration messagerie instantanée",
       "tagline": "Messages",
-      "lead": "Discutez instantanément autours du globe avec les messages sécurisés."
+      "lead":
+        "Discutez instantanément autours du globe grâce aux messages sécurisés."
     },
     "groups": {
       "alt": "Illustration groupes",
       "tagline": "Groupes",
-      "lead": "Discutez, appellez, et partagez des videos et des fichiers avec toutes la bande dans les groupes de discussions."
+      "lead":
+        "Discutez, appellez, et partagez des videos et des fichiers avec toute la bande dans les groupes de discussions."
     },
     "voice-call": {
       "alt": "Illustration appel audio",
       "tagline": "Voix",
-      "lead": "Restez en contact avec vos amis et votre famille en utilisant les appels audios chiffrés et gratuits."
+      "lead":
+        "Restez en contact avec vos amis et votre famille en utilisant les appels audios chiffrés et gratuits."
     },
     "video-call": {
       "alt": "Illustration appel video",
@@ -51,12 +59,18 @@
     "file-sharing": {
       "alt": "Illustration partage de fichiers",
       "tagline": "Fichiers",
-      "lead": "Échangez des fichiers, sans limites artificielles ou restrictions."
+      "lead":
+        "Échangez des fichiers, sans limites artificielles ni restrictions."
     },
     "screen-sharing": {
       "alt": "Illustration partage d'écran",
       "tagline": "Partage d'écran",
-      "lead": "Partagez votre écran avec vos amis en toute sécurité, de votre téléphone ou votre ordinateur."
+      "lead":
+        "Partagez votre écran en toute sécurité, depuis votre téléphone ou votre ordinateur."
     }
+  },
+  "featured": {
+    "tagline": "Ils parlent de nous !",
+    "lead": "Parce qu'on mérite un peu de promotion 😜"
   }
 }
