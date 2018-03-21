@@ -75,6 +75,27 @@ const styles = {
     marginTop: 24,
     marginBottom: 0,
     lineHeight: 1.6
+  },
+  featuredInWrapper: {
+    backgroundColor: Theme.Colors.PRIMARY,
+    padding: 16
+  },
+  featuredIn: {
+    margin: 16
+  },
+  taglineFeaturedIn: {
+    fontSize: 40,
+    lineHeight: "44px",
+    color: Theme.Colors.BACKGROUND,
+    margin: 0,
+    marginTop: 24
+  },
+  leadFeaturedIn: {
+    fontSize: 20,
+    color: Theme.Colors.BACKGROUND,
+    marginTop: 8,
+    marginBottom: 24,
+    lineHeight: 1.6
   }
 };
 

@@ -6,6 +6,7 @@ const styles = {
     flexFlow: "column wrap",
     justifyContent: "center",
     alignItems: "center",
+    textAlign: "center",
     width: "100%",
     padding: 48,
     backgroundColor: Theme.Colors.HEADER,
