@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 import styles from "./styles";
-import { getFeatures } from "./features";
+import { getFeatures, getFeaturedIns } from "./data";
 
 // Images.
 import hero from "./../../assets/illustrations/tox-illustration.png";
@@ -24,6 +24,7 @@ export class IndexPage extends React.Component {
   render() {
     const { t } = this.props;
     const features = getFeatures(t);
+    const featuredIns = getFeaturedIns();
 
     return (
       <div style={styles.pageWrapper}>
@@ -130,66 +131,16 @@ export class IndexPage extends React.Component {
               {t("indexPage:featured.tagline")}
             </h2>
             <p style={styles.leadFeaturedIn}>{t("indexPage:featured.lead")}</p>
-            <FeaturedLogo
-              source={"https://svgshare.com/i/5wj.svg"}
-              width={200}
-              height={40}
-              title={"Wired"}
-              style={styles.featuredIn}
-            />
-            <FeaturedLogo
-              source={"https://i.imgur.com/aDlElFF.png"}
-              width={200}
-              height={40}
-              title={"Linux.com"}
-              style={styles.featuredIn}
-            />
-            <FeaturedLogo
-              source={
-                "https://248qms3nhmvl15d4ne1i4pxl-wpengine.netdna-ssl.com/wp-content/themes/cryptocoinsnews/dist/images/logo.svg"
-              }
-              width={200}
-              height={40}
-              title={"CCN.com"}
-              style={styles.featuredIn}
-            />
-            <FeaturedLogo
-              source={
-                "https://xakep.ru/wp-content/uploads/2016/09/xakep_logo_ws.png"
-              }
-              width={75}
-              height={40}
-              title={"Xakep.ru"}
-              style={styles.featuredIn}
-            />
-            <FeaturedLogo
-              source={"https://i.imgur.com/ktJAYGK.png"}
-              width={200}
-              height={40}
-              title={"CoinTelegraph"}
-              style={styles.featuredIn}
-            />
-            <FeaturedLogo
-              source={"https://i.imgur.com/V79HOKk.png"}
-              width={40}
-              height={40}
-              title={"Korben"}
-              style={styles.featuredIn}
-            />
-            <FeaturedLogo
-              source={"https://i.imgur.com/xgjnSHi.png"}
-              width={200}
-              height={40}
-              title={"netzpolitik.org"}
-              style={styles.featuredIn}
-            />
-            <FeaturedLogo
-              source={"https://svgshare.com/i/5w0.svg"}
-              width={100}
-              height={40}
-              title={"MakeUseOf"}
-              style={styles.featuredIn}
-            />
+
+            {featuredIns.map((company, index) => (
+              <FeaturedLogo
+                source={company.imageUrl}
+                width={company.size ? company.size.width : 200}
+                height={company.size ? company.size.height : 40}
+                title={company.name}
+                style={styles.featuredIn}
+              />
+            ))}
           </ResponsiveContainer>
         </div>
       </div>

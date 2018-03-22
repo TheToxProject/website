@@ -76,9 +76,18 @@ const styles = {
     marginBottom: 0,
     lineHeight: 1.6
   },
+  featuredInContainer: {
+    display: "flex",
+    flexFlow: "column wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    padding: "8px 25px",
+    backgroundColor: Theme.Colors.PRIMARY
+  },
   featuredInWrapper: {
-    backgroundColor: Theme.Colors.PRIMARY,
-    padding: 16
+    padding: 16,
+    maxWidth: Theme.Constants.MAX_WIDTH
   },
   featuredIn: {
     margin: 16
