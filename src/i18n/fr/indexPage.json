@@ -5,7 +5,7 @@
     "lead": "Tox est une nouvelle façon de communiquer. Simple, sécurisé et bien conçu. Discutez avec vos proches, gratuitement!"
   },
   "1st-callout": {
-    "download": "Télécharger",
+    "download": "Télécharger Tox",
     "try-the-app": "Version web"
   },
   "2nd-callout": {
@@ -58,5 +58,9 @@
       "tagline": "Partage d'écran",
       "lead": "Partagez votre écran avec vos amis en toute sécurité, de votre téléphone ou votre ordinateur."
     }
+  },
+  "featured": {
+    "tagline": "Ils parlent de nous !",
+    "lead": "Parce qu'on mérite un peu de promotion 😜"
   }
 }
