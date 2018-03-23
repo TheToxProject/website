@@ -13,7 +13,7 @@ const styles = {
     textDecoration: "none",
     fontWeight: 200,
     fontSize: 18,
-    transition: "background 0.2s ease-in-out",
+    transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
     paddingLeft: 16,
     paddingRight: 16
   },
