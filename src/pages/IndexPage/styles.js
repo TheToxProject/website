@@ -6,16 +6,48 @@ const styles = {
     textAlign: "center",
     width: "100%"
   },
+  header: {
+    display: "flex",
+    flexFlow: "row wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    maxWidth: Theme.Constants.MAX_WIDTH,
+    margin: "0 auto 36px auto",
+    padding: 8
+  },
+  hero: {
+    display: "flex",
+    flexFlow: "column wrap",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  appPreview: {
+    display: "flex",
+    flexFlow: "column wrap",
+    justifyContent: "center",
+    alignItems: "center"
+  },
   buttonsContainer: {
     display: "flex",
     flexFlow: "row wrap",
     justifyContent: "center",
     width: "100%",
-    marginBottom: 36,
     padding: 8
   },
-  button: {
+  downloadBtn: {
+    fontWeight: "bold",
     margin: 8
+  },
+  webappBtn: {
+    backgroundColor: Theme.Colors.BACKGROUND,
+    border: `2px solid ${Theme.Colors.BUTTON}`,
+    color: Theme.Colors.BUTTON,
+    margin: 8
+  },
+  btnHover: {
+    color: Theme.Colors.BACKGROUND,
+    backgroundColor: Theme.Colors.PRIMARY,
+    border: "none"
   },
   featuresContainer: {
     display: "flex",

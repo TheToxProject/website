@@ -27,7 +27,7 @@ export class Button extends React.Component {
       href,
       buttonStyle,
       hoverStyle,
-      ...props
+      ...rest
     } = this.props;
     const { hover } = this.state;
 
@@ -41,7 +41,11 @@ export class Button extends React.Component {
       if (href) {
         return <a {...props}>{props.children}</a>;
       } else {
-        return <Link {...props}>{props.children}</Link>;
+        return (
+          <Link style={props.style} {...props}>
+            {props.children}
+          </Link>
+        );
       }
     };
 
@@ -54,8 +58,8 @@ export class Button extends React.Component {
         style={style}
         onMouseEnter={this.handleHover}
         onMouseLeave={this.handleHover}
-        onClick={props.onClick}
-        {...props}
+        onClick={this.props.onClick}
+        {...rest}
       >
         {buttonContent}
       </LinkButton>

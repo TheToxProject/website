@@ -41,24 +41,40 @@ export class IndexPage extends React.Component {
           <meta property="og:site_name" content="Tox" />
           <meta property="og:description" content={t("indexPage:hero.lead")} />
         </Helmet>
-        <Hero
-          image={hero}
-          image_2x={hero2x}
-          alt={t("indexPage:hero.alt")}
-          tagline={t("indexPage:hero.tagline")}
-          lead={t("indexPage:hero.lead")}
-        />
-        <div style={styles.buttonsContainer}>
-          <Button
-            to="/download"
-            buttonStyle={styles.button}
-            text={t("indexPage:1st-callout.download")}
-          />
-          <Button
-            to="/webapp"
-            text={t("indexPage:1st-callout.try-the-app")}
-            buttonStyle={styles.button}
-          />
+        <div style={styles.header}>
+          <div style={styles.hero}>
+            <Hero
+              image={hero}
+              image_2x={hero2x}
+              alt={t("indexPage:hero.alt")}
+              tagline={t("indexPage:hero.tagline")}
+              lead={t("indexPage:hero.lead")}
+            />
+            <div style={styles.buttonsContainer}>
+              <Button
+                to="/webapp"
+                text={t("indexPage:1st-callout.try-the-app")}
+                buttonStyle={styles.webappBtn}
+                hoverStyle={styles.btnHover}
+              />
+              <Button
+                to="/download"
+                text={t("indexPage:1st-callout.download")}
+                buttonStyle={styles.downloadBtn}
+                hoverStyle={styles.btnHover}
+              />
+            </div>
+          </div>
+          <ResponsiveContainer
+            styles={styles.appPreview}
+            mobileStyles={{ display: "none" }}
+          >
+            <img
+              src="https://i.imgur.com/TWRVCDg.png"
+              style={{ width: 292, height: 571 }}
+              alt="Tox apps preview desktop & mobile"
+            />
+          </ResponsiveContainer>
         </div>
         <div style={styles.featuresContainer}>
           <ResponsiveContainer
