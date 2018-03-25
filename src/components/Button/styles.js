@@ -11,7 +11,7 @@ const styles = {
     backgroundColor: Theme.Colors.BUTTON,
     color: "white",
     textDecoration: "none",
-    fontWeight: 200,
+    fontWeight: "normal",
     fontSize: 18,
     transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
     paddingLeft: 16,
