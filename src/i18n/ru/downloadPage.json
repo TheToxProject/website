@@ -1,9 +1,9 @@
 {
   "hero": {
-    "alt": "Downloads illustration",
-    "tagline": "Download Tox",
-    "lead": "Works on all popular platforms."
+    "alt": "",
+    "tagline": "Скачать Tox",
+    "lead": ""
   },
-  "download-for": "Download for",
-  "unavailable-platform": "It looks like you use a device/os that we do not support. Try to look at the download list bellow or submit an issue so that we can try to port Tox to your device if enough users ask for it"
+  "download-for": "Скачать для",
+  "unavailable-platform": ""
 }
