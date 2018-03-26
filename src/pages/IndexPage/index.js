@@ -17,8 +17,6 @@ import FeaturedLogo from "./../../components/GrayscaleImage";
 export class IndexPage extends React.Component {
   componentWillMount() {
     window.scrollTo(0, 0);
-
-    console.log(FeaturedLogo);
   }
 
   render() {
@@ -54,7 +52,7 @@ export class IndexPage extends React.Component {
               styles={styles.buttonsContainer}
               mobileStyles={{
                 ...styles.buttonsContainer,
-                flexDirection: "column-reverse"
+                flexDirection: "row-reverse"
               }}
             >
               <Button
@@ -156,6 +154,7 @@ export class IndexPage extends React.Component {
 
             {featuredIns.map((company, index) => (
               <FeaturedLogo
+                key={company.name}
                 source={company.imageUrl}
                 width={company.size ? company.size.width : 200}
                 height={company.size ? company.size.height : 40}
