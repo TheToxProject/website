@@ -2,8 +2,7 @@
   "hero": {
     "alt": "Ilustração da marca Tox",
     "tagline": "Uma nova forma de mensagens instantâneas",
-    "lead":
-      "Tox é um novo tipo de programa de troca de mensagens. Simples, seguro e bem projetado. Converse com pessoas que são importantes para você, grátis!"
+    "lead": "Tox é um novo tipo de programa de troca de mensagens. Simples, seguro e bem projetado. Converse com pessoas que são importantes para você, grátis!"
   },
   "1st-callout": {
     "download": "Baixar Tox",
@@ -11,45 +10,38 @@
   },
   "2nd-callout": {
     "tagline": "O que faz o Tox diferente dos outros?",
-    "lead":
-      "O Tox é feito pelas pessoas que o usam — pessoas que discordam das opções existentes que nos espionam, controlam, censuram e impedem de inovar. Sem interesses corporativos nem agendas ocultas. Apenas um mensageiro simples e seguro que é fácil de usar."
+    "lead": "O Tox é feito pelas pessoas que o usam — pessoas que discordam das opções existentes que nos espionam, controlam, censuram e impedem de inovar. Sem interesses corporativos nem agendas ocultas. Apenas um mensageiro simples e seguro que é fácil de usar."
   },
   "features": {
     "encrypted": {
       "alt": "Ilustração de criptografia",
       "tagline": "Criptografado",
-      "lead":
-        "Tudo que você faz com o Tox é criptografado usando bibliotecas de código-fonte aberto. As únicas pessoas que podem ver suas conversas são as pessoas com quem você está falando."
+      "lead": "Tudo que você faz com o Tox é criptografado usando bibliotecas de código-fonte aberto. As únicas pessoas que podem ver suas conversas são as pessoas com quem você está falando."
     },
     "distributed": {
       "alt": "Ilustração de distribuído",
       "tagline": "Distribuído",
-      "lead":
-        "Tox não tem nenhum servidor central que pode ser invadido, desligado ou forçado a entregar dados — a rede é composta por seus usuários. Diga adeus a paralisações de servidor!"
+      "lead": "Tox não tem nenhum servidor central que pode ser invadido, desligado ou forçado a entregar dados — a rede é composta por seus usuários. Diga adeus a paralisações de servidor!"
     },
     "free": {
       "alt": "Ilustração de grátis e livre",
       "tagline": "Grátis e Livre",
-      "lead":
-        "Tox é software livre. É livre como em liberdade, bem como no preço. Isto significa que o Tox é seu — para usar, modificar e compartilhar — porque Tox é feito por e para os usuários."
+      "lead": "Tox é software livre. É livre como em liberdade, bem como no preço. Isto significa que o Tox é seu — para usar, modificar e compartilhar — porque Tox é feito por e para os usuários."
     },
     "instant-messaging": {
       "alt": "Ilustração de mensagem instantânea",
       "tagline": "Mensagens instantâneas",
-      "lead":
-        "Conversar instantaneamente em todo o mundo com mensagens seguras do Tox."
+      "lead": "Conversar instantaneamente em todo o mundo com mensagens seguras do Tox."
     },
     "groups": {
       "alt": "Ilustração de grupos",
       "tagline": "Batepapo em grupo",
-      "lead":
-        "Converse, ligue e compartilhe arquivos e vídeo com a turma toda nos bate-papos de grupo do Tox."
+      "lead": "Converse, ligue e compartilhe arquivos e vídeo com a turma toda nos bate-papos de grupo do Tox."
     },
     "voice-call": {
       "alt": "Ilustração de chamada de voz",
       "tagline": "Voz",
-      "lead":
-        "Manter contato com amigos e familiares usando as chamadas de voz completamente grátis e criptografadas do Tox."
+      "lead": "Manter contato com amigos e familiares usando as chamadas de voz completamente grátis e criptografadas do Tox."
     },
     "video-call": {
       "alt": "Ilustração de chamada de vídeo",
@@ -64,8 +56,11 @@
     "screen-sharing": {
       "alt": "Ilustração de compartilhamento de tela",
       "tagline": "Compartilhamento de tela",
-      "lead":
-        "Compartilhe sua área de trabalho com os seus amigos com o compartilhamento de tela do Tox."
+      "lead": "Compartilhe sua área de trabalho com os seus amigos com o compartilhamento de tela do Tox."
     }
+  },
+  "featured": {
+    "tagline": "",
+    "lead": ""
   }
 }
