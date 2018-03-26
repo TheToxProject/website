@@ -50,7 +50,13 @@ export class IndexPage extends React.Component {
               tagline={t("indexPage:hero.tagline")}
               lead={t("indexPage:hero.lead")}
             />
-            <div style={styles.buttonsContainer}>
+            <ResponsiveContainer
+              styles={styles.buttonsContainer}
+              mobileStyles={{
+                ...styles.buttonsContainer,
+                flexDirection: "column-reverse"
+              }}
+            >
               <Button
                 to="/webapp"
                 text={t("indexPage:1st-callout.try-the-app")}
@@ -63,7 +69,7 @@ export class IndexPage extends React.Component {
                 buttonStyle={styles.downloadBtn}
                 hoverStyle={styles.btnHover}
               />
-            </div>
+            </ResponsiveContainer>
           </div>
           <ResponsiveContainer
             styles={styles.appPreview}

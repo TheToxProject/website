@@ -35,7 +35,6 @@ const styles = {
     padding: 8
   },
   downloadBtn: {
-    fontWeight: "bold",
     margin: 8
   },
   webappBtn: {
