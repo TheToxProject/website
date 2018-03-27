@@ -1,66 +1,66 @@
 {
   "hero": {
-    "alt": "",
-    "tagline": "",
-    "lead": ""
+    "alt": "Tox brand illustration",
+    "tagline": "A New Kind of Instant Messaging",
+    "lead": "Tox is a new kind of messenger app. Simple, secure and well-designed. Chat with people who matters to you, for free!"
   },
   "1st-callout": {
-    "download": "",
-    "try-the-app": ""
+    "download": "Download Tox",
+    "try-the-app": "Try the web app"
   },
   "2nd-callout": {
-    "tagline": "",
-    "lead": ""
+    "tagline": "What makes Tox different?",
+    "lead": "Tox is made by the people who use it — people fed up with the existing options that spy on us, track us, censor us, and keep us from innovating. There are no corporate interests, and no hidden agendas. Just simple and secure messaging that is easy to use."
   },
   "features": {
     "encrypted": {
-      "alt": "",
-      "tagline": "",
-      "lead": ""
+      "alt": "Encrypted illustration",
+      "tagline": "Encrypted",
+      "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
     },
     "distributed": {
-      "alt": "",
-      "tagline": "",
-      "lead": ""
+      "alt": "Distributed illustration",
+      "tagline": "Distributed",
+      "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
     },
     "free": {
-      "alt": "",
-      "tagline": "",
-      "lead": ""
+      "alt": "Free & libre illustration",
+      "tagline": "Free & Libre",
+      "lead": "Tox is free software. That's free as in freedom, as well as in price. This means Tox is yours — to use, modify, and share — because Tox is made by and for the users."
     },
     "instant-messaging": {
-      "alt": "",
-      "tagline": "",
-      "lead": ""
+      "alt": "Instant messaging illustration",
+      "tagline": "Instant messaging",
+      "lead": "Chat instantly across the globe with Tox's secure messages."
     },
     "groups": {
-      "alt": "",
-      "tagline": "",
-      "lead": ""
+      "alt": "Groups illustration",
+      "tagline": "Group chats",
+      "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
     },
     "voice-call": {
-      "alt": "",
-      "tagline": "",
-      "lead": ""
+      "alt": "Voice call illustration",
+      "tagline": "Voice",
+      "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
     },
     "video-call": {
-      "alt": "",
-      "tagline": "",
-      "lead": ""
+      "alt": "Video call illustration",
+      "tagline": "Video",
+      "lead": "Catch up face to face, over Tox's secure video calls."
     },
     "file-sharing": {
-      "alt": "",
-      "tagline": "",
-      "lead": ""
+      "alt": "File sharing illustration",
+      "tagline": "File sharing",
+      "lead": "Trade files, with no artificial limits or caps."
     },
     "screen-sharing": {
-      "alt": "",
-      "tagline": "",
-      "lead": ""
+      "alt": "Screen sharing illustration",
+      "tagline": "Screen sharing",
+      "lead": "Share your desktop with your friends with Tox's screen sharing."
     }
   },
   "featured": {
-    "tagline": "",
-    "lead": ""
+    "tagline": "They talks about us!",
+    "lead": "Because we merits a bit of promotion 😜"
   }
 }
