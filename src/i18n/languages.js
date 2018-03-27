@@ -1,11 +1,13 @@
 import en from "./en";
 import fr from "./fr";
 import pt from "./pt";
+import ru from "./ru";
 
 const languages = {
   en,
   fr,
-  pt
+  pt,
+  ru
 };
 
 export const languagesInfos = {
@@ -23,6 +25,11 @@ export const languagesInfos = {
     flag: "pt-BR",
     twoLettersCode: "pt",
     name: "Portuguese"
+  },
+  ru: {
+    flag: "ru",
+    twoLettersCode: "ru",
+    name: "Russian"
   }
 };
 
