@@ -15,7 +15,7 @@
   "features": {
     "encrypted": {
       "alt": "Encrypted illustration",
-      "tagline": "Encrypted",
+      "tagline": "Шифрование",
       "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
     },
     "distributed": {
@@ -40,22 +40,22 @@
     },
     "voice-call": {
       "alt": "Voice call illustration",
-      "tagline": "Voice",
+      "tagline": "Аудиозвонки",
       "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
     },
     "video-call": {
       "alt": "Video call illustration",
-      "tagline": "Video",
+      "tagline": "Видеозвонки",
       "lead": "Catch up face to face, over Tox's secure video calls."
     },
     "file-sharing": {
       "alt": "File sharing illustration",
-      "tagline": "File sharing",
+      "tagline": "Обмен файлами",
       "lead": "Trade files, with no artificial limits or caps."
     },
     "screen-sharing": {
       "alt": "Screen sharing illustration",
-      "tagline": "Screen sharing",
+      "tagline": "Демонстрация экрана",
       "lead": "Share your desktop with your friends with Tox's screen sharing."
     }
   },
