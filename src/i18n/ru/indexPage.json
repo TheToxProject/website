@@ -16,7 +16,7 @@
     "encrypted": {
       "alt": "Encrypted illustration",
       "tagline": "Шифрование",
-      "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
+      "lead": "Всё, что вы делаете c Tox, шифруется с помощью библиотек с открытым исходным кодом. Единственные люди, которые могут видеть вашу беседу - это люди, с которыми вы вели эту беседу."
     },
     "distributed": {
       "alt": "Distributed illustration",
