@@ -20,8 +20,8 @@
     },
     "distributed": {
       "alt": "Distributed illustration",
-      "tagline": "Distributed",
-      "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
+      "tagline": "База данных",
+      "lead": "В мессенджере Tox нет центральных серверов, которые могут быть взломаны, закрыты и т.д. — сеть состоит из пользователей. Скажите \"Прощай!\" подающим серверам."
     },
     "free": {
       "alt": "Free & libre illustration",
