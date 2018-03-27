@@ -19,13 +19,15 @@ const styles = {
     display: "flex",
     flexFlow: "column wrap",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    maxWidth: "70%"
   },
   appPreview: {
     display: "flex",
     flexFlow: "column wrap",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    maxWidth: "30%"
   },
   buttonsContainer: {
     display: "flex",
