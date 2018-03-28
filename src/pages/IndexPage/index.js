@@ -7,8 +7,6 @@ import { getFeatures, getFeaturedIns } from "./data";
 // Images.
 import hero from "./../../assets/illustrations/tox-illustration.png";
 import hero2x from "./../../assets/illustrations/tox-illustration@2x.png";
-import screenshot from "../../assets/screens/phone@2x.png";
-import screenshot2x from "../../assets/screens/phone@2x.png";
 
 import Button from "./../../components/Button";
 import Hero from "./../../components/Hero";
