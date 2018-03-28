@@ -2,8 +2,12 @@
   "hero": {
     "alt": "Downloads illustration",
     "tagline": "Скачать Tox",
-    "lead": "Работает на всех популярных платформах."
+    "lead": "Ready to take back your freedom and privacy? Download Tox and escape surveillance right now!"
   },
   "download-for": "Скачать для",
-  "unavailable-platform": "Похоже, вы используете неподдерживаемое устройство/OC. Попробуйте посмотреть в список ниже или отправьте запрос. Если достаточное кол-во пользователей попросит об этом, мы попытаемся портировать Tox для этого устройства."
+  "unavailable-platform": "Похоже, вы используете неподдерживаемое устройство/OC. Попробуйте посмотреть в список ниже или отправьте запрос. Если достаточное кол-во пользователей попросит об этом, мы попытаемся портировать Tox для этого устройства.",
+  "download": {
+    "getItOn": "Download Tox from",
+    "also-available-on": "Also available on..."
+  }
 }
