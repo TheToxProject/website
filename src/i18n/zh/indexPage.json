@@ -36,31 +36,31 @@
     "groups": {
       "alt": "群组插画",
       "tagline": "群组聊天",
-      "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
+      "lead": "与 Tox 的群组成员聊天、呼叫并分享视频和文件。"
     },
     "voice-call": {
-      "alt": "Voice call illustration",
-      "tagline": "Voice",
-      "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
+      "alt": "语音呼叫插图",
+      "tagline": "语音",
+      "lead": "使用 Tox 完全免费加密的语音呼叫与朋友与家人保持联络。"
     },
     "video-call": {
-      "alt": "Video call illustration",
-      "tagline": "Video",
-      "lead": "Catch up face to face, over Tox's secure video calls."
+      "alt": "视频呼叫插图",
+      "tagline": "视频",
+      "lead": "通过 Tox 的加密视频呼叫与朋友面对面沟通。"
     },
     "file-sharing": {
-      "alt": "File sharing illustration",
-      "tagline": "File sharing",
-      "lead": "Trade files, with no artificial limits or caps."
+      "alt": "文件共享插图",
+      "tagline": "文件共享",
+      "lead": "无限制地传输文件。"
     },
     "screen-sharing": {
-      "alt": "Screen sharing illustration",
-      "tagline": "Screen sharing",
-      "lead": "Share your desktop with your friends with Tox's screen sharing."
+      "alt": "屏幕分享插图",
+      "tagline": "屏幕分享",
+      "lead": "使用 Tox 的屏幕分享与您的朋友共享桌面。"
     }
   },
   "featured": {
-    "tagline": "They talks about us!",
-    "lead": "Because we merits a bit of promotion 😜"
+    "tagline": "他们谈论了我们！",
+    "lead": "因为我们值得一点宣传 😜"
   }
 }
