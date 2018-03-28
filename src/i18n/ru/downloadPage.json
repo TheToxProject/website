@@ -5,5 +5,5 @@
     "lead": "Работает на всех популярных платформах."
   },
   "download-for": "Скачать для",
-  "unavailable-platform": "It looks like you use a device/os that we do not support. Try to look at the download list bellow or submit an issue so that we can try to port Tox to your device if enough users ask for it"
+  "unavailable-platform": "Похоже, вы используете неподдерживаемое устройство/OC. Попробуйте посмотреть в список ниже или отправьте запрос. Если достаточное кол-во пользователей попросит об этом, мы попытаемся портировать Tox для этого устройства."
 }
