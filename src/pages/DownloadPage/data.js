@@ -50,12 +50,12 @@ export const DOWNLOADS = {
       {
         type: "direct",
         uri: "https://downloads.tox.chat/linux/deb",
-        format: "deb"
+        format: "Debian (deb)"
       },
       {
         type: "direct",
         uri: "https://downloads.tox.chat/linux/rpm",
-        format: "rpm"
+        format: "Fedora (rpm)"
       },
       {
         type: "store",
@@ -94,18 +94,18 @@ export const DOWNLOADS = {
     links: [
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/windows/nsis",
-        format: "nsis"
+        uri: "https://downloads.tox.chat/windows/x86",
+        format: "32 bits"
       },
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/windows/msi",
-        format: "msi"
+        uri: "https://downloads.tox.chat/windows/x64",
+        format: "64 bits"
       },
       {
         type: "direct",
         uri: "https://downloads.tox.chat/windows/portable",
-        format: "zip"
+        format: "Portable"
       },
       {
         type: "store",

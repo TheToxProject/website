@@ -104,10 +104,25 @@ export class DownloadPage extends React.Component {
                             </Button>
                           );
                         }
-
-                        /**
-                         * TODO: Implement other sort of links too.
-                         */
+                        return null;
+                      })}
+                    </div>
+                    <div style={styles.buttonsDivider} />
+                    <div style={styles.buttonsContainer}>
+                      {downloadLinks.map((link, index) => {
+                        if (link.type === "direct") {
+                          return (
+                            <Button
+                              key={index * 2}
+                              href={link.uri}
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              text={link.format}
+                              buttonStyle={styles.directButton}
+                              //hoverStyle={styles.storeButtonHover}
+                            />
+                          );
+                        }
                         return null;
                       })}
                     </div>
