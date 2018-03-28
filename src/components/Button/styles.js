@@ -13,9 +13,9 @@ const styles = {
     textDecoration: "none",
     fontWeight: "normal",
     fontSize: 18,
-    transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
     paddingLeft: 16,
-    paddingRight: 16
+    paddingRight: 16,
+    transition: "all 0.3s cubic-bezier(.25,.8,.25,1)"
   },
   buttonHover: {
     backgroundColor: Theme.Colors.PRIMARY

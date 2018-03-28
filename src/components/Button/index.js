@@ -15,7 +15,7 @@ export class Button extends React.Component {
     };
   }
 
-  handleHover(e) {
+  handleHover() {
     this.setState({ hover: !this.state.hover });
   }
 
@@ -31,7 +31,7 @@ export class Button extends React.Component {
     } = this.props;
     const { hover } = this.state;
 
-    const btnStyle = hover ? { ...styles.buttonHover, ...hoverStyle } : {};
+    const btnStyle = hover ? { ...styles.buttonHover, ...hoverStyle } : null;
     let style = { ...styles.button, ...buttonStyle, ...btnStyle };
 
     const child = children ? React.Children.only(children) : null;
@@ -39,10 +39,24 @@ export class Button extends React.Component {
 
     const LinkButton = props => {
       if (href) {
-        return <a {...props}>{props.children}</a>;
+        return (
+          <a
+            {...props}
+            onMouseEnter={this.handleHover}
+            onMouseLeave={this.handleHover}
+            style={props.style}
+          >
+            {props.children}
+          </a>
+        );
       } else {
         return (
-          <Link style={props.style} {...props}>
+          <Link
+            {...props}
+            onMouseEnter={this.handleHover}
+            onMouseLeave={this.handleHover}
+            style={props.style}
+          >
             {props.children}
           </Link>
         );
@@ -56,8 +70,6 @@ export class Button extends React.Component {
         target={href ? "_blank" : null}
         rel={href ? "noopener noreferrer" : null}
         style={style}
-        onMouseEnter={this.handleHover}
-        onMouseLeave={this.handleHover}
         onClick={this.props.onClick}
         {...rest}
       >

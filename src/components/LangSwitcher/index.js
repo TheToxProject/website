@@ -48,7 +48,7 @@ export class LangSwitcher extends React.Component {
     });
   }
 
-  handleHover(e) {
+  handleHover() {
     this.setState({ handleHover: !this.state.handleHover });
   }
 

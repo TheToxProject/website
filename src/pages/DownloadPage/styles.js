@@ -11,7 +11,56 @@ const styles = {
     flexFlow: "row wrap",
     justifyContent: "center",
     width: "100%",
-    marginBottom: 36
+    marginBottom: 36,
+    padding: 8
+  },
+  storeButton: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "0",
+    margin: 8,
+    height: 60,
+    backgroundColor: "black",
+    borderRadius: 4,
+    color: "white",
+    textDecoration: "none",
+    transition: "all 280ms ease-in-out"
+  },
+  storeButtonHover: {
+    backgroundColor: Theme.Colors.PRIMARY,
+    color: Theme.Colors.BACKGROUND
+  },
+  storeButtonWrapper: {
+    display: "flex",
+    flexFlow: "row nowrap",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    padding: 8,
+    height: 60,
+    width: "100%"
+  },
+  storeButtonIcon: {
+    width: 36,
+    height: 36,
+    margin: 8
+  },
+  storeButtonTexts: {
+    display: "flex",
+    flexFlow: "column nowrap",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    margin: 8,
+    padding: 2
+  },
+  getItOn: {
+    fontSize: 11
+    //textTransform: "uppercase"
+  },
+  storeName: {
+    margin: 0,
+    fontSize: 20,
+    fontWeight: "bold"
   },
   featuresContainer: {
     display: "flex",
