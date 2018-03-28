@@ -2,8 +2,12 @@
   "hero": {
     "alt": "Illustration de téléchargements",
     "tagline": "Télécharger Tox",
-    "lead": "Fonctionne sur toutes les plateformes populaires."
+    "lead": "Ready to take back your freedom and privacy? Download Tox and escape surveillance right now!"
   },
   "download-for": "Télécharger pour",
-  "unavailable-platform": "Il semble que vous utilisez un appareil ou un système d'exploitation que nous ne supportons pas. Essayez d'autres téléchargements dans la liste ci-dessous ou rapportez nous ce problème afin que nous puissions supporter votre appareil lorsqu'un nombre conséquent d'utilisateurs en font la demande"
+  "unavailable-platform": "Il semble que vous utilisez un appareil ou un système d'exploitation que nous ne supportons pas. Essayez d'autres téléchargements dans la liste ci-dessous ou rapportez nous ce problème afin que nous puissions supporter votre appareil lorsqu'un nombre conséquent d'utilisateurs en font la demande",
+  "download": {
+    "getItOn": "Download Tox from",
+    "also-available-on": "Also available on..."
+  }
 }
