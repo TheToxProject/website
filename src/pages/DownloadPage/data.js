@@ -1,5 +1,12 @@
 import { SystemOS } from "../../components/SystemDetector";
 
+import PlayStoreIcon from "../../assets/icons/google-play.png";
+import AppleIcon from "../../assets/icons/apple.svg";
+import WindowsIcon from "../../assets/icons/windows.svg";
+import FdroidIcon from "../../assets/icons/fdroid.svg";
+import SnapcraftIcon from "../../assets/icons/snapcraft.svg";
+import FalthubIcon from "../../assets/icons/flathub.svg";
+
 export const DOWNLOADS = {
   [SystemOS.ANDROID]: {
     name: "Android",
@@ -7,22 +14,20 @@ export const DOWNLOADS = {
     links: [
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/v0.1.0/android",
+        uri: "https://downloads.tox.chat/android",
         format: "apk"
       },
       {
         type: "store",
         uri: "https://play.google.com/store/apps/details?id=chat.tox.antox",
         name: "Play Store",
-        icon:
-          "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.amz.mshcdn.com%2FK1p5PL4669x6LLyGzxlqe25Xtsc%3D%2Ffit-in%2F1200x9600%2Fhttps%253A%252F%252Fblueprint-api-production.s3.amazonaws.com%252Fuploads%252Fcard%252Fimage%252F475500%252Ff018ae30-f60a-43b7-a3fd-d9acec74849e.png&f=1"
+        icon: PlayStoreIcon
       },
       {
         type: "store",
         uri: "https://f-droid.org/packages/com.zoffcc.applications.trifa/",
         name: "F-Droid",
-        icon:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/F-Droid_Logo_4.svg/1024px-F-Droid_Logo_4.svg.png"
+        icon: FdroidIcon
       }
     ]
   },
@@ -32,9 +37,9 @@ export const DOWNLOADS = {
     links: [
       {
         type: "store",
-        uri: "https://itunes.apple.com/us/app/antidote-for-tox/id933117605",
+        uri: "https://itunes.apple.com/app/antidote-for-tox/id933117605",
         name: "App Store",
-        icon: "http://svgur.com/i/62B.svg"
+        icon: AppleIcon
       }
     ]
   },
@@ -44,25 +49,25 @@ export const DOWNLOADS = {
     links: [
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/v0.1.0/linux/deb",
+        uri: "https://downloads.tox.chat/linux/deb",
         format: "deb"
       },
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/v0.1.0/linux/rpm",
+        uri: "https://downloads.tox.chat/linux/rpm",
         format: "rpm"
       },
       {
         type: "store",
         uri: "https://snapcraft.io/tox",
         name: "Snap Store",
-        icon: "http://svgur.com/i/63D.svg"
+        icon: SnapcraftIcon
       },
       {
         type: "store",
         uri: "https://flathub.org/tox",
         name: "Flatpak Hub",
-        icon: "https://flathub.org/img/logo.svg"
+        icon: FalthubIcon
       }
     ]
   },
@@ -72,14 +77,14 @@ export const DOWNLOADS = {
     links: [
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/v0.1.0/osx",
+        uri: "https://downloads.tox.chat/osx",
         format: "dmg"
       },
       {
         type: "store",
-        uri: "https://itunes.apple.com/us/app/antidote-for-tox/id933117605",
-        name: "App Store",
-        icon: "http://svgur.com/i/62B.svg"
+        uri: "https://itunes.apple.com/app/tox-desktop",
+        name: "Mac App Store",
+        icon: AppleIcon
       }
     ]
   },
@@ -89,18 +94,24 @@ export const DOWNLOADS = {
     links: [
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/v0.1.0/windows/nsis",
+        uri: "https://downloads.tox.chat/windows/nsis",
         format: "nsis"
       },
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/v0.1.0/windows/msi",
+        uri: "https://downloads.tox.chat/windows/msi",
         format: "msi"
       },
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/v0.1.0/windows/portable",
+        uri: "https://downloads.tox.chat/windows/portable",
         format: "zip"
+      },
+      {
+        type: "store",
+        uri: "https://www.microsoft.com/store/p/tox",
+        name: "Windows Store",
+        icon: WindowsIcon
       }
     ]
   },
