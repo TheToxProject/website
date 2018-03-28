@@ -10,6 +10,10 @@ import Routes from "../src/routes";
 import i18n from "../src/i18n/i18n";
 
 import Backend from "i18next-node-fs-backend";
+
+const PORT = process.env.PORT || 3000;
+const STATIC_PATH = path.resolve(__dirname);
+
 const i18nextMiddleware = require("i18next-express-middleware");
 const app = express();
 
@@ -40,15 +44,12 @@ export const start = () => {
         app
           .disable("x-powered-by")
           .use(i18nextMiddleware.handle(i18n))
-          .use(express.static("/home/skyzohkey/Dev/React/Tox/website/build"))
+          .use(express.static(STATIC_PATH))
           .get("*", handleRequests);
 
-        app.listen(3000);
-        console.log("Server listening on port http://127.0.0.1:3000 !");
-        console.log(
-          "Serving assets from: " +
-            "/home/skyzohkey/Dev/React/Tox/website/build"
-        );
+        app.listen(PORT);
+        console.log(`Server listening on port http://127.0.0.1:${PORT} !`);
+        console.log(`Serving assets from ${STATIC_PATH}.`);
       }
     );
 };
@@ -65,8 +66,6 @@ export const handleRequests = (req, res) => {
       </StaticRouter>
     </I18nextProvider>
   );
-
-  console.log(markup);
 
   if (context.status === 404) {
     res.status(404);
@@ -87,10 +86,6 @@ export const handleRequests = (req, res) => {
   });
 
   const initialLanguage = req.i18n.language;
-
   const template = templateFn(markup, {}, initialI18nStore, initialLanguage);
-
   res.status(200).send(template);
 };
-
-////////////////////// ---[|]--- //////////////////////

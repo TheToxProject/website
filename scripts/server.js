@@ -6,7 +6,7 @@ const MemoryFS = require("memory-fs");
 const serverConfig = require("../config/webpack.config.server.prod.js");
 const fs = new MemoryFS();
 
-const outputErrors = (err, stats) => {
+/*const outputErrors = (err, stats) => {
   if (err) {
     console.error(err.stack || err);
     if (err.details) {
@@ -31,13 +31,15 @@ const serverCompiler = webpack(serverConfig);
 serverCompiler.outputFileSystem = fs;
 
 serverCompiler.run((err, stats) => {
-  outputErrors(err, stats);
-  const contents = fs.readFileSync(
-    path.resolve(serverConfig.output.path, serverConfig.output.filename),
-    "utf8"
-  );
+  outputErrors(err, stats);*/
 
-  console.log("Starting server...");
-  const server = requireFromString(contents, serverConfig.output.filename);
-  server.start();
-});
+console.log(path.resolve(serverConfig.output.path, "server", "index.js"));
+const contents = fs.readFileSync(
+  path.resolve(serverConfig.output.path, "server", "index.js"),
+  "utf8"
+);
+
+console.log("Starting server...");
+const server = requireFromString(contents, serverConfig.output.filename);
+server.start();
+//});

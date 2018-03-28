@@ -22,14 +22,12 @@ module.exports = {
   externals: [nodeExternals()],
   entry: [
     require.resolve("./polyfills"),
-    path.resolve(__dirname, "..", "server", "index.js")
+    path.resolve(__dirname, "..", "src", "server", "index.js")
   ],
   output: {
     path: paths.appBuild,
-    filename: "server.js",
-    publicPath: publicPath,
-    library: "app",
-    libraryTarget: "commonjs2"
+    filename: "ssr-server.js",
+    publicPath: publicPath
   },
   resolve: {
     extensions: [".web.js", ".mjs", ".js", ".json", ".web.jsx", ".jsx"],
