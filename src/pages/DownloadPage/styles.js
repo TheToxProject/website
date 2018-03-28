@@ -71,16 +71,27 @@ const styles = {
   screenshot: {
     width: "60%"
   },
+  buttonsDivider: {
+    margin: "8px auto",
+    height: 2,
+    width: "80%",
+    backgroundColor: Theme.Colors.SECONDARY_BACKGROUND
+  },
   buttonsContainer: {
     display: "flex",
     flexFlow: "row wrap",
     justifyContent: "center",
     width: "100%",
-    marginBottom: 36,
     padding: 8
+  },
+  directButton: {
+    margin: 8,
+    flex: "none",
+    backgroundColor: "black"
   },
   storeButton: {
     display: "flex",
+    flex: "none",
     justifyContent: "center",
     alignItems: "center",
     padding: "0",
@@ -88,7 +99,7 @@ const styles = {
     height: 60,
     maxHeight: 60,
     minWidth: 210,
-    maxWidth: 250,
+    maxWidth: 280,
     backgroundColor: "black",
     borderRadius: 4,
     color: "white",
