@@ -6,7 +6,7 @@
   },
   "1st-callout": {
     "download": "Скачать Tox",
-    "try-the-app": "Опроб веб-прилож"
+    "try-the-app": "Веб-приложение"
   },
   "2nd-callout": {
     "tagline": "Чем Tox отличается от других мессенджеров?",
@@ -30,7 +30,7 @@
     },
     "instant-messaging": {
       "alt": "Instant messaging illustration",
-      "tagline": "Обмен мгновенными сообщениями",
+      "tagline": "Обмен сообщениями",
       "lead": "Chat instantly across the globe with Tox's secure messages."
     },
     "groups": {
