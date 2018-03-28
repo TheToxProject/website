@@ -7,6 +7,8 @@ import { getFeatures, getFeaturedIns } from "./data";
 // Images.
 import hero from "./../../assets/illustrations/tox-illustration.png";
 import hero2x from "./../../assets/illustrations/tox-illustration@2x.png";
+import screenshot from "../../assets/screens/phone@2x.png";
+import screenshot2x from "../../assets/screens/phone@2x.png";
 
 import Button from "./../../components/Button";
 import Hero from "./../../components/Hero";
@@ -69,16 +71,6 @@ export class IndexPage extends React.Component {
               />
             </ResponsiveContainer>
           </div>
-          <ResponsiveContainer
-            styles={styles.appPreview}
-            mobileStyles={{ display: "none" }}
-          >
-            <img
-              src="https://i.imgur.com/TWRVCDg.png"
-              style={{ width: 292, height: 571 }}
-              alt="Tox apps preview desktop & mobile"
-            />
-          </ResponsiveContainer>
         </div>
         <div style={styles.featuresContainer}>
           <ResponsiveContainer

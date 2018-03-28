@@ -4,7 +4,72 @@ const styles = {
   pageWrapper: {
     margin: "36px 25px 0 25px",
     textAlign: "center",
-    width: "100%"
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    flex: "1 1 0%",
+    overflowX: "hidden"
+  },
+  container: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    flex: "1 1 0%"
+  },
+  downloadsWrapper: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    flex: "1 1 0%",
+    backgroundColor: Theme.Colors.SECONDARY_BACKGROUND
+  },
+  downloads: {
+    display: "flex",
+    flexFlow: "row wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    maxWidth: Theme.Constants.MAX_WIDTH
+    //borderBottom: `1px solid ${Theme.Colors.SECONDARY_BACKGROUND}`
+  },
+  otherDownloads: {
+    display: "flex",
+    flexFlow: "row wrap",
+    justifyContent: "center",
+    alignItems: "stretch",
+    margin: "36px 25px",
+    width: "100%",
+    maxWidth: Theme.Constants.MAX_WIDTH + 100,
+    padding: 8
+  },
+  alsoAvailableOn: {
+    marginTop: 36,
+    marginBottom: 0
+  },
+  downloadContainer: {
+    flex: 1,
+    display: "flex",
+    flexFlow: "column nowrap",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    margin: 8,
+    padding: "12px 16px",
+    borderRadius: 6,
+    backgroundColor: Theme.Colors.BACKGROUND,
+    boxShadow:
+      "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
+  },
+  left: {
+    width: "40%"
+  },
+  screenshot: {
+    width: "60%"
   },
   buttonsContainer: {
     display: "flex",
@@ -21,6 +86,9 @@ const styles = {
     padding: "0",
     margin: 8,
     height: 60,
+    maxHeight: 60,
+    width: 210,
+    maxWidth: 210,
     backgroundColor: "black",
     borderRadius: 4,
     color: "white",
