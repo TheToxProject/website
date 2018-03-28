@@ -1,12 +1,12 @@
 {
   "hero": {
     "alt": "Tox brand illustration",
-    "tagline": "Новый вид мгновенных сообщений",
+    "tagline": "Новый вид обмена мгновенными сообщениями",
     "lead": "Tox - мессенджер нового поколения. Простой, безопасный и хорошо продуманный. Общайтесь с близкими людьми абсолютно бесплатно!"
   },
   "1st-callout": {
     "download": "Скачать Tox",
-    "try-the-app": "Опроб веб-прилож"
+    "try-the-app": "Веб-приложение"
   },
   "2nd-callout": {
     "tagline": "Чем Tox отличается от других мессенджеров?",
@@ -15,13 +15,13 @@
   "features": {
     "encrypted": {
       "alt": "Encrypted illustration",
-      "tagline": "Encrypted",
-      "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
+      "tagline": "Шифрование",
+      "lead": "Всё, что вы делаете c Tox, шифруется с помощью библиотек с открытым исходным кодом. Единственные люди, которые могут видеть вашу беседу - это люди, с которыми вы вели эту беседу."
     },
     "distributed": {
       "alt": "Distributed illustration",
-      "tagline": "Distributed",
-      "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
+      "tagline": "База данных",
+      "lead": "В мессенджере Tox нет центральных серверов, которые могут быть взломаны, закрыты и т.д. — сеть состоит из пользователей. Скажите \"Прощай!\" подающим серверам."
     },
     "free": {
       "alt": "Free & libre illustration",
@@ -30,32 +30,32 @@
     },
     "instant-messaging": {
       "alt": "Instant messaging illustration",
-      "tagline": "Instant messaging",
+      "tagline": "Обмен сообщениями",
       "lead": "Chat instantly across the globe with Tox's secure messages."
     },
     "groups": {
       "alt": "Groups illustration",
-      "tagline": "Group chats",
+      "tagline": "Групповой чат",
       "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
     },
     "voice-call": {
       "alt": "Voice call illustration",
-      "tagline": "Voice",
+      "tagline": "Аудиозвонки",
       "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
     },
     "video-call": {
       "alt": "Video call illustration",
-      "tagline": "Video",
+      "tagline": "Видеозвонки",
       "lead": "Catch up face to face, over Tox's secure video calls."
     },
     "file-sharing": {
       "alt": "File sharing illustration",
-      "tagline": "File sharing",
+      "tagline": "Обмен файлами",
       "lead": "Trade files, with no artificial limits or caps."
     },
     "screen-sharing": {
       "alt": "Screen sharing illustration",
-      "tagline": "Screen sharing",
+      "tagline": "Демонстрация экрана",
       "lead": "Share your desktop with your friends with Tox's screen sharing."
     }
   },
