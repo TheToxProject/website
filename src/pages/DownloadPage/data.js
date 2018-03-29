@@ -1,3 +1,4 @@
+import { FaLinux, FaWindows, FaApple, FaAndroid } from "react-icons/lib/fa";
 import { SystemOS } from "../../components/SystemDetector";
 
 import PlayStoreIcon from "../../assets/icons/google-play.png";
@@ -10,6 +11,7 @@ import FalthubIcon from "../../assets/icons/flathub.svg";
 export const DOWNLOADS = {
   [SystemOS.ANDROID]: {
     name: "Android",
+    icon: FaAndroid,
     screenshot: "",
     links: [
       {
@@ -33,6 +35,7 @@ export const DOWNLOADS = {
   },
   [SystemOS.IOS]: {
     name: "iPhone",
+    icon: FaApple,
     screenshot: "",
     links: [
       {
@@ -45,6 +48,7 @@ export const DOWNLOADS = {
   },
   [SystemOS.LINUX]: {
     name: "Linux",
+    icon: FaLinux,
     screenshot: "",
     links: [
       {
@@ -73,6 +77,7 @@ export const DOWNLOADS = {
   },
   [SystemOS.MACOSX]: {
     name: "Mac OSX",
+    icon: FaApple,
     screenshot: "",
     links: [
       {
@@ -90,6 +95,7 @@ export const DOWNLOADS = {
   },
   [SystemOS.WINDOWS]: {
     name: "Windows",
+    icon: FaWindows,
     screenshot: "",
     links: [
       {
@@ -122,6 +128,7 @@ export const DOWNLOADS = {
     name: "Sailfish"
   },
   [SystemOS.WINDOWS_PHONE]: {
-    name: "Windows Phone"
+    name: "Windows Phone",
+    icon: FaWindows
   }
 };
