@@ -103,37 +103,18 @@ export class IndexPage extends React.Component {
             styles={styles.featuresWrapper}
             mobileStyles={styles.featuresWrapperMobile}
           >
-            {features.messaging
-              .slice(0, 3)
-              .map((feature, index) => (
-                <Feature
-                  key={index}
-                  style={styles.feature}
-                  image={feature.image}
-                  image_2x={feature.image_2x}
-                  alt={feature.alt}
-                  tagline={feature.tagline}
-                  lead={feature.lead}
-                />
-              ))}
-          </ResponsiveContainer>
-          <ResponsiveContainer
-            styles={styles.featuresWrapper}
-            mobileStyles={styles.featuresWrapperMobile}
-          >
-            {features.messaging
-              .slice(3, 6)
-              .map((feature, index) => (
-                <Feature
-                  key={index}
-                  style={styles.feature}
-                  image={feature.image}
-                  image_2x={feature.image_2x}
-                  alt={feature.alt}
-                  tagline={feature.tagline}
-                  lead={feature.lead}
-                />
-              ))}
+            {features.messaging.map((feature, index) => (
+              <Feature
+                key={index}
+                style={styles.feature}
+                mobileStyles={styles.featureMobile}
+                image={feature.image}
+                image_2x={feature.image_2x}
+                alt={feature.alt}
+                tagline={feature.tagline}
+                lead={feature.lead}
+              />
+            ))}
           </ResponsiveContainer>
         </div>
         <div style={styles.featuredInContainer}>
