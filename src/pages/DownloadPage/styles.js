@@ -50,7 +50,8 @@ const styles = {
   },
   alsoAvailableOn: {
     marginTop: 36,
-    marginBottom: 0
+    marginBottom: 0,
+    padding: "0 16px"
   },
   downloadContainer: {
     flex: 1,
@@ -85,9 +86,18 @@ const styles = {
     padding: 8
   },
   directButton: {
-    margin: 8,
+    margin: 4,
     flex: "none",
-    backgroundColor: "black"
+    backgroundColor: "none",
+    fontSize: 14,
+    color: Theme.Colors.PRIMARY
+  },
+  directButtonHover: {
+    margin: 4,
+    flex: "none",
+    backgroundColor: "none",
+    //fontWeight: "bold"
+    textDecoration: "underline"
   },
   storeButton: {
     display: "flex",

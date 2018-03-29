@@ -107,7 +107,6 @@ export class DownloadPage extends React.Component {
                         return null;
                       })}
                     </div>
-                    <div style={styles.buttonsDivider} />
                     <div style={styles.buttonsContainer}>
                       {downloadLinks.map((link, index) => {
                         if (link.type === "direct") {
@@ -119,7 +118,7 @@ export class DownloadPage extends React.Component {
                               target="_blank"
                               text={link.format}
                               buttonStyle={styles.directButton}
-                              //hoverStyle={styles.storeButtonHover}
+                              hoverStyle={styles.directButtonHover}
                             />
                           );
                         }
