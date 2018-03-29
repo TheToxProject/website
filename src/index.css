@@ -27,7 +27,10 @@ h6 {
 }
 
 a {
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s,
+    border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s,
+    text-decoration 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
 
 img {
