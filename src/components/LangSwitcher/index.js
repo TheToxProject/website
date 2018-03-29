@@ -55,7 +55,6 @@ export class LangSwitcher extends React.Component {
   changeLanguage(lang) {
     const i18n = getI18n();
     i18n.changeLanguage(lang);
-    console.log(lang, i18n.language, i18n.languages);
     this.setState({ lang });
     this.toggleSwitch();
   }
