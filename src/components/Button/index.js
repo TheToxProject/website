@@ -4,6 +4,22 @@ import { Link } from "react-router-dom";
 
 import styles from "./styles";
 
+const LinkButton = props => {
+  if (props.href) {
+    return (
+      <a {...props} style={props.style}>
+        {props.children}
+      </a>
+    );
+  } else {
+    return (
+      <Link {...props} style={props.style}>
+        {props.children}
+      </Link>
+    );
+  }
+};
+
 export class Button extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -27,41 +43,17 @@ export class Button extends React.Component {
       href,
       buttonStyle,
       hoverStyle,
+      style,
       ...rest
     } = this.props;
     const { hover } = this.state;
 
-    const btnStyle = hover ? { ...styles.buttonHover, ...hoverStyle } : null;
-    let style = { ...styles.button, ...buttonStyle, ...btnStyle };
+    const hoveredStyle = hover
+      ? { ...styles.buttonHover, ...hoverStyle }
+      : null;
 
     const child = children ? React.Children.only(children) : null;
     const buttonContent = child == null ? text : child;
-
-    const LinkButton = props => {
-      if (href) {
-        return (
-          <a
-            {...props}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHover}
-            style={props.style}
-          >
-            {props.children}
-          </a>
-        );
-      } else {
-        return (
-          <Link
-            {...props}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHover}
-            style={props.style}
-          >
-            {props.children}
-          </Link>
-        );
-      }
-    };
 
     return (
       <LinkButton
@@ -69,7 +61,9 @@ export class Button extends React.Component {
         href={href}
         target={href ? "_blank" : null}
         rel={href ? "noopener noreferrer" : null}
-        style={style}
+        style={{ ...styles.button, ...buttonStyle, ...hoveredStyle }}
+        onMouseEnter={this.handleHover}
+        onMouseLeave={this.handleHover}
         onClick={this.props.onClick}
         {...rest}
       >
