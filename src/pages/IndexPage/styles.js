@@ -83,9 +83,12 @@ const styles = {
     padding: 12
   },
   feature: {
-    //flex: 1,
     margin: 12,
-    flex: "1"
+    flex: "1 1 30%",
+    width: "33%"
+  },
+  featureMobile: {
+    flex: 1
   },
   darkContainer: {
     display: "flex",

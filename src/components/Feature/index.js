@@ -2,13 +2,25 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import styles from "./styles";
+import ResponsiveContainer from "../ResponsiveContainer";
 
 export class Feature extends React.Component {
   render() {
-    const { image, image_2x, alt, tagline, lead, style } = this.props;
+    const {
+      image,
+      image_2x,
+      alt,
+      tagline,
+      lead,
+      style,
+      mobileStyles
+    } = this.props;
 
     return (
-      <div style={{ ...styles.featureContainer, ...style }}>
+      <ResponsiveContainer
+        styles={{ ...styles.featureContainer, ...style }}
+        mobileStyles={{ ...mobileStyles }}
+      >
         <img
           src={image}
           srcSet={`${image_2x} 2x`}
@@ -17,7 +29,7 @@ export class Feature extends React.Component {
         />
         <h2 style={styles.tagline}>{tagline}</h2>
         <p style={styles.lead}>{lead}</p>
-      </div>
+      </ResponsiveContainer>
     );
   }
 }

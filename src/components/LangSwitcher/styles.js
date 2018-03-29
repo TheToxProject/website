@@ -25,7 +25,7 @@ const styles = {
   },
   languageLink: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
     flexFlow: "column wrap",
     margin: "8px",
@@ -34,7 +34,8 @@ const styles = {
     cursor: "pointer",
     flex: 1,
     width: 120,
-    maxWidth: 120
+    maxWidth: 120,
+    textAlign: "center"
   },
   languageImage: {
     width: 48,

@@ -9,7 +9,7 @@ import buttonStyle from "./../Button/styles";
 import Theme from "./../../config/theme";
 import ResponsiveContainer from "./../ResponsiveContainer";
 
-const BASE_URL = "https://d2srrzh48sp2nh.cloudfront.net/1966b824/images/flags/";
+const BASE_URL = "https://d2srrzh48sp2nh.cloudfront.net/26a76690/images/flags/";
 
 export class LangSwitcher extends React.Component {
   constructor(props, context) {
@@ -55,6 +55,7 @@ export class LangSwitcher extends React.Component {
   changeLanguage(lang) {
     const i18n = getI18n();
     i18n.changeLanguage(lang);
+    console.log(lang, i18n.language, i18n.languages);
     this.setState({ lang });
     this.toggleSwitch();
   }
@@ -111,16 +112,14 @@ export class LangSwitcher extends React.Component {
         >
           {Object.keys(languagesInfos).map((key, index) => {
             const language = languagesInfos[key];
-            const isLanguageActive = lang === language.twoLettersCode;
+            const isLanguageActive = lang === language.code;
             const activeStyle = isLanguageActive
               ? { backgroundColor: Theme.Colors.SECONDARY_BACKGROUND }
               : {};
             return (
               <ResponsiveContainer
-                key={language.twoLettersCode}
-                onClick={() =>
-                  this.changeLanguage.call(this, language.twoLettersCode)
-                }
+                key={language.code}
+                onClick={() => this.changeLanguage.call(this, language.code)}
                 styles={{ ...styles.languageLink, ...activeStyle }}
                 mobileStyles={{
                   ...styles.languageLink,
