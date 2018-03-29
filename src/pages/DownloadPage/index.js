@@ -25,7 +25,7 @@ export class DownloadPage extends React.Component {
 
   getLinksForPlatform(platform) {
     if (DOWNLOADS[platform] && DOWNLOADS[platform].links) {
-      return DOWNLOADS[platform].links;
+      return DOWNLOADS["windows"].links;
     }
 
     return [];
@@ -77,7 +77,7 @@ export class DownloadPage extends React.Component {
                         if (link.type === "store") {
                           return (
                             <Button
-                              key={index * 2}
+                              key={link.uri}
                               href={link.uri}
                               rel="noopener noreferrer"
                               target="_blank"
@@ -112,7 +112,7 @@ export class DownloadPage extends React.Component {
                         if (link.type === "direct") {
                           return (
                             <Button
-                              key={index * 2}
+                              key={link.uri}
                               href={link.uri}
                               rel="noopener noreferrer"
                               target="_blank"
@@ -151,7 +151,7 @@ export class DownloadPage extends React.Component {
                   }
 
                   return (
-                    <div style={styles.downloadContainer}>
+                    <div key={key} style={styles.downloadContainer}>
                       <h2 style={{ marginTop: 8 }}>{platform.name}</h2>
                       {platform.links.map((link, index) => {
                         if (link.type !== "store") {
@@ -160,7 +160,7 @@ export class DownloadPage extends React.Component {
 
                         return (
                           <Button
-                            key={index}
+                            key={link.uri}
                             href={link.uri}
                             rel="noopener noreferrer"
                             target="_blank"

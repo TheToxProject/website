@@ -38,8 +38,8 @@ export class Hero extends React.Component {
 }
 
 Hero.propTypes = {
-  image: PropTypes.string.isRequired,
-  image_2x: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  image_2x: PropTypes.string,
   alt: PropTypes.string.isRequired,
   tagline: PropTypes.string.isRequired,
   lead: PropTypes.string.isRequired

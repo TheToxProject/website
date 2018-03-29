@@ -15,7 +15,8 @@ const styles = {
     fontSize: 18,
     paddingLeft: 16,
     paddingRight: 16,
-    transition: "all 0.3s cubic-bezier(.25,.8,.25,1)"
+    transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
+    userSelect: "none"
   },
   buttonHover: {
     backgroundColor: Theme.Colors.PRIMARY

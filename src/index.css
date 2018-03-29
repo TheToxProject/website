@@ -26,6 +26,17 @@ h6 {
   color: #2d383e;
 }
 
+a {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  user-drag: none;
+}
+
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
