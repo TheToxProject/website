@@ -30,13 +30,13 @@
     },
     "instant-messaging": {
       "alt": "Instant messaging illustration",
-      "tagline": "Обмен сообщениями",
+      "tagline": "Обмен мгновенными сообщениями",
       "lead": "Chat instantly across the globe with Tox's secure messages."
     },
     "groups": {
       "alt": "Groups illustration",
       "tagline": "Групповой чат",
-      "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
+      "lead": "Общайтесь, звоните, делитесь видео и файлами со всей бандой в групповом чате Tox."
     },
     "voice-call": {
       "alt": "Voice call illustration",
@@ -51,16 +51,16 @@
     "file-sharing": {
       "alt": "File sharing illustration",
       "tagline": "Обмен файлами",
-      "lead": "Trade files, with no artificial limits or caps."
+      "lead": "Обменивайтесь файлами, без каких-либо ограничений."
     },
     "screen-sharing": {
       "alt": "Screen sharing illustration",
       "tagline": "Демонстрация экрана",
-      "lead": "Share your desktop with your friends with Tox's screen sharing."
+      "lead": "Делитесь своим рабочим столом с друзьями с помощью «Демонстрации экрана» в Tox."
     }
   },
   "featured": {
-    "tagline": "They talks about us!",
-    "lead": "Because we merits a bit of promotion 😜"
+    "tagline": "Они говорят о нас!",
+    "lead": "Потому что мы заслужили немного продвижения 😜"
   }
 }
