@@ -118,33 +118,37 @@ export class IndexPage extends React.Component {
             ))}
           </ResponsiveContainer>
         </div>
-        <ResponsiveContainer
-          styles={{
-            ...styles.buttonsContainer,
-            backgroundColor: Theme.Colors.HEADER
-          }}
-          mobileStyles={{
-            ...styles.buttonsContainer,
-            flexDirection: "column-reverse",
-            alignItems: "center",
-            backgroundColor: Theme.Colors.HEADER
-          }}
-        >
-          <Button
-            key={"2nd-callout-webapp"}
-            to="/webapp"
-            text={t("indexPage:1st-callout.try-the-app")}
-            buttonStyle={styles.downloadBtn}
-            hoverStyle={styles.btnHover}
-          />
-          <Button
-            key={"2nd-callout-download"}
-            to="/download"
-            text={t("indexPage:1st-callout.download")}
-            buttonStyle={styles.webappBtn}
-            hoverStyle={styles.btnHover}
-          />
-        </ResponsiveContainer>
+        <div style={styles.callout2nd}>
+          <p style={styles.callout2ndText}>{t("downloadPage:hero.lead")}</p>
+          <ResponsiveContainer
+            styles={{
+              ...styles.buttonsContainer
+            }}
+            mobileStyles={{
+              ...styles.buttonsContainer,
+              flexDirection: "column-reverse",
+              alignItems: "center"
+            }}
+          >
+            <Button
+              key={"2nd-callout-webapp"}
+              to="/webapp"
+              text={t("indexPage:1st-callout.try-the-app")}
+              buttonStyle={{
+                ...styles.downloadBtn,
+                backgroundColor: "rgba(0,0,0,.25)"
+              }}
+              hoverStyle={styles.btnHover}
+            />
+            <Button
+              key={"2nd-callout-download"}
+              to="/download"
+              text={t("indexPage:1st-callout.download")}
+              buttonStyle={{ ...styles.webappBtn, border: "none" }}
+              hoverStyle={styles.btnHover}
+            />
+          </ResponsiveContainer>
+        </div>
         <div style={styles.featuredInContainer}>
           <ResponsiveContainer
             styles={styles.featuredInWrapper}

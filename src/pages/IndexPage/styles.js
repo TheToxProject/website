@@ -119,6 +119,22 @@ const styles = {
     marginBottom: 0,
     lineHeight: 1.6
   },
+  callout2nd: {
+    display: "flex",
+    flexFlow: "column wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    padding: "8px 25px",
+    backgroundColor: Theme.Colors.HEADER
+  },
+  callout2ndText: {
+    fontSize: 20,
+    color: Theme.Colors.BACKGROUND,
+    marginTop: 24,
+    marginBottom: 8,
+    lineHeight: 1.6
+  },
   featuredInContainer: {
     display: "flex",
     flexFlow: "column wrap",
