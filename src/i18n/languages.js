@@ -2,34 +2,41 @@ import en from "./en";
 import fr from "./fr";
 import pt from "./pt";
 import ru from "./ru";
+import zhCN from "./zh-CN";
 
 const languages = {
   en,
   fr,
   pt,
-  ru
+  ru,
+  "zh-CN": zhCN
 };
 
 export const languagesInfos = {
   en: {
     flag: "en",
-    twoLettersCode: "en",
+    code: "en",
     name: "English"
   },
   fr: {
     flag: "fr",
-    twoLettersCode: "fr",
+    code: "fr",
     name: "French"
   },
   pt: {
     flag: "pt-BR",
-    twoLettersCode: "pt",
+    code: "pt",
     name: "Portuguese"
   },
   ru: {
     flag: "ru",
-    twoLettersCode: "ru",
+    code: "ru",
     name: "Russian"
+  },
+  "zh-CN": {
+    flag: "zh-CN",
+    code: "zh-CN",
+    name: "Chinese Simplified"
   }
 };
 
