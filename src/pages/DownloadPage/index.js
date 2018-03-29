@@ -25,7 +25,7 @@ export class DownloadPage extends React.Component {
 
   getLinksForPlatform(platform) {
     if (DOWNLOADS[platform] && DOWNLOADS[platform].links) {
-      return DOWNLOADS["windows"].links;
+      return DOWNLOADS[platform].links;
     }
 
     return [];
