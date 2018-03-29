@@ -1,19 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-/*import {
-  FaLinux,
-  FaWindows,
-  FaApple,
-  FaAndroid,
-  FaInternetExplorer
-} from "react-icons/lib/fa";*/
 
 import styles from "./styles";
 import Button from "../../components/Button";
+import StoreButton from "../../components/StoreButton";
 import Hero from "../../components/Hero";
 import SystemDetector from "../../components/SystemDetector";
 import ResponsiveContainer from "../../components/ResponsiveContainer";
-//import Theme from "../../config/theme";
+import Theme from "../../config/theme";
 
 import { DOWNLOADS } from "./data";
 import screenshot from "../../assets/screens/multi-devices.png";
@@ -29,6 +23,14 @@ export class DownloadPage extends React.Component {
     }
 
     return [];
+  }
+
+  getIconForPlatform(platform) {
+    if (DOWNLOADS[platform] && DOWNLOADS[platform].icon) {
+      return DOWNLOADS[platform].icon;
+    }
+
+    return null;
   }
 
   render() {
@@ -76,32 +78,13 @@ export class DownloadPage extends React.Component {
                       {downloadLinks.map((link, index) => {
                         if (link.type === "store") {
                           return (
-                            <Button
+                            <StoreButton
                               key={link.uri}
-                              href={link.uri}
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              buttonStyle={styles.storeButton}
-                              hoverStyle={styles.storeButtonHover}
-                            >
-                              <div style={styles.storeButtonWrapper}>
-                                <img
-                                  src={link.icon}
-                                  style={styles.storeButtonIcon}
-                                  alt={`${t("downloadPage:download.getItOn")} ${
-                                    link.name
-                                  }`}
-                                />
-                                <div style={styles.storeButtonTexts}>
-                                  <span style={styles.getItOn}>
-                                    {t("downloadPage:download.getItOn")}
-                                  </span>
-                                  <span style={styles.storeName}>
-                                    {link.name}
-                                  </span>
-                                </div>
-                              </div>
-                            </Button>
+                              uri={link.uri}
+                              icon={link.icon}
+                              name={link.name}
+                              getItOn={t("downloadPage:download.getItOn")}
+                            />
                           );
                         }
                         return null;
@@ -152,39 +135,27 @@ export class DownloadPage extends React.Component {
 
                   return (
                     <div key={key} style={styles.downloadContainer}>
-                      <h2 style={{ marginTop: 8 }}>{platform.name}</h2>
+                      <h2 style={styles.downloadTitle}>
+                        {platform.icon({
+                          size: 20,
+                          color: Theme.Colors.HEADER,
+                          style: { marginRight: 8, lineHeight: 18 }
+                        })}
+                        {platform.name}
+                      </h2>
                       {platform.links.map((link, index) => {
                         if (link.type !== "store") {
                           return null;
                         }
 
                         return (
-                          <Button
+                          <StoreButton
                             key={link.uri}
-                            href={link.uri}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            buttonStyle={styles.storeButton}
-                            hoverStyle={styles.storeButtonHover}
-                          >
-                            <div style={styles.storeButtonWrapper}>
-                              <img
-                                src={link.icon}
-                                style={styles.storeButtonIcon}
-                                alt={`${t("downloadPage:download.getItOn")} ${
-                                  link.name
-                                }`}
-                              />
-                              <div style={styles.storeButtonTexts}>
-                                <span style={styles.getItOn}>
-                                  {t("downloadPage:download.getItOn")}
-                                </span>
-                                <span style={styles.storeName}>
-                                  {link.name}
-                                </span>
-                              </div>
-                            </div>
-                          </Button>
+                            uri={link.uri}
+                            icon={link.icon}
+                            name={link.name}
+                            getItOn={t("downloadPage:download.getItOn")}
+                          />
                         );
                       })}
                     </div>
