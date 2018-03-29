@@ -15,7 +15,7 @@ export const DOWNLOADS = {
       {
         type: "direct",
         uri: "https://downloads.tox.chat/android",
-        format: "apk"
+        format: "Android package (.apk)"
       },
       {
         type: "store",
@@ -50,12 +50,12 @@ export const DOWNLOADS = {
       {
         type: "direct",
         uri: "https://downloads.tox.chat/linux/deb",
-        format: "Debian (deb)"
+        format: "Debian package (.deb)"
       },
       {
         type: "direct",
         uri: "https://downloads.tox.chat/linux/rpm",
-        format: "Fedora (rpm)"
+        format: "Fedora package (.rpm)"
       },
       {
         type: "store",
@@ -78,7 +78,7 @@ export const DOWNLOADS = {
       {
         type: "direct",
         uri: "https://downloads.tox.chat/osx",
-        format: "dmg"
+        format: "Mac app (.dmg)"
       },
       {
         type: "store",
@@ -94,18 +94,18 @@ export const DOWNLOADS = {
     links: [
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/windows/x86",
-        format: "32 bits"
+        uri: "https://downloads.tox.chat/windows/nsis",
+        format: "Windows installer (.nsis)"
       },
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/windows/x64",
-        format: "64 bits"
+        uri: "https://downloads.tox.chat/windows/exe",
+        format: "Windows installer (.exe)"
       },
       {
         type: "direct",
         uri: "https://downloads.tox.chat/windows/portable",
-        format: "Portable"
+        format: "Portable app (.exe)"
       },
       {
         type: "store",

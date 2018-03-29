@@ -40,7 +40,10 @@ export class IndexPage extends React.Component {
           <meta property="og:description" content={t("indexPage:hero.lead")} />
         </Helmet>
         <div style={styles.header}>
-          <div style={styles.hero}>
+          <ResponsiveContainer
+            styles={styles.hero}
+            mobileStyles={styles.heroMobile}
+          >
             <Hero
               image={hero}
               image_2x={hero2x}
@@ -52,7 +55,8 @@ export class IndexPage extends React.Component {
               styles={styles.buttonsContainer}
               mobileStyles={{
                 ...styles.buttonsContainer,
-                flexDirection: "row-reverse"
+                flexDirection: "column-reverse",
+                alignItems: "center"
               }}
             >
               <Button
@@ -68,7 +72,7 @@ export class IndexPage extends React.Component {
                 hoverStyle={styles.btnHover}
               />
             </ResponsiveContainer>
-          </div>
+          </ResponsiveContainer>
         </div>
         <div style={styles.featuresContainer}>
           <ResponsiveContainer

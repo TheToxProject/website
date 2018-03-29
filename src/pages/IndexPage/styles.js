@@ -12,8 +12,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     maxWidth: Theme.Constants.MAX_WIDTH,
-    margin: "0 auto 36px auto",
-    padding: 8
+    margin: "0 auto 36px auto"
   },
   hero: {
     display: "flex",
@@ -21,6 +20,10 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     maxWidth: "70%"
+  },
+  heroMobile: {
+    maxWidth: "100%",
+    padding: "0 16px"
   },
   appPreview: {
     display: "flex",
@@ -37,13 +40,17 @@ const styles = {
     padding: 8
   },
   downloadBtn: {
-    margin: 8
+    margin: 8,
+    maxHeight: 46,
+    width: 210
   },
   webappBtn: {
     backgroundColor: Theme.Colors.BACKGROUND,
     border: `2px solid ${Theme.Colors.BUTTON}`,
     color: Theme.Colors.BUTTON,
-    margin: 8
+    margin: 8,
+    maxHeight: 46,
+    width: 210
   },
   btnHover: {
     color: Theme.Colors.BACKGROUND,
