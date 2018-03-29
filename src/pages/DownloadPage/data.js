@@ -94,18 +94,18 @@ export const DOWNLOADS = {
     links: [
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/windows/nsis",
-        format: "Windows installer (.nsis)"
+        uri: "https://downloads.tox.chat/windows/x86",
+        format: "Windows 32bits"
       },
       {
         type: "direct",
-        uri: "https://downloads.tox.chat/windows/exe",
-        format: "Windows installer (.exe)"
+        uri: "https://downloads.tox.chat/windows/x64",
+        format: "Windows 64bits"
       },
       {
         type: "direct",
         uri: "https://downloads.tox.chat/windows/portable",
-        format: "Portable app (.exe)"
+        format: "Portable (x86)"
       },
       {
         type: "store",

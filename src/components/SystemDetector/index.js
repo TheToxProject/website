@@ -102,15 +102,13 @@ export class SystemDetector extends React.Component {
     ) {
       this.setState({ os: SystemOS.SAILFISH });
     }
-
-    console.log(this.state);
   }
 
   render() {
     const { children, render = children } = this.props;
     const { arch, os } = this.state;
 
-    return render({ arch, os });
+    return render({ arch, os, key: os });
   }
 }
 

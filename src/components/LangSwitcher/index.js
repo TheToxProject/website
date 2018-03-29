@@ -18,33 +18,38 @@ export class LangSwitcher extends React.Component {
     this.toggleSwitch = this.toggleSwitch.bind(this);
     this.changeLanguage = this.changeLanguage.bind(this);
     this.handleHover = this.handleHover.bind(this);
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
 
     this.state = {
       lang: "en",
       handleHover: false,
       toggled: false,
       deviceWidth: 0,
-      deviceHeight: 0
+      deviceHeight: 0,
+      switchHeight: 0
     };
   }
 
   componentWillMount() {
     const i18n = getI18n();
     this.setState({ lang: i18n.language });
+  }
 
-    this.updateWindowDimensions();
-    window.addEventListener("resize", this.updateWindowDimensions);
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
-  updateWindowDimensions() {
+  updateDimensions() {
     this.setState({
       deviceWidth: window.innerWidth,
-      deviceHeight: window.innerHeight
+      deviceHeight: window.innerHeight,
+      // Add 100px to avoid div remaining clickable at the 1px top.
+      switchHeight: this.div.children[0].clientHeight + 100
     });
   }
 
@@ -65,11 +70,11 @@ export class LangSwitcher extends React.Component {
 
   render() {
     const { t } = this.props;
-    const { handleHover, lang, toggled } = this.state;
+    const { handleHover, lang, toggled, switchHeight } = this.state;
     const hoverStyle = handleHover || toggled ? buttonStyle.buttonHover : {};
     const switchVisibilityStyle = toggled
       ? { opacity: 1, transform: "translate(0px, 0px)" }
-      : { opacity: 0, transform: "translate(0px, -300px)" };
+      : { opacity: 0, transform: `translate(0px, -${switchHeight}px)` };
 
     return (
       <div
@@ -96,54 +101,55 @@ export class LangSwitcher extends React.Component {
               .toUpperCase()}
           </span>
         </a>
-        <ResponsiveContainer
-          styles={{ ...styles.languagesContainer, ...switchVisibilityStyle }}
-          mobileStyles={{
-            ...styles.languagesContainer,
-            ...switchVisibilityStyle,
-            ...{
-              maxWidth: "auto",
-              width: this.state.deviceWidth - 60, // 30px each side.
-              right: 0,
-              justifyCcontent: "space-around"
-            }
-          }}
-        >
-          {Object.keys(languagesInfos).map((key, index) => {
-            const language = languagesInfos[key];
-            const isLanguageActive = lang === language.code;
-            const activeStyle = isLanguageActive
-              ? { backgroundColor: Theme.Colors.SECONDARY_BACKGROUND }
-              : {};
-            return (
-              <ResponsiveContainer
-                key={language.code}
-                onClick={() => this.changeLanguage.call(this, language.code)}
-                styles={{ ...styles.languageLink, ...activeStyle }}
-                mobileStyles={{
-                  ...styles.languageLink,
-                  ...activeStyle,
-                  ...{ maxWidth: "auto", width: "100%" }
-                }}
-              >
-                <img
-                  style={styles.languageImage}
-                  src={`${BASE_URL}${language.flag}.png`}
-                  alt={language.name}
-                />
-                {language.name}
-              </ResponsiveContainer>
-            );
-          })}
-          <a
-            style={styles.helpUs}
-            href="https://crowdin.com/project/tox-website"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div ref={div => (this.div = div)} style={switchVisibilityStyle}>
+          <ResponsiveContainer
+            styles={{ ...styles.languagesContainer, ...switchVisibilityStyle }}
+            mobileStyles={{
+              ...styles.languagesContainer,
+              ...{
+                maxWidth: "auto",
+                width: this.state.deviceWidth - 60, // 30px each side.
+                right: 0,
+                justifyCcontent: "space-around"
+              }
+            }}
           >
-            {t("commons:lang-switch.help-us-translating")}
-          </a>
-        </ResponsiveContainer>
+            {Object.keys(languagesInfos).map((key, index) => {
+              const language = languagesInfos[key];
+              const isLanguageActive = lang === language.code;
+              const activeStyle = isLanguageActive
+                ? { backgroundColor: Theme.Colors.SECONDARY_BACKGROUND }
+                : {};
+              return (
+                <ResponsiveContainer
+                  key={language.code}
+                  onClick={() => this.changeLanguage.call(this, language.code)}
+                  styles={{ ...styles.languageLink, ...activeStyle }}
+                  mobileStyles={{
+                    ...styles.languageLink,
+                    ...activeStyle,
+                    ...{ maxWidth: "auto", width: "100%" }
+                  }}
+                >
+                  <img
+                    style={styles.languageImage}
+                    src={`${BASE_URL}${language.flag}.png`}
+                    alt={language.name}
+                  />
+                  {language.name}
+                </ResponsiveContainer>
+              );
+            })}
+            <a
+              style={styles.helpUs}
+              href="https://crowdin.com/project/tox-website"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("commons:lang-switch.help-us-translating")}
+            </a>
+          </ResponsiveContainer>
+        </div>
       </div>
     );
   }

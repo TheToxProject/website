@@ -117,7 +117,11 @@ export class Header extends React.Component {
               />
             </MediaQuery>
             <MediaQuery maxWidth={768}>
-              {showLogo && <Logo style={{ ...styles.logo }} />}
+              {showLogo && (
+                <div style={{ flex: 1 }}>
+                  <Logo style={{ ...styles.logo }} />
+                </div>
+              )}
             </MediaQuery>
             <MediaQuery minWidth={768}>
               {showLogo && <Logo style={styles.logo} />}
@@ -125,9 +129,10 @@ export class Header extends React.Component {
                 <div style={styles.menu}>
                   {menuLinks.map((link, index) => (
                     <Button
-                      key={index}
+                      key={link.to || link.href}
                       text={link.text}
                       to={link.to}
+                      href={link.href}
                       buttonStyle={
                         index !== menuLinks.length - 1
                           ? { ...styles.link, marginRight: 8 }
