@@ -13,7 +13,6 @@ import Hero from "./../../components/Hero";
 import Feature from "./../../components/Feature";
 import ResponsiveContainer from "./../../components/ResponsiveContainer";
 import FeaturedLogo from "./../../components/GrayscaleImage";
-import Theme from "../../config/theme";
 
 export class IndexPage extends React.Component {
   componentWillMount() {
