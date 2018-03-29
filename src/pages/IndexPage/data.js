@@ -99,12 +99,12 @@ export const getFeaturedIns = t => {
       name: "Linux.com",
       imageUrl: "https://i.imgur.com/aDlElFF.png"
     },
-    {
+    /*{
       name: "CCN",
       imageUrl:
         "https://248qms3nhmvl15d4ne1i4pxl-wpengine.netdna-ssl.com/wp-content/themes/cryptocoinsnews/dist/images/logo.svg"
-    },
-    {
+    },*/
+    /*{
       name: "Korben",
       imageUrl: "https://i.imgur.com/V79HOKk.png",
       size: { width: 40, height: 40 }
@@ -113,7 +113,7 @@ export const getFeaturedIns = t => {
       name: "Xakep",
       imageUrl: "https://xakep.ru/wp-content/uploads/2016/09/xakep_logo_ws.png",
       size: { width: 40, height: 40 }
-    },
+    },*/
     {
       name: "MakeUseOf",
       imageUrl: "https://svgshare.com/i/5w0.svg",
