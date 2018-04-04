@@ -2,12 +2,12 @@
   "hero": {
     "alt": "Ilustração de downloads",
     "tagline": "Baixar Tox",
-    "lead": "Ready to take back your freedom and privacy? Download Tox and escape surveillance right now!"
+    "lead": "Pronto para retomar a sua liberdade e privacidade? Baixe o Tox e escape da vigilância agora!"
   },
   "download-for": "Baixar para",
   "unavailable-platform": "Parece que você está usando um dispositivo/sistema operacional não suportado. Procure na lista de downloads abaixo ou submeta um problema para que possamos tentar desenvolver o Tox para o seu dispositivo se um número suficiente de usuários pedir",
   "download": {
-    "getItOn": "Download Tox from",
-    "also-available-on": "Also available on..."
+    "getItOn": "Baixar Tox de",
+    "also-available-on": "Também disponível em..."
   }
 }
