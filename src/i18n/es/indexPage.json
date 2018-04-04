@@ -6,16 +6,16 @@
   },
   "1st-callout": {
     "download": "Download",
-    "try-the-app": "Try the web app"
+    "try-the-app": "Probar la aplicación"
   },
   "2nd-callout": {
-    "tagline": "What makes Tox different?",
-    "lead": "Tox is made by the people who use it — people fed up with the existing options that spy on us, track us, censor us, and keep us from innovating. There are no corporate interests, and no hidden agendas. Just simple and secure messaging that is easy to use."
+    "tagline": "¿Qué hace Tox diferente?",
+    "lead": "Tox es hecho por las personas que lo utilizan, gente harta con las opciones existentes que nos espían, nos rastrean, nos censuran y nos impiden de innovar. No hay intereses corporativos y ni agendas ocultas. Simplemente una mensajería sencilla y segura que es fácil de usar."
   },
   "features": {
     "encrypted": {
       "alt": "Encrypted illustration",
-      "tagline": "Encrypted",
+      "tagline": "Encriptado",
       "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
     },
     "distributed": {
@@ -24,8 +24,8 @@
       "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
     },
     "free": {
-      "alt": "Free & libre illustration",
-      "tagline": "Free & Libre",
+      "alt": "Ilustración gratis y libre",
+      "tagline": "Gratis y Libre",
       "lead": "Tox is free software. That's free as in freedom, as well as in price. This means Tox is yours — to use, modify, and share — because Tox is made by and for the users."
     },
     "instant-messaging": {
@@ -40,12 +40,12 @@
     },
     "voice-call": {
       "alt": "Voice call illustration",
-      "tagline": "Voice",
+      "tagline": "Voz",
       "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
     },
     "video-call": {
       "alt": "Video call illustration",
-      "tagline": "Video",
+      "tagline": "Vídeo",
       "lead": "Catch up face to face, over Tox's secure video calls."
     },
     "file-sharing": {
