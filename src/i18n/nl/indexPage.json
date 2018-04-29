@@ -36,11 +36,11 @@
     "groups": {
       "alt": "Groepen Illustratie",
       "tagline": "Groeps gesprekken",
-      "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
+      "lead": "Praat, bel, en deel video's en bestanden met de hele groep in Tox's groeps gesprekken."
     },
     "voice-call": {
-      "alt": "Voice call illustration",
-      "tagline": "Voice",
+      "alt": "Geluid bel illustratie",
+      "tagline": "Stem",
       "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
     },
     "video-call": {
