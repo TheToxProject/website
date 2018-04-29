@@ -5,9 +5,9 @@
     "lead": "Klaar om jou vrijheid en privacy te herwinnen? Download Tox en ontsnap pottenkijkers direct!"
   },
   "download-for": "Download voor",
-  "unavailable-platform": "It looks like you use a device/os that we do not support. Try to look at the download list bellow or submit an issue so that we can try to port Tox to your device if enough users ask for it",
+  "unavailable-platform": "Het lijkt erop dat je een systeem gebruikt dat we niet ondersteunen. Kijk in de lijst met downloads hieronder of doe een aanvraag zodat we Tox op jou systeem kunnen uitbrengen als er genoeg animo voor is",
   "download": {
-    "getItOn": "Download Tox from",
-    "also-available-on": "Also available on..."
+    "getItOn": "Download Tox van",
+    "also-available-on": "Ook verkrijgbaar op..."
   }
 }
