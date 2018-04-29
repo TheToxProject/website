@@ -41,22 +41,22 @@
     "voice-call": {
       "alt": "Geluid bel illustratie",
       "tagline": "Stem",
-      "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
+      "lead": "Blijf in contact met vrienden en familie via Tox's compleet gratis en versleutelde telefoon gesprekken."
     },
     "video-call": {
-      "alt": "Video call illustration",
+      "alt": "Video bel illustratie",
       "tagline": "Video",
-      "lead": "Catch up face to face, over Tox's secure video calls."
+      "lead": "Praat bij face to face, via Tox's veilige video gesprekken."
     },
     "file-sharing": {
-      "alt": "File sharing illustration",
-      "tagline": "File sharing",
-      "lead": "Trade files, with no artificial limits or caps."
+      "alt": "Bestanden delen illustratie",
+      "tagline": "Bestanden delen",
+      "lead": "Wissel bestanden, zonder service limitaties."
     },
     "screen-sharing": {
-      "alt": "Screen sharing illustration",
-      "tagline": "Screen sharing",
-      "lead": "Share your desktop with your friends with Tox's screen sharing."
+      "alt": "Scherm delen illustratie",
+      "tagline": "Scherm delen",
+      "lead": "Deel je bureaublad met je vrienden via Tox's scherm delen."
     }
   },
   "featured": {
