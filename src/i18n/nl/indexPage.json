@@ -15,12 +15,12 @@
   "features": {
     "encrypted": {
       "alt": "Versleutelde illustraties",
-      "tagline": "Encrypted",
-      "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
+      "tagline": "Versleuteld",
+      "lead": "Alles wat je met Tox doet is versleuteld met open-source libraries. De enige die je gesprekken kan zien zijn de mensen waarmee je chat."
     },
     "distributed": {
-      "alt": "Distributed illustration",
-      "tagline": "Distributed",
+      "alt": "Decentraal illustratie",
+      "tagline": "Decentraal",
       "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
     },
     "free": {
