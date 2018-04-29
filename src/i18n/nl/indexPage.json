@@ -2,19 +2,19 @@
   "hero": {
     "alt": "Tox merk illustratie",
     "tagline": "Een nieuw soort Instant Messaging",
-    "lead": "Tox is a new kind of messenger app. Simple, secure and well-designed. Chat with people who matters to you, for free!"
+    "lead": "Tox is een nieuw soort messenger app. Simpel, veilig en goed ontworpen. Chat met de mensen die belangrijk voor je zijn, gratis!"
   },
   "1st-callout": {
     "download": "Download",
-    "try-the-app": "Try the web app"
+    "try-the-app": "Probeer de web app"
   },
   "2nd-callout": {
-    "tagline": "What makes Tox different?",
-    "lead": "Tox is made by the people who use it — people fed up with the existing options that spy on us, track us, censor us, and keep us from innovating. There are no corporate interests, and no hidden agendas. Just simple and secure messaging that is easy to use."
+    "tagline": "Wat maakt Tox zo anders?",
+    "lead": "Tox is gemaakt door de mensen die het gebruiken — mensen die de bestaande opties die ons bespioneren, volgen, censureren, en inovatie tegenwerken zat zijn. Er zijn geen bedrijfs belangen, er zijn geen geheime agendas. Gewoon simpel en veilig chatten en makkelijk in gebruik."
   },
   "features": {
     "encrypted": {
-      "alt": "Encrypted illustration",
+      "alt": "Versleutelde illustraties",
       "tagline": "Encrypted",
       "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
     },
