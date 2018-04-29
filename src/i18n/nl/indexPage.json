@@ -9,12 +9,12 @@
     "try-the-app": "Probeer de web app"
   },
   "2nd-callout": {
-    "tagline": "Wat maakt Tox zo anders?",
+    "tagline": "Wat maakt Tox anders?",
     "lead": "Tox is gemaakt door de mensen die het gebruiken — mensen die de bestaande opties die ons bespioneren, volgen, censureren, en inovatie tegenwerken zat zijn. Er zijn geen bedrijfs belangen, er zijn geen geheime agendas. Gewoon simpel en veilig chatten en makkelijk in gebruik."
   },
   "features": {
     "encrypted": {
-      "alt": "Versleutelde illustraties",
+      "alt": "Versleuteld illustraties",
       "tagline": "Versleuteld",
       "lead": "Alles wat je met Tox doet is versleuteld met open-source libraries. De enige die je gesprekken kan zien zijn de mensen waarmee je chat."
     },
@@ -36,10 +36,10 @@
     "groups": {
       "alt": "Groepen Illustratie",
       "tagline": "Groeps gesprekken",
-      "lead": "Praat, bel, en deel video's en bestanden met de hele groep in Tox's groeps gesprekken."
+      "lead": "Chat, bel, en deel video's en bestanden met de hele groep in Tox's groeps gesprekken."
     },
     "voice-call": {
-      "alt": "Geluid bel illustratie",
+      "alt": "Telefoon gesprek illustratie",
       "tagline": "Stem",
       "lead": "Blijf in contact met vrienden en familie via Tox's compleet gratis en versleutelde telefoon gesprekken."
     },
