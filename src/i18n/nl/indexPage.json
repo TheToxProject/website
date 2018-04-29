@@ -21,12 +21,12 @@
     "distributed": {
       "alt": "Decentraal illustratie",
       "tagline": "Decentraal",
-      "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
+      "lead": "Tox heeft geen centrale servers waar een inval kan worden gedaan, neer gehaald kan worden, of gedwongen data te overhandigen — het netwerk bestaat uit de gebruikers. Nooit meer serverproblemen!"
     },
     "free": {
-      "alt": "Free & libre illustration",
-      "tagline": "Free & Libre",
-      "lead": "Tox is free software. That's free as in freedom, as well as in price. This means Tox is yours — to use, modify, and share — because Tox is made by and for the users."
+      "alt": "Gratis & vrij illustratie",
+      "tagline": "Gratis & Vrij",
+      "lead": "Tox is vrije software. Vrij als in vrijheid, maar ook vrij van kosten. Dat betekend dat Tox van jou is — om te gebruiken, aan te passen, en te delen — omdat Tox gemaakt is door en voor de gebruikers."
     },
     "instant-messaging": {
       "alt": "Instant messaging illustration",
