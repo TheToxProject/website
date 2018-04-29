@@ -2,10 +2,10 @@
   "hero": {
     "alt": "Tox merk illustratie",
     "tagline": "Een nieuw soort Instant Messaging",
-    "lead": "Tox is een nieuw soort messenger app. Simpel, veilig en goed ontworpen. Chat met de mensen die belangrijk voor je zijn, gratis!"
+    "lead": "Tox is een nieuw soort messenger app. Simpel, veilig en goed ontworpen. Praat met de mensen die belangrijk voor je zijn, gratis!"
   },
   "1st-callout": {
-    "download": "Download",
+    "download": "Download Tox",
     "try-the-app": "Probeer de web app"
   },
   "2nd-callout": {
@@ -60,7 +60,7 @@
     }
   },
   "featured": {
-    "tagline": "They talks about us!",
-    "lead": "Because we merits a bit of promotion 😜"
+    "tagline": "Men praat over ons!",
+    "lead": "Omdat we wel wat promotie verdienen 😜"
   }
 }
