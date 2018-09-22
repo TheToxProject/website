@@ -16,7 +16,7 @@ import FeaturedLogo from "./../../components/GrayscaleImage";
 
 export class IndexPage extends React.Component {
   componentWillMount() {
-    window.scrollTo(0, 0);
+    typeof window !== 'undefined' && window.scrollTo(0, 0);
   }
 
   render() {

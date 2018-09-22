@@ -30,8 +30,10 @@ export class SystemDetector extends React.Component {
     /**
      * Architecture detection.
      */
+    if (typeof window === "undefined") {
+      return null;
+    }
 
-    // Detect x64 devices.
     if (
       window.navigator.userAgent.indexOf("WOW64") !== -1 ||
       window.navigator.userAgent.indexOf("x86_64") !== -1 ||
@@ -39,6 +41,7 @@ export class SystemDetector extends React.Component {
       window.navigator.userAgent.indexOf("Win64") !== -1 ||
       window.navigator.userAgent.indexOf("AMD64") !== -1
     ) {
+      // Detect x64 devices.
       this.setState({ arch: 64 });
     }
 

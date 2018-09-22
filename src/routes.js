@@ -5,7 +5,9 @@ import Layout from "./components/Layout";
 import IndexPage from "./pages/IndexPage";
 import DownloadPage from "./pages/DownloadPage";
 
-const Routes = props => (
+import './index.css'
+
+const Routes = () => (
   <Switch>
     <Layout exact path="/" component={IndexPage} />
     <Layout exact path="/download" component={DownloadPage} />
