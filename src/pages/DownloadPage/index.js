@@ -14,7 +14,7 @@ import screenshot from "../../assets/screens/multi-devices.png";
 
 export class DownloadPage extends React.Component {
   componentWillMount() {
-    window.scrollTo(0, 0);
+    typeof window !== "undefined" && window.scrollTo(0, 0);
   }
 
   getLinksForPlatform(platform) {

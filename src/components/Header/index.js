@@ -47,17 +47,17 @@ export class Header extends React.Component {
 
   componentWillMount() {
     this.updateWindowDimensions();
-    window.addEventListener("resize", this.updateWindowDimensions);
+    typeof window !== 'undefined' && window.addEventListener("resize", this.updateWindowDimensions);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
+    typeof window !== 'undefined' && window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
   updateWindowDimensions() {
     this.setState({
-      deviceWidth: window.innerWidth,
-      deviceHeight: window.innerHeight
+      deviceWidth: typeof window !== 'undefined' ? window.innerWidth : 0,
+      deviceHeight: typeof window !== 'undefined' ? window.innerHeight : 0
     });
   }
 

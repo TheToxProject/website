@@ -24,14 +24,15 @@ const styles = {
     cursor: "pointer"
   },
   logo: {
-    height: Theme.Constants.LOGO_HEIGHT
-    //flex: "1"
+    height: Theme.Constants.LOGO_HEIGHT,
+    flex: "1"
   },
   menu: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
-    flex: 1
+    flex: 1,
+    width: '100%'
   },
   link: {
     color: "white",

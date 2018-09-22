@@ -37,17 +37,17 @@ export class LangSwitcher extends React.Component {
 
   componentDidMount() {
     this.updateDimensions();
-    window.addEventListener("resize", this.updateDimensions);
+    typeof window !== 'undefined' && window.addEventListener("resize", this.updateDimensions);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
+    typeof window !== 'undefined' && window.removeEventListener("resize", this.updateDimensions);
   }
 
   updateDimensions() {
     this.setState({
-      deviceWidth: window.innerWidth,
-      deviceHeight: window.innerHeight,
+      deviceWidth: typeof window !== 'undefined' ? window.innerWidth : 0,
+      deviceHeight: typeof window !== 'undefined' ? window.innerHeight : 0,
       // Add 100px to avoid div remaining clickable at the 1px top.
       switchHeight: this.div.children[0].clientHeight + 100
     });

@@ -1,20 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import { I18nextProvider } from "react-i18next";
+import http from "http";
+import app from "./server";
 
-import registerServiceWorker from "./registerServiceWorker";
-import Routes from "./routes";
-import i18n from "./i18n/i18n";
-import "./index.css";
+const server = http.createServer(app);
+let currentApp = app;
 
-export const App = () => (
-  <I18nextProvider i18n={i18n}>
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
-  </I18nextProvider>
-);
+server.listen(process.env.PORT || 3000, error => {
+  if (error) {
+    console.log(error);
+  }
 
-ReactDOM.render(<App />, document.getElementById("root"));
-registerServiceWorker();
+  console.log("🚀 started");
+});
+
+if (module.hot) {
+  console.log("✅  Server-side HMR Enabled!");
+
+  module.hot.accept("./server", () => {
+    console.log("🔁  HMR Reloading `./server`...");
+    server.removeListener("request", currentApp);
+    const newApp = require("./server").default;
+    server.on("request", newApp);
+    currentApp = newApp;
+  });
+}
