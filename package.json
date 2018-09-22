@@ -64,10 +64,10 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "razzle start",
+    "start": "NODE_ENV=production node build/server.js",
+    "dev": "razzle start",
     "build": "razzle build",
     "test": "razzle test --env=jsdom",
-    "start:prod": "NODE_ENV=production node build/server.js",
     "webpack:stats": "webpack --json > stats.json"
   },
   "jest": {
