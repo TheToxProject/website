@@ -8,6 +8,7 @@ import { I18nextProvider } from "react-i18next";
 import express from "express";
 import Backend from "i18next-node-fs-backend";
 import i18nextMiddleware from "i18next-express-middleware";
+// import { minify } from "html-minifier";
 
 import i18n from "./i18n/i18n";
 import Routes from "./routes";
@@ -20,6 +21,14 @@ const appSrc = resolveApp("src");
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 const server = express();
+// const minifierConfig = {
+//   removeAttributesQuotes: false,
+//   removeComments: true,
+//   minifyJS: true,
+//   minifyCSS: true,
+//   sortAttributes: true,
+//   sortClassName: true
+// };
 
 i18n
   .use(Backend)
@@ -72,10 +81,13 @@ i18n
             ? `<link rel="stylesheet" href="${assets.client.css}">`
             : ""
         }
+    </head>
+    <body>
+        <div id="root">${markup}</div>
         <script>
-          window.initialI18nStore = JSON.parse('${JSON.stringify(
+          window.initialI18nStore = JSON.parse(\`${JSON.stringify(
             initialI18nStore
-          )}');
+          )}\`);
           window.initialLanguage = '${initialLanguage}';
         </script>
         ${
@@ -83,9 +95,6 @@ i18n
             ? `<script src="${assets.client.js}" defer></script>`
             : `<script src="${assets.client.js}" defer crossorigin></script>`
         }
-    </head>
-    <body>
-        <div id="root">${markup}</div>
     </body>
 </html>`
             );
