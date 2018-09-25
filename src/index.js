@@ -8,7 +8,7 @@ let currentApp = app;
 
 console.log(process.env)
 
-server.listen(process.env.PORT || 3000, error => {
+server.listen(Number.parseInt(process.env.PORT, 10) || 3000, error => {
   if (error) {
     console.log(error);
   }
