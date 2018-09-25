@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "postinstall": "NODE_ENV=production npm run build && env",
+    "postinstall": "NODE_ENV=production npm run build",
     "start": "NODE_ENV=production node ./build/server.js",
     "dev": "razzle start",
     "build": "razzle build",

@@ -1,20 +1,25 @@
 import http from "http";
 import app from "./server";
 
-const PRODUCTION_DOMAIN = 'https://tox-rebrand.herokuapp.com'
+const PRODUCTION_DOMAIN = "https://tox-rebrand.herokuapp.com";
 
+// Avoid cunning webpack replacemnt of process.env.
+let env = {};
+for (var a of ["env"]) {
+  env = process[a];
+}
+
+app.set("port", Number.parseInt(env.PORT, 10) || 3000);
 const server = http.createServer(app);
 let currentApp = app;
 
-console.log(process.env)
-
-server.listen(Number.parseInt(process.env.PORT, 10) || 3000, error => {
+server.listen(Number.parseInt(env.PORT, 10) || 3000, error => {
   if (error) {
     console.log(error);
   }
 
-  console.log(`🚀 Server started. Listening on port ${process.env.PORT}.`);
-  console.log(`Website is served at ${PRODUCTION_DOMAIN}.`)
+  console.log(`🚀 Server started. Listening on port ${env.PORT}.`);
+  console.log(`Website is served at ${PRODUCTION_DOMAIN}.`);
 });
 
 if (module.hot) {
