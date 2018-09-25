@@ -47,7 +47,8 @@ i18n
         .use(i18nextMiddleware.handle(i18n))
         .use("/locales", express.static(`${appSrc}/i18n`))
         .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
-        .use(express.static('static'))
+        .use("/static", express.static('static'))
+        .use("/static", express.static('../public'))
         .get("/*", (req, res) => {
           const context = {};
           const markup = renderToString(
