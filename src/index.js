@@ -6,6 +6,8 @@ const PRODUCTION_DOMAIN = 'https://tox-rebrand.herokuapp.com'
 const server = http.createServer(app);
 let currentApp = app;
 
+console.log(process.env)
+
 server.listen(process.env.PORT || 3000, error => {
   if (error) {
     console.log(error);
