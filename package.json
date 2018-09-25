@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=production node ../build/server.js",
+    "start": "NODE_ENV=production ls && tree && node ./build/server.js",
     "dev": "razzle start",
     "build": "razzle build",
     "test": "razzle test --env=jsdom",
