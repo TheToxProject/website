@@ -15,7 +15,7 @@ import ResponsiveContainer from "./../../components/ResponsiveContainer";
 import FeaturedLogo from "./../../components/GrayscaleImage";
 
 export class IndexPage extends React.Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     typeof window !== 'undefined' && window.scrollTo(0, 0);
   }
 

@@ -45,7 +45,7 @@ export class Header extends React.Component {
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.updateWindowDimensions();
     typeof window !== 'undefined' && window.addEventListener("resize", this.updateWindowDimensions);
   }

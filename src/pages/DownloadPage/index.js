@@ -13,7 +13,7 @@ import { DOWNLOADS } from "./data";
 import screenshot from "../../assets/screens/multi-devices.png";
 
 export class DownloadPage extends React.Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     typeof window !== "undefined" && window.scrollTo(0, 0);
   }
 

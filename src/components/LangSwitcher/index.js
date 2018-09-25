@@ -30,7 +30,7 @@ export class LangSwitcher extends React.Component {
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const i18n = getI18n();
     this.setState({ lang: i18n.language });
   }
