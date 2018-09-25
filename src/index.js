@@ -1,6 +1,8 @@
 import http from "http";
 import app from "./server";
 
+const PRODUCTION_DOMAIN = 'https://tox-rebrand.herokuapp.com'
+
 const server = http.createServer(app);
 let currentApp = app;
 
@@ -9,14 +11,15 @@ server.listen(process.env.PORT || 3000, error => {
     console.log(error);
   }
 
-  console.log("🚀 started");
+  console.log(`🚀 Server started. Listening on port ${process.env.PORT}.`);
+  console.log(`Website is served at ${PRODUCTION_DOMAIN}.`)
 });
 
 if (module.hot) {
-  console.log("✅  Server-side HMR Enabled!");
+  console.log("✅ Server-side HMR Enabled!");
 
   module.hot.accept("./server", () => {
-    console.log("🔁  HMR Reloading `./server`...");
+    console.log("🔁 HMR Reloading `./server`...");
     server.removeListener("request", currentApp);
     const newApp = require("./server").default;
     server.on("request", newApp);

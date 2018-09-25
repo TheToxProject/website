@@ -21,7 +21,6 @@ const appSrc = resolveApp("src");
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 const server = express();
-server.set("port", process.env.PORT || 3000);
 // const minifierConfig = {
 //   removeAttributesQuotes: false,
 //   removeComments: true,
