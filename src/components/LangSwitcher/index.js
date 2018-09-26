@@ -29,25 +29,24 @@ export class LangSwitcher extends React.Component {
       switchHeight: 0
     };
   }
-
-  UNSAFE_componentWillMount() {
+  
+  componentDidMount() {
     const i18n = getI18n();
     this.setState({ lang: i18n.language });
-  }
-
-  componentDidMount() {
     this.updateDimensions();
-    typeof window !== 'undefined' && window.addEventListener("resize", this.updateDimensions);
+    typeof window !== "undefined" &&
+      window.addEventListener("resize", this.updateDimensions);
   }
 
   componentWillUnmount() {
-    typeof window !== 'undefined' && window.removeEventListener("resize", this.updateDimensions);
+    typeof window !== "undefined" &&
+      window.removeEventListener("resize", this.updateDimensions);
   }
 
   updateDimensions() {
     this.setState({
-      deviceWidth: typeof window !== 'undefined' ? window.innerWidth : 0,
-      deviceHeight: typeof window !== 'undefined' ? window.innerHeight : 0,
+      deviceWidth: typeof window !== "undefined" ? window.innerWidth : 0,
+      deviceHeight: typeof window !== "undefined" ? window.innerHeight : 0,
       // Add 100px to avoid div remaining clickable at the 1px top.
       switchHeight: this.div.children[0].clientHeight + 100
     });
