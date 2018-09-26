@@ -11,7 +11,7 @@
     "webpack:stats": "webpack --json > stats.json"
   },
   "engines": {
-    "node": "8.9.1"
+    "node": ">=8.9.1"
   },
   "dependencies": {
     "autoprefixer": "7.1.6",
@@ -56,9 +56,9 @@
     "prop-types": "^15.6.1",
     "raf": "3.4.0",
     "razzle": "^2.4.0",
-    "react": "^16.2.0",
+    "react": "^16.5.2",
     "react-dev-utils": "^5.0.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
     "react-i18next": "^7.5.0",
     "react-icons": "^2.2.7",

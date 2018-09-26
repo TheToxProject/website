@@ -60,7 +60,7 @@ export class DownloadPage extends React.Component {
         <div style={styles.container}>
           <div style={styles.downloads}>
             <SystemDetector>
-              {({ arch, os: platform }) => {
+              {({ arch, platform }) => {
                 const downloadLinks = this.getLinksForPlatform(platform);
                 return (
                   <ResponsiveContainer
@@ -126,7 +126,7 @@ export class DownloadPage extends React.Component {
           </h1>
           <div style={styles.otherDownloads}>
             <SystemDetector>
-              {({ arch, os }) => {
+              {({ arch, platform: os }) => {
                 return Object.keys(DOWNLOADS).map((key, index) => {
                   const platform = DOWNLOADS[key];
                   if (!platform.links || key === os) {

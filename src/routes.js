@@ -7,11 +7,13 @@ import DownloadPage from "./pages/DownloadPage";
 
 import './index.css'
 
-const Routes = () => (
-  <Switch>
-    <Layout exact path="/" component={IndexPage} />
-    <Layout exact path="/download" component={DownloadPage} />
-  </Switch>
-);
+const Routes = () => {
+  return (
+    <Switch>
+      <Layout exact path="/" component={IndexPage} />
+      <Layout exact path="/download" component={DownloadPage} />
+    </Switch>
+  );
+};
 
 export default Routes;

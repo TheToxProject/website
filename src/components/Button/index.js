@@ -77,7 +77,7 @@ Button.propTypes = {
   buttonStyle: PropTypes.object,
   children: PropTypes.element,
   text: PropTypes.string,
-  to: PropTypes.string.isRequired
+  // to: PropTypes.string.isRequired
 };
 
 Button.defaultProps = {

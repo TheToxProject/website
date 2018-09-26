@@ -8,10 +8,12 @@ import { I18nextProvider } from "react-i18next";
 import express from "express";
 import Backend from "i18next-node-fs-backend";
 import i18nextMiddleware from "i18next-express-middleware";
+import Helmet from "react-helmet";
 // import { minify } from "html-minifier";
 
 import i18n from "./i18n/i18n";
 import Routes from "./routes";
+import SystemDetectorProvider from "./components/SystemDetector/Provider";
 
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebookincubator/create-react-app/issues/637
@@ -47,15 +49,17 @@ i18n
         .use(i18nextMiddleware.handle(i18n))
         .use("/locales", express.static(`${appSrc}/i18n`))
         .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
-        .use(express.static('/app/build/public'))
+        .use(express.static("/app/build/public")) // Fix static path on Heroku.
         .get("/*", (req, res) => {
           const context = {};
           const markup = renderToString(
-            <I18nextProvider i18n={req.i18n}>
-              <StaticRouter context={context} location={req.url}>
-                <Routes />
-              </StaticRouter>
-            </I18nextProvider>
+            <SystemDetectorProvider ua={req.headers["user-agent"]}>
+              <I18nextProvider i18n={req.i18n}>
+                <StaticRouter context={context} location={req.url}>
+                  <Routes />
+                </StaticRouter>
+              </I18nextProvider>
+            </SystemDetectorProvider>
           );
 
           if (context.url) {
@@ -67,35 +71,37 @@ i18n
             });
 
             const initialLanguage = req.i18n.language;
+            const head = Helmet.rewind();
 
             res.status(200).send(
               `<!doctype html>
     <html lang="">
     <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta charset="utf-8" />
-        <title>Tox &mdash; A New Kind of Instant Messaging</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>body,html{margin:0;padding:0;font-family:Roboto, sans-serif}*{box-sizing:border-box;text-rendering:optimizelegibility}#root{height:100%;width:100%}</style>
-        ${
-          assets.client.css
-            ? `<link rel="stylesheet" href="${assets.client.css}">`
-            : ""
-        }
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      ${head.title}
+      ${head.meta}
+      <style>body,html{margin:0;padding:0;font-family:Roboto, sans-serif}*{box-sizing:border-box;text-rendering:optimizelegibility}#root{height:100%;width:100%}</style>
+      ${
+        assets.client.css
+          ? `<link rel="stylesheet" href="${assets.client.css}">`
+          : ""
+      }
     </head>
     <body>
-        <div id="root">${markup}</div>
-        <script>
-          window.initialI18nStore = JSON.parse(\`${JSON.stringify(
-            initialI18nStore
-          )}\`);
-          window.initialLanguage = '${initialLanguage}';
-        </script>
-        ${
-          process.env.NODE_ENV === "production"
-            ? `<script src="${assets.client.js}" defer></script>`
-            : `<script src="${assets.client.js}" defer crossorigin></script>`
-        }
+      <div id="root">${markup}</div>
+      <script>
+        window.initialI18nStore = JSON.parse(\`${JSON.stringify(
+          initialI18nStore
+        )}\`);
+        window.initialLanguage = '${initialLanguage}';
+      </script>
+      ${
+        process.env.NODE_ENV === "production"
+          ? `<script src="${assets.client.js}" defer></script>`
+          : `<script src="${assets.client.js}" defer crossorigin></script>`
+      }
     </body>
 </html>`
             );

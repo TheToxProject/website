@@ -55,7 +55,7 @@ StoreButton.propTypes = {
   uri: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  getItOn: PropTypes.func.isRequired
+  getItOn: PropTypes.string.isRequired
 };
 
 export default StoreButton;
