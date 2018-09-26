@@ -80,8 +80,11 @@ i18n
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      ${head.title}
       ${head.meta}
+      ${head.title}
+      <link rel="manifest" href="/manifest.json">
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Fredoka+One">
       <style>body,html{margin:0;padding:0;font-family:Roboto, sans-serif}*{box-sizing:border-box;text-rendering:optimizelegibility}#root{height:100%;width:100%}</style>
       ${
         assets.client.css

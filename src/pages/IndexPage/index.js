@@ -94,7 +94,7 @@ export class IndexPage extends React.Component {
         </div>
         <div style={styles.darkContainer}>
           <div style={styles.darkWrapper}>
-            <h2 style={styles.tagline}>{t("indexPage:2nd-callout.tagline")}</h2>
+            <h2 style={styles.taglineLight}>{t("indexPage:2nd-callout.tagline")}</h2>
             <p style={styles.lead}>{t("indexPage:2nd-callout.lead")}</p>
           </div>
         </div>

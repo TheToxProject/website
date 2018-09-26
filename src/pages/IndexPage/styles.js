@@ -112,6 +112,12 @@ const styles = {
     color: Theme.Colors.TEXT_PRIMARY,
     margin: 0
   },
+  taglineLight: {
+    fontSize: 40,
+    lineHeight: "44px",
+    color: "white",
+    margin: 0
+  },
   lead: {
     fontSize: 20,
     color: Theme.Colors.SECONDARY_BACKGROUND,
