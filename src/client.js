@@ -8,7 +8,7 @@ import i18n from "./i18n/i18n";
 import SystemDetectorProvider from "./components/SystemDetector/Provider";
 
 const main = document.getElementById("root");
-const renderOrHydrate = () => null // main.innerHTML.trim().length ? hydrate : render;
+const renderOrHydrate = main.innerHTML.trim().length ? hydrate : render;
 
 renderOrHydrate(
   <SystemDetectorProvider ua={window.navigator.userAgent}>

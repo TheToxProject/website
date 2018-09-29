@@ -12,8 +12,7 @@ import {
 } from "react-icons/lib/md";
 
 import styles from "./styles";
-import logo from "./../../assets/logo/logo-white.png";
-import logo2x from "./../../assets/logo/logo-white@2x.png";
+import logo from "./../../assets/logo/logo-white.svg";
 
 import Button from "./../Button";
 import LangSwitcher from "./../LangSwitcher";
@@ -24,7 +23,6 @@ const Logo = props => (
     <img
       style={props.style}
       src={logo}
-      srcSet={`${logo2x} 2x`}
       alt="Tox brand logo"
       {...props}
     />
@@ -108,7 +106,7 @@ export class Header extends React.Component {
       <div style={{ width: "100%" }}>
         <div style={styles.headerContainer}>
           <div style={styles.navWrapper}>
-            <MediaQuery maxWidth={768}>
+            <MediaQuery maxWidth={768} values={{ width: deviceWidth || 1600 }}>
               <MdMenu
                 size={24}
                 color={"white"}
@@ -116,14 +114,14 @@ export class Header extends React.Component {
                 onClick={this.toggleDrawer}
               />
             </MediaQuery>
-            <MediaQuery maxWidth={768}>
+            <MediaQuery maxWidth={768} values={{ width: deviceWidth || 1600 }}>
               {showLogo && (
                 <div style={{ flex: 1 }}>
                   <Logo style={{ ...styles.logo }} />
                 </div>
               )}
             </MediaQuery>
-            <MediaQuery minWidth={768}>
+            <MediaQuery minWidth={768} values={{ width: deviceWidth || 1600 }}>
               {showLogo && <Logo style={styles.logo} />}
               {showNavigation && (
                 <div style={styles.menu}>

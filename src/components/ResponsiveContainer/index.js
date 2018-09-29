@@ -2,7 +2,7 @@ import React from "react";
 import MediaQuery from "react-responsive";
 
 const ResponsiveContainer = props => (
-  <MediaQuery maxWidth={768}>
+  <MediaQuery maxWidth={768} values={{ deviceWidth: 1024 }}>
     {matches => {
       let children = React.Children.toArray(props.children);
       const { styles, mobileStyles, ...rest } = props;

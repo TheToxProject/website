@@ -23,7 +23,7 @@ export class Feature extends React.Component {
       >
         <img
           src={image}
-          srcSet={`${image_2x} 2x`}
+          srcSet={image_2x ? `${image_2x} 2x` : undefined}
           style={styles.featureIllustration}
           alt={alt}
         />
@@ -36,7 +36,7 @@ export class Feature extends React.Component {
 
 Feature.propTypes = {
   image: PropTypes.string.isRequired,
-  image_2x: PropTypes.string.isRequired,
+  image_2x: PropTypes.string,
   alt: PropTypes.string.isRequired,
   tagline: PropTypes.string.isRequired,
   lead: PropTypes.string.isRequired,

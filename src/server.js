@@ -1,11 +1,15 @@
 import fs from "fs";
 import path from "path";
 
+import express from "express";
+import minify from "express-minify";
+import minifyHTML from "express-minify-html";
+import compression from "compression";
+
 import React from "react";
 import { StaticRouter } from "react-router-dom";
 import { renderToString, renderToStaticMarkup } from "react-dom/server";
 import { I18nextProvider } from "react-i18next";
-import express from "express";
 import Backend from "i18next-node-fs-backend";
 import i18nextMiddleware from "i18next-express-middleware";
 import Helmet from "react-helmet";
@@ -46,6 +50,22 @@ i18n
     () => {
       server
         .disable("x-powered-by")
+        .use(compression({ level: 9 }))
+        .use(minify())
+        .use(
+          minifyHTML({
+            override: true,
+            exception_url: false,
+            htmlMinifier: {
+              removeComments: true,
+              collapseWhitespace: true,
+              collapseBooleanAttributes: true,
+              removeAttributeQuotes: true,
+              removeEmptyAttributes: true,
+              minifyJS: true
+            }
+          })
+        )
         .use(i18nextMiddleware.handle(i18n))
         .use("/locales", express.static(`${appSrc}/i18n`))
         .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
@@ -98,12 +118,7 @@ i18n
     </head>
     <body ${helmet.bodyAttributes.toString()}>
       <div id="root">${markup}</div>
-      <script>
-        window.initialI18nStore = JSON.parse(\`${JSON.stringify(
-          initialI18nStore
-        )}\`);
-        window.initialLanguage = '${initialLanguage}';
-      </script>
+      <script>window.initialI18nStore = JSON.parse(\`${JSON.stringify(initialI18nStore)}\`);window.initialLanguage = '${initialLanguage}';</script>
       ${
         process.env.NODE_ENV === "production"
           ? `<script src="${assets.client.js}" defer></script>`

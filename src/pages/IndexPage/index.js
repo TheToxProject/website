@@ -5,8 +5,7 @@ import styles from "./styles";
 import { getFeatures, getFeaturedIns } from "./data";
 
 // Images.
-import hero from "./../../assets/illustrations/tox-illustration.png";
-import hero2x from "./../../assets/illustrations/tox-illustration@2x.png";
+import hero from "./../../assets/illustrations/tox-illustration.svg";
 
 import Button from "./../../components/Button";
 import Hero from "./../../components/Hero";
@@ -15,8 +14,31 @@ import ResponsiveContainer from "./../../components/ResponsiveContainer";
 import FeaturedLogo from "./../../components/GrayscaleImage";
 
 export class IndexPage extends React.Component {
-  UNSAFE_componentWillMount() {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      deviceWidth: 0
+    };
+
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    typeof window !== 'undefined' && window.addEventListener("resize", this.updateWindowDimensions);
     typeof window !== 'undefined' && window.scrollTo(0, 0);
+  }
+
+  componentWillUnmount() {
+    typeof window !== 'undefined' && window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({
+      deviceWidth: typeof window !== 'undefined' ? window.innerWidth : 0,
+      deviceHeight: typeof window !== 'undefined' ? window.innerHeight : 0
+    });
   }
 
   render() {
@@ -46,7 +68,6 @@ export class IndexPage extends React.Component {
           >
             <Hero
               image={hero}
-              image_2x={hero2x}
               alt={t("indexPage:hero.alt")}
               tagline={t("indexPage:hero.tagline")}
               lead={t("indexPage:hero.lead")}

@@ -25,7 +25,7 @@ const styles = {
   },
   logo: {
     height: Theme.Constants.LOGO_HEIGHT,
-    flex: "1"
+    flex: 1
   },
   menu: {
     display: "flex",
