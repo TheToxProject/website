@@ -1,5 +1,16 @@
 import Theme from "./../../config/theme";
 
+const vars = {
+  button: {},
+  buttonIcon: {}
+}
+
+vars.button.minWidth = 210;
+vars.button.maxWidth = 280;
+vars.button.height = 60;
+vars.button.radius = vars.button.height / 2;
+vars.buttonIcon.size = 36;
+
 const styles = {
   storeButton: {
     display: "flex",
@@ -8,12 +19,12 @@ const styles = {
     alignItems: "center",
     padding: "0",
     margin: 8,
-    height: 60,
-    maxHeight: 60,
-    minWidth: 210,
-    maxWidth: 280,
+    height: vars.button.height,
+    maxHeight: vars.button.height,
+    minWidth: vars.button.minWidth,
+    maxWidth: vars.button.maxWidth,
     backgroundColor: "black",
-    borderRadius: 4,
+    borderRadius: vars.button.radius,
     color: "white",
     textDecoration: "none",
     transition: "all 280ms ease-in-out"
@@ -28,12 +39,12 @@ const styles = {
     justifyContent: "flex-start",
     alignItems: "center",
     padding: 8,
-    height: 60,
+    height: vars.button.height,
     width: "100%"
   },
   storeButtonIcon: {
-    width: 36,
-    height: 36,
+    width: vars.buttonIcon.size,
+    height: vars.buttonIcon.size,
     margin: 8
   },
   storeButtonTexts: {
@@ -46,7 +57,6 @@ const styles = {
   },
   getItOn: {
     fontSize: 11
-    //textTransform: "uppercase"
   },
   storeName: {
     margin: 0,
