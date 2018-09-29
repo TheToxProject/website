@@ -32,4 +32,4 @@ Layout.propTypes = {
   component: PropTypes.any.isRequired
 };
 
-export default translate("menu", { wait: true })(Layout);
+export default translate("menu", { wait: false })(Layout);

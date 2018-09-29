@@ -19,7 +19,7 @@ const options = {
     }
   },
   react: {
-    wait: true,
+    wait: false,
     bindI18n: "languageChanged loaded"
   }
 };

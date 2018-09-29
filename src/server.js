@@ -3,7 +3,7 @@ import path from "path";
 
 import React from "react";
 import { StaticRouter } from "react-router-dom";
-import { renderToString } from "react-dom/server";
+import { renderToString, renderToStaticMarkup } from "react-dom/server";
 import { I18nextProvider } from "react-i18next";
 import express from "express";
 import Backend from "i18next-node-fs-backend";
@@ -52,7 +52,7 @@ i18n
         .use(express.static("/app/build/public")) // Fix static path on Heroku.
         .get("/*", (req, res) => {
           const context = {};
-          const markup = renderToString(
+          const Root = () => (
             <SystemDetectorProvider ua={req.headers["user-agent"]}>
               <I18nextProvider i18n={req.i18n}>
                 <StaticRouter context={context} location={req.url}>
@@ -61,6 +61,10 @@ i18n
               </I18nextProvider>
             </SystemDetectorProvider>
           );
+
+          const markup = renderToString(<Root />);
+          const staticMarkup = renderToStaticMarkup(<Root />);
+          const helmet = Helmet.renderStatic();
 
           if (context.url) {
             res.redirect(context.url);
@@ -71,7 +75,6 @@ i18n
             });
 
             const initialLanguage = req.i18n.language;
-            const head = Helmet.rewind();
 
             res.status(200).send(
               `<!doctype html>
@@ -80,8 +83,9 @@ i18n
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      ${head.meta}
-      ${head.title}
+      ${helmet.meta.toString()}
+      ${helmet.title.toString()}
+      ${helmet.link.toString()}
       <link rel="manifest" href="/manifest.json">
       <link rel="shortcut icon" href="/favicon.ico">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Fredoka+One">
@@ -92,7 +96,7 @@ i18n
           : ""
       }
     </head>
-    <body>
+    <body ${helmet.bodyAttributes.toString()}>
       <div id="root">${markup}</div>
       <script>
         window.initialI18nStore = JSON.parse(\`${JSON.stringify(
