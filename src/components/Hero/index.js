@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import MediaQuery from "react-responsive";
 
 import styles from "./styles";
+import SystemDetector, { DeviceType } from "../SystemDetector";
 
 export class Hero extends React.Component {
   constructor(props) {
@@ -17,18 +18,20 @@ export class Hero extends React.Component {
 
   componentDidMount() {
     this.updateWindowDimensions();
-    typeof window !== 'undefined' && window.addEventListener("resize", this.updateWindowDimensions);
-    typeof window !== 'undefined' && window.scrollTo(0, 0);
+    typeof window !== "undefined" &&
+      window.addEventListener("resize", this.updateWindowDimensions);
+    typeof window !== "undefined" && window.scrollTo(0, 0);
   }
 
   componentWillUnmount() {
-    typeof window !== 'undefined' && window.removeEventListener("resize", this.updateWindowDimensions);
+    typeof window !== "undefined" &&
+      window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
   updateWindowDimensions() {
     this.setState({
-      deviceWidth: typeof window !== 'undefined' ? window.innerWidth : 0,
-      deviceHeight: typeof window !== 'undefined' ? window.innerHeight : 0
+      deviceWidth: typeof window !== "undefined" ? window.innerWidth : 0,
+      deviceHeight: typeof window !== "undefined" ? window.innerHeight : 0
     });
   }
 
@@ -37,30 +40,44 @@ export class Hero extends React.Component {
     const { deviceWidth } = this.state;
 
     return (
-      <div style={styles.heroContainer}>
-        <MediaQuery minWidth={768} values={{ width: deviceWidth || 1600 }}>
-          {image != null && (
-            <img
-              src={image}
-              srcSet={image_2x ? `${image_2x} 2x` : undefined}
-              style={styles.heroIllustration}
-              alt={alt}
-            />
-          )}
-        </MediaQuery>
-        <MediaQuery maxWidth={768} values={{ width: deviceWidth || 1600 }}>
-          {image != null && (
-            <img
-              src={image}
-              srcSet={image_2x ? `${image_2x} 2x` : undefined}
-              style={styles.heroIllustrationMobile}
-              alt={alt}
-            />
-          )}
-        </MediaQuery>
-        <h1 style={styles.tagline}>{tagline}</h1>
-        <p style={styles.lead}>{lead}</p>
-      </div>
+      <SystemDetector>
+        {({ deviceType }) => (
+          <div style={styles.heroContainer}>
+            <MediaQuery
+              minWidth={768}
+              values={{
+                width: deviceType === DeviceType.PHONE ? 767 : deviceWidth
+              }}
+            >
+              {image != null && (
+                <img
+                  src={image}
+                  srcSet={image_2x ? `${image_2x} 2x` : undefined}
+                  style={styles.heroIllustration}
+                  alt={alt}
+                />
+              )}
+            </MediaQuery>
+            <MediaQuery
+              maxWidth={768}
+              values={{
+                width: deviceType === DeviceType.DESKTOP ? deviceWidth : 767
+              }}
+            >
+              {image != null && (
+                <img
+                  src={image}
+                  srcSet={image_2x ? `${image_2x} 2x` : undefined}
+                  style={styles.heroIllustrationMobile}
+                  alt={alt}
+                />
+              )}
+            </MediaQuery>
+            <h1 style={styles.tagline}>{tagline}</h1>
+            <p style={styles.lead}>{lead}</p>
+          </div>
+        )}
+      </SystemDetector>
     );
   }
 }

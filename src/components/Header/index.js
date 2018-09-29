@@ -17,15 +17,11 @@ import logo from "./../../assets/logo/logo-white.svg";
 import Button from "./../Button";
 import LangSwitcher from "./../LangSwitcher";
 import ResponsiveContainer from "../ResponsiveContainer";
+import SystemDetector, { DeviceType } from "../SystemDetector";
 
 const Logo = props => (
   <Link to={"/"} style={props.style}>
-    <img
-      style={props.style}
-      src={logo}
-      alt="Tox brand logo"
-      {...props}
-    />
+    <img style={props.style} src={logo} alt="Tox brand logo" {...props} />
   </Link>
 );
 
@@ -45,17 +41,19 @@ export class Header extends React.Component {
 
   componentDidMount() {
     this.updateWindowDimensions();
-    typeof window !== 'undefined' && window.addEventListener("resize", this.updateWindowDimensions);
+    typeof window !== "undefined" &&
+      window.addEventListener("resize", this.updateWindowDimensions);
   }
 
   componentWillUnmount() {
-    typeof window !== 'undefined' && window.removeEventListener("resize", this.updateWindowDimensions);
+    typeof window !== "undefined" &&
+      window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
   updateWindowDimensions() {
     this.setState({
-      deviceWidth: typeof window !== 'undefined' ? window.innerWidth : 0,
-      deviceHeight: typeof window !== 'undefined' ? window.innerHeight : 0
+      deviceWidth: typeof window !== "undefined" ? window.innerWidth : 0,
+      deviceHeight: typeof window !== "undefined" ? window.innerHeight : 0
     });
   }
 
@@ -106,41 +104,62 @@ export class Header extends React.Component {
       <div style={{ width: "100%" }}>
         <div style={styles.headerContainer}>
           <div style={styles.navWrapper}>
-            <MediaQuery maxWidth={768} values={{ width: deviceWidth || 1600 }}>
-              <MdMenu
-                size={24}
-                color={"white"}
-                style={styles.mobileMenu}
-                onClick={this.toggleDrawer}
-              />
-            </MediaQuery>
-            <MediaQuery maxWidth={768} values={{ width: deviceWidth || 1600 }}>
-              {showLogo && (
-                <div style={{ flex: 1 }}>
-                  <Logo style={{ ...styles.logo }} />
-                </div>
-              )}
-            </MediaQuery>
-            <MediaQuery minWidth={768} values={{ width: deviceWidth || 1600 }}>
-              {showLogo && <Logo style={styles.logo} />}
-              {showNavigation && (
-                <div style={styles.menu}>
-                  {menuLinks.map((link, index) => (
-                    <Button
-                      key={link.to || link.href}
-                      text={link.text}
-                      to={link.to}
-                      href={link.href}
-                      buttonStyle={
-                        index !== menuLinks.length - 1
-                          ? { ...styles.link, marginRight: 8 }
-                          : styles.link
-                      }
+            <SystemDetector>
+              {({ deviceType }) => (
+                <React.Fragment>
+                  <MediaQuery
+                    maxWidth={768}
+                    values={{
+                      width: deviceType === DeviceType.PHONE ? 767 : deviceWidth
+                    }}
+                  >
+                    <MdMenu
+                      size={24}
+                      color={"white"}
+                      style={styles.mobileMenu}
+                      onClick={this.toggleDrawer}
                     />
-                  ))}
-                </div>
+                  </MediaQuery>
+                  <MediaQuery
+                    maxWidth={768}
+                    values={{
+                      width: deviceType === DeviceType.PHONE ? 767 : deviceWidth
+                    }}
+                  >
+                    {showLogo && (
+                      <div style={{ flex: 1 }}>
+                        <Logo style={{ ...styles.logo }} />
+                      </div>
+                    )}
+                  </MediaQuery>
+                  <MediaQuery
+                    minWidth={768}
+                    values={{
+                      width: deviceType === DeviceType.PHONE ? 767 : deviceWidth
+                    }}
+                  >
+                    {showLogo && <Logo style={styles.logo} />}
+                    {showNavigation && (
+                      <div style={styles.menu}>
+                        {menuLinks.map((link, index) => (
+                          <Button
+                            key={link.to || link.href}
+                            text={link.text}
+                            to={link.to}
+                            href={link.href}
+                            buttonStyle={
+                              index !== menuLinks.length - 1
+                                ? { ...styles.link, marginRight: 8 }
+                                : styles.link
+                            }
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </MediaQuery>
+                </React.Fragment>
               )}
-            </MediaQuery>
+            </SystemDetector>
             <LangSwitcher t={t} />
           </div>
         </div>

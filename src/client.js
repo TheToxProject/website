@@ -10,6 +10,14 @@ import SystemDetectorProvider from "./components/SystemDetector/Provider";
 const main = document.getElementById("root");
 const renderOrHydrate = main.innerHTML.trim().length ? hydrate : render;
 
+i18n.init({
+  loadPath: '/locales/{{lng}}/{{ns}}.json',
+  addPath: '/locales/add/{{lng}}/{{ns}}',
+  allowMultiLoading: true,
+  crossDomain: false,
+  withCredentials: false,
+});
+
 renderOrHydrate(
   <SystemDetectorProvider ua={window.navigator.userAgent}>
     <I18nextProvider
@@ -28,5 +36,13 @@ renderOrHydrate(
 );
 
 if (module.hot) {
+  i18n.init({
+    loadPath: '/locales/{{lng}}/{{ns}}.json',
+    addPath: '/locales/add/{{lng}}/{{ns}}',
+    allowMultiLoading: true,
+    crossDomain: false,
+    withCredentials: false,
+  });
+
   module.hot.accept();
 }

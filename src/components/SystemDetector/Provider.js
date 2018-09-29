@@ -13,6 +13,12 @@ export const SystemOS = {
   UNKNOWN: "unknown"
 };
 
+export const DeviceType = {
+  DESKTOP: "desktop",
+  PHONE: "phone",
+  UNKNOWN: "unknown"
+}
+
 export const SystemDetectorContext = React.createContext({
   arch: 0,
   platform: SystemOS.UNKNOWN
@@ -24,20 +30,37 @@ class SystemDetectorProvider extends React.Component {
 
     this.state = {
       arch: 0,
-      platform: SystemOS.UNKNOWN
+      platform: SystemOS.UNKNOWN,
+      deviceType: DeviceType.UNKNWON
     };
   }
 
   componentDidMount() {
-    this.detect(this.props.ua);
+    const { ua, deviceType } = this.props;
+    
+    if (ua != null) {
+      this.detect(ua);
+    }
+
+    if (deviceType != null) {
+      this.setState({ deviceType })
+    }
   }
 
   componentDidUpdate(nextProps) {
-    if (nextProps.ua === this.props.ua) {
+    if (nextProps.ua === this.props.ua || nextProps.deviceType === this.props.deviceType) {
       return;
     }
 
-    this.detect(nextProps.ua);
+    const { ua, deviceType } = this.props;
+    
+    if (ua != null) {
+      this.detect(ua);
+    }
+
+    if (deviceType != null) {
+      this.setState({ deviceType })
+    }
   }
 
   detect(ua) {
@@ -153,11 +176,11 @@ class SystemDetectorProvider extends React.Component {
   }
 
   render() {
-    const { arch, platform } = this.state;
+    const { arch, platform, deviceType } = this.state;
     const { children } = this.props;
 
     return (
-      <SystemDetectorContext.Provider value={{ arch, platform }}>
+      <SystemDetectorContext.Provider value={{ arch, platform, deviceType }}>
         {React.Children.only(children)}
       </SystemDetectorContext.Provider>
     );
@@ -166,7 +189,8 @@ class SystemDetectorProvider extends React.Component {
 
 if (process.env.NODE_ENV !== "production") {
   SystemDetectorProvider.propTypes = {
-    ua: PropTypes.string.isRequired
+    ua: PropTypes.string.isRequired,
+    deviceType: PropTypes.string
   };
 }
 

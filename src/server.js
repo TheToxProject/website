@@ -5,6 +5,7 @@ import express from "express";
 import minify from "express-minify";
 import minifyHTML from "express-minify-html";
 import compression from "compression";
+import device from "express-device";
 
 import React from "react";
 import { StaticRouter } from "react-router-dom";
@@ -36,12 +37,16 @@ const server = express();
 //   sortClassName: true
 // };
 
+console.log(`${appSrc}/i18n/{{lng}}/{{ns}}.json`);
+
 i18n
   .use(Backend)
   .use(i18nextMiddleware.LanguageDetector)
   .init(
     {
       preload: ["en", "fr"],
+      whitelist: ["en", "fr", "pt", "ru", "zh-CN"],
+      nonExplicitWhitelist: true,
       backend: {
         loadPath: `${appSrc}/i18n/{{lng}}/{{ns}}.json`,
         addPath: `${appSrc}/i18n/{{lng}}/{{ns}}.missing.json`
@@ -70,11 +75,18 @@ i18n
         .use("/locales", express.static(`${appSrc}/i18n`))
         .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
         .use(express.static("/app/build/public")) // Fix static path on Heroku.
+        .use(device.capture())
         .get("/*", (req, res) => {
+          const i18n_ = req.i18n.cloneInstance();
+          i18n_.changeLanguage(req.language); // TODO: Load from cookies first.
+
           const context = {};
           const Root = () => (
-            <SystemDetectorProvider ua={req.headers["user-agent"]}>
-              <I18nextProvider i18n={req.i18n}>
+            <SystemDetectorProvider
+              ua={req.headers["user-agent"]}
+              deviceType={req.device.type}
+            >
+              <I18nextProvider i18n={i18n_}>
                 <StaticRouter context={context} location={req.url}>
                   <Routes />
                 </StaticRouter>
@@ -83,7 +95,6 @@ i18n
           );
 
           const markup = renderToString(<Root />);
-          const staticMarkup = renderToStaticMarkup(<Root />);
           const helmet = Helmet.renderStatic();
 
           if (context.url) {
@@ -118,7 +129,9 @@ i18n
     </head>
     <body ${helmet.bodyAttributes.toString()}>
       <div id="root">${markup}</div>
-      <script>window.initialI18nStore = JSON.parse(\`${JSON.stringify(initialI18nStore)}\`);window.initialLanguage = '${initialLanguage}';</script>
+      <script>window.initialI18nStore = JSON.parse(\`${JSON.stringify(
+        initialI18nStore
+      )}\`);window.initialLanguage = '${initialLanguage}';</script>
       ${
         process.env.NODE_ENV === "production"
           ? `<script src="${assets.client.js}" defer></script>`

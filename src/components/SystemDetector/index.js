@@ -1,16 +1,16 @@
 import React from "react";
-import { SystemDetectorContext, SystemOS } from './Provider'
+import { SystemDetectorContext, SystemOS, DeviceType } from './Provider'
 
 class SystemDetector extends React.Component {
   render() {
     const { children, render = children } = this.props;
     return (
       <SystemDetectorContext.Consumer>
-        {({arch, platform}) => render({arch, platform})}
+        {({arch, platform, deviceType}) => render({arch, platform, deviceType})}
       </SystemDetectorContext.Consumer>
     )
   }
 }
 
-export { SystemOS };
+export { SystemOS, DeviceType };
 export default SystemDetector;
