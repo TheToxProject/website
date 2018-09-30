@@ -44,7 +44,7 @@ i18n
   .use(i18nextMiddleware.LanguageDetector)
   .init(
     {
-    preload: ["en", "fr", "pt", "ru", "zh-CN", "nl"],
+      preload: ["en", "fr", "pt", "ru", "zh-CN", "nl"],
       whitelist: ["en", "fr", "pt", "ru", "zh-CN", "nl"],
       nonExplicitWhitelist: true,
       backend: {
@@ -76,6 +76,13 @@ i18n
         .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
         .use(express.static("/app/build/public")) // Fix static path on Heroku.
         .use(device.capture())
+        .use(function(req, res, next) {
+          if (!/https/.test(req.protocol) && !/localhost/.test(req.headers.host)) {
+            res.redirect("https://" + req.headers.host + req.url);
+          } else {
+            return next();
+          }
+        })
         .get("/*", (req, res) => {
           const i18n_ = req.i18n.cloneInstance();
           i18n_.changeLanguage(req.i18n.language); // TODO: Load from cookies first.

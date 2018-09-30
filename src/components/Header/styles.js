@@ -14,7 +14,7 @@ const styles = {
   navWrapper: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "flex-end",
+    justifyContent: "space-between",
     alignItems: "center",
     maxWidth: Theme.Constants.MAX_WIDTH,
     width: "100%"

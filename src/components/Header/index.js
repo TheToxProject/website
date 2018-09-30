@@ -19,7 +19,7 @@ import ResponsiveContainer from "../ResponsiveContainer";
 import SystemDetector, { DeviceType } from "../SystemDetector";
 
 const Logo = props => (
-  <Link to={"/"} style={props.style}>
+  <Link to={"/"} style={{ ...props.style, flex: 1 }}>
     <img style={props.style} src={logo} alt="Tox brand logo" {...props} />
   </Link>
 );
@@ -109,7 +109,7 @@ export class Header extends React.Component {
                   <MediaQuery
                     maxWidth={768}
                     values={{
-                      width: deviceType === DeviceType.PHONE ? 767 : deviceWidth
+                      width: deviceType === DeviceType.PHONE ? 768 : deviceWidth
                     }}
                   >
                     <MdMenu
@@ -122,11 +122,11 @@ export class Header extends React.Component {
                   <MediaQuery
                     maxWidth={768}
                     values={{
-                      width: deviceType === DeviceType.PHONE ? 767 : deviceWidth
+                      width: deviceType === DeviceType.PHONE ? 768 : deviceWidth
                     }}
                   >
                     {showLogo && (
-                      <div style={{ flex: 1 }}>
+                      <div style={{ flex: 1, width: '100%' }}>
                         <Logo style={{ ...styles.logo }} />
                       </div>
                     )}
@@ -137,7 +137,9 @@ export class Header extends React.Component {
                       width: deviceType === DeviceType.PHONE ? 767 : deviceWidth
                     }}
                   >
-                    {showLogo && <Logo style={styles.logo} />}
+                    {showLogo && <div style={{ flex: 1 }}>
+                      <Logo style={{ ...styles.logo }} />
+                    </div>}
                     {showNavigation && (
                       <div style={styles.menu}>
                         {menuLinks.map((link, index) => (
