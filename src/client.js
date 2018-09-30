@@ -7,8 +7,8 @@ import Routes from "./routes";
 import i18n from "./i18n/i18n";
 import SystemDetectorProvider from "./components/SystemDetector/Provider";
 
+import registerServiceWorker from "./registerServiceWorker"
 import "./index.css"
-import "./registerServiceWorker"
 
 const rootNode = document.getElementById("root");
 const renderOrHydrate = rootNode.innerHTML.trim().length ? hydrate : render;
@@ -37,6 +37,7 @@ renderOrHydrate(
   </SystemDetectorProvider>,
   rootNode
 );
+registerServiceWorker();
 
 if (module.hot) {
   i18n.init({

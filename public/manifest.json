@@ -1,6 +1,6 @@
 {
   "short_name": "Tox",
-  "name": "A New Kind of Instant Messaging",
+  "name": "Tox - A New Kind of Instant Messaging",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,8 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#5269e6",
   "background_color": "#ffffff"
 }
