@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "alt": "Downloads illustration",
+    "tagline": "Download Tox",
+    "lead": "Ready to take back your freedom and privacy? Download Tox and escape surveillance right now!"
+  },
+  "download-for": "Download for",
+  "unavailable-platform": "It looks like you use a device/os that we do not support. Try to look at the download list bellow or submit an issue so that we can try to port Tox to your device if enough users ask for it",
+  "download": {
+    "getItOn": "Download Tox from",
+    "also-available-on": "Also available on..."
+  }
+}

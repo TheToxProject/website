@@ -2,14 +2,16 @@ import en from "./en";
 import fr from "./fr";
 import pt from "./pt";
 import ru from "./ru";
-import zhCN from "./zh-CN";
+import zhCN from "./zh";
+import nl from "./nl";
 
 const languages = {
   en,
   fr,
   pt,
   ru,
-  "zh-CN": zhCN
+  "zh-CN": zhCN,
+  nl
 };
 
 export const languagesInfos = {
@@ -37,6 +39,11 @@ export const languagesInfos = {
     flag: "zh-CN",
     code: "zh-CN",
     name: "Chinese Simplified"
+  },
+  nl: {
+    flag: "nl",
+    code: "nl",
+    name: "Dutch"
   }
 };
 

@@ -14,6 +14,7 @@ import flagFr from "./../../assets/flags/fr.png";
 import flagPt from "./../../assets/flags/pt.png";
 import flagRu from "./../../assets/flags/ru.png";
 import flagZhCn from "./../../assets/flags/zh-CN.png";
+import flagNl from "./../../assets/flags/nl.png";
 
 export class LangSwitcher extends React.Component {
   constructor(props, context) {
@@ -77,7 +78,8 @@ export class LangSwitcher extends React.Component {
       fr: flagFr,
       "pt-BR": flagPt,
       ru: flagRu,
-      "zh-CN": flagZhCn
+      "zh-CN": flagZhCn,
+      "nl": flagNl
     }[flag];
   }
 

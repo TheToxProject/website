@@ -1,6 +1,6 @@
 {
   "hero": {
-    "alt": "Tox brand illustration",
+    "alt": "Иллюстрация марки Tox",
     "tagline": "Новый вид обмена мгновенными сообщениями",
     "lead": "Tox - мессенджер нового поколения. Простой, безопасный и хорошо продуманный. Общайтесь с близкими людьми абсолютно бесплатно!"
   },
@@ -14,12 +14,12 @@
   },
   "features": {
     "encrypted": {
-      "alt": "Encrypted illustration",
+      "alt": "Иллюстрация шифрования",
       "tagline": "Шифрование",
       "lead": "Всё, что вы делаете c Tox, шифруется с помощью библиотек с открытым исходным кодом. Единственные люди, которые могут видеть вашу беседу - это люди, с которыми вы вели эту беседу."
     },
     "distributed": {
-      "alt": "Distributed illustration",
+      "alt": "Иллюстрация базы данных",
       "tagline": "База данных",
       "lead": "В мессенджере Tox нет центральных серверов, которые могут быть взломаны, закрыты и т.д. — сеть состоит из пользователей. Скажите \"Прощай!\" подающим серверам."
     },
@@ -29,32 +29,32 @@
       "lead": "Tox is free software. That's free as in freedom, as well as in price. This means Tox is yours — to use, modify, and share — because Tox is made by and for the users."
     },
     "instant-messaging": {
-      "alt": "Instant messaging illustration",
+      "alt": "Иллюстрация обмена мгновенными сообщениями",
       "tagline": "Обмен мгновенными сообщениями",
       "lead": "Chat instantly across the globe with Tox's secure messages."
     },
     "groups": {
-      "alt": "Groups illustration",
+      "alt": "Иллюстрация групп",
       "tagline": "Групповой чат",
       "lead": "Общайтесь, звоните, делитесь видео и файлами со всей бандой в групповом чате Tox."
     },
     "voice-call": {
-      "alt": "Voice call illustration",
+      "alt": "Иллюстрация аудиозвонков",
       "tagline": "Аудиозвонки",
       "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
     },
     "video-call": {
-      "alt": "Video call illustration",
+      "alt": "Иллюстрация видеозвонков",
       "tagline": "Видеозвонки",
       "lead": "Catch up face to face, over Tox's secure video calls."
     },
     "file-sharing": {
-      "alt": "File sharing illustration",
+      "alt": "Иллюстрация обмена файлами",
       "tagline": "Обмен файлами",
       "lead": "Обменивайтесь файлами, без каких-либо ограничений."
     },
     "screen-sharing": {
-      "alt": "Screen sharing illustration",
+      "alt": "Иллюстрация демонстрации экрана",
       "tagline": "Демонстрация экрана",
       "lead": "Делитесь своим рабочим столом с друзьями с помощью «Демонстрации экрана» в Tox."
     }

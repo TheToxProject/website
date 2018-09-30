@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "alt": "Tox merk illustratie",
+    "tagline": "Een nieuw soort Instant Messaging",
+    "lead": "Tox is een nieuw soort messenger app. Simpel, veilig en goed ontworpen. Praat met de mensen die belangrijk voor je zijn, gratis!"
+  },
+  "1st-callout": {
+    "download": "Download Tox",
+    "try-the-app": "Probeer de web app"
+  },
+  "2nd-callout": {
+    "tagline": "Wat maakt Tox anders?",
+    "lead": "Tox is gemaakt door de mensen die het gebruiken — mensen die de bestaande opties die ons bespioneren, volgen, censureren, en inovatie tegenwerken zat zijn. Er zijn geen bedrijfs belangen, er zijn geen geheime agendas. Gewoon simpel en veilig chatten en makkelijk in gebruik."
+  },
+  "features": {
+    "encrypted": {
+      "alt": "Versleuteld illustraties",
+      "tagline": "Versleuteld",
+      "lead": "Alles wat je met Tox doet is versleuteld met open-source libraries. De enige die je gesprekken kan zien zijn de mensen waarmee je chat."
+    },
+    "distributed": {
+      "alt": "Decentraal illustratie",
+      "tagline": "Decentraal",
+      "lead": "Tox heeft geen centrale servers waar een inval kan worden gedaan, neer gehaald kan worden, of gedwongen data te overhandigen — het netwerk bestaat uit de gebruikers. Nooit meer serverproblemen!"
+    },
+    "free": {
+      "alt": "Gratis & vrij illustratie",
+      "tagline": "Gratis & Vrij",
+      "lead": "Tox is vrije software. Vrij als in vrijheid, maar ook vrij van kosten. Dat betekend dat Tox van jou is — om te gebruiken, aan te passen, en te delen — omdat Tox gemaakt is door en voor de gebruikers."
+    },
+    "instant-messaging": {
+      "alt": "Instant messaging illustratie",
+      "tagline": "Instant messaging",
+      "lead": "Chat meteen over de hele wereld met Tox's veilige berichten."
+    },
+    "groups": {
+      "alt": "Groepen Illustratie",
+      "tagline": "Groeps gesprekken",
+      "lead": "Chat, bel, en deel video's en bestanden met de hele groep in Tox's groeps gesprekken."
+    },
+    "voice-call": {
+      "alt": "Telefoon gesprek illustratie",
+      "tagline": "Stem",
+      "lead": "Blijf in contact met vrienden en familie via Tox's compleet gratis en versleutelde telefoon gesprekken."
+    },
+    "video-call": {
+      "alt": "Video bel illustratie",
+      "tagline": "Video",
+      "lead": "Praat face to face, via Tox's veilige video gesprekken."
+    },
+    "file-sharing": {
+      "alt": "Bestanden delen illustratie",
+      "tagline": "Bestanden delen",
+      "lead": "Wissel bestanden, zonder service limitaties."
+    },
+    "screen-sharing": {
+      "alt": "Scherm delen illustratie",
+      "tagline": "Scherm delen",
+      "lead": "Deel je bureaublad met je vrienden via Tox's scherm delen."
+    }
+  },
+  "featured": {
+    "tagline": "Men praat over ons!",
+    "lead": "Omdat we wel wat promotie verdienen 😜"
+  }
+}
