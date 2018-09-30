@@ -57,7 +57,7 @@ export class IndexPage extends React.Component {
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://tox.chat" />
-          <meta property="og:image" content={hero} />
+          <meta property="og:image" content={`https://tox-rebrand.herokuapp.com/${hero}`} />
           <meta property="og:site_name" content="Tox" />
           <meta property="og:description" content={t("indexPage:hero.lead")} />
         </Helmet>

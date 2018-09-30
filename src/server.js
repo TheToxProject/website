@@ -44,8 +44,8 @@ i18n
   .use(i18nextMiddleware.LanguageDetector)
   .init(
     {
-      preload: ["en", "fr"],
-      whitelist: ["en", "fr", "pt", "ru", "zh-CN"],
+    preload: ["en", "fr", "pt", "ru", "zh-CN", "nl"],
+      whitelist: ["en", "fr", "pt", "ru", "zh-CN", "nl"],
       nonExplicitWhitelist: true,
       backend: {
         loadPath: `${appSrc}/i18n/{{lng}}/{{ns}}.json`,
@@ -110,9 +110,10 @@ i18n
               `<!doctype html>
     <html lang="${initialLanguage}">
     <head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#5269e6">
       ${helmet.meta.toString()}
       ${helmet.title.toString()}
       ${

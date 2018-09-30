@@ -7,15 +7,12 @@ const ResponsiveContainer = props => (
     {({ deviceType }) => (
       <MediaQuery
         maxWidth={768}
-        values={{
-          width: deviceType === DeviceType.PHONE ? 767 : 1024
-        }}
       >
         {matches => {
           let children = React.Children.toArray(props.children);
           const { styles, mobileStyles, ...rest } = props;
 
-          return matches ? (
+          return matches || deviceType === DeviceType.PHONE ? (
             <div style={{ ...mobileStyles }} {...rest}>
               {children}
             </div>
