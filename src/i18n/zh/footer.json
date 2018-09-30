@@ -1,11 +1,11 @@
 {
-  "credits": "由 SkyzohLabs 与来自全世界极棒的贡献者们用 💖 为 Tox 量身打造。",
+  "credits": "Made for Tox by SkyzohLabs & awesome contributors with 💖 from all around the Earth.",
   "links": {
-    "github": "Github 上的 Tox",
-    "twitter": "Twitter 上的 Tox",
-    "facebook": "Facebook 上的 Tox",
-    "spectrum": "Spectrum 上的 Tox",
-    "reddit": "Reddit 上的 Tox",
-    "irc": "Tox 的 IRC 频道"
+    "github": "Tox on GitHub",
+    "twitter": "Tox on Twitter",
+    "facebook": "Tox on Facebook",
+    "spectrum": "Tox on Spectrum",
+    "reddit": "Tox on Reddit",
+    "irc": "Tox's IRC chans"
   }
 }
