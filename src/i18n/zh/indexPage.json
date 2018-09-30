@@ -1,66 +1,66 @@
 {
   "hero": {
-    "alt": "Tox 的品牌插画",
-    "tagline": "新型即时信息软件",
-    "lead": "Tox 是一种新型信息软件。免费、简洁、安全、设计精美。与您亲近的人现在开始聊天吧！"
+    "alt": "Tox brand illustration",
+    "tagline": "A New Kind of Instant Messaging",
+    "lead": "Tox is a new kind of messenger app. Simple, secure and well-designed. Chat with people who matters to you, for free!"
   },
   "1st-callout": {
-    "download": "下载 Tox",
-    "try-the-app": "尝试网页版应用"
+    "download": "Download",
+    "try-the-app": "Try the web app"
   },
   "2nd-callout": {
-    "tagline": "是什么使 Tox 与众不同？",
-    "lead": "Tox 是由它的使用者所制作的 —— 那些仅有着选择监控我们、追踪我们、过滤我们并防止我们进行创新的软件的人们。这里没有什么公司利益，更没有什么幕后动机。它仅仅只是一款简简单单的加密聊天软件。"
+    "tagline": "What makes Tox different?",
+    "lead": "Tox is made by the people who use it — people fed up with the existing options that spy on us, track us, censor us, and keep us from innovating. There are no corporate interests, and no hidden agendas. Just simple and secure messaging that is easy to use."
   },
   "features": {
     "encrypted": {
-      "alt": "加密插图",
-      "tagline": "加密",
-      "lead": "任何您使用 Tox 所做出的行为均由开源库所加密。您的对话仅对您所交谈的人可见。"
+      "alt": "Encrypted illustration",
+      "tagline": "Encrypted",
+      "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
     },
     "distributed": {
-      "alt": "分布插图",
-      "tagline": "分布",
-      "lead": "Tox 没有可被攻击、关闭或移交数据的中央服务器 —— 聊天网络是由它的用户所构成的。向服务器宕机说再见吧！"
+      "alt": "Distributed illustration",
+      "tagline": "Distributed",
+      "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
     },
     "free": {
-      "alt": "免费和自由插画",
-      "tagline": "免费和自由",
-      "lead": "Tox 是一款免费软件。价格免费，充分自由。您可以随意使用、修改、分享 Tox，因为 Tox 基于用户、为了用户。"
+      "alt": "Free & libre illustration",
+      "tagline": "Free & Libre",
+      "lead": "Tox is free software. That's free as in freedom, as well as in price. This means Tox is yours — to use, modify, and share — because Tox is made by and for the users."
     },
     "instant-messaging": {
-      "alt": "即时信息插图",
-      "tagline": "即时信息",
-      "lead": "用 Tox 的加密信息与全球用户即时聊天。"
+      "alt": "Instant messaging illustration",
+      "tagline": "Instant messaging",
+      "lead": "Chat instantly across the globe with Tox's secure messages."
     },
     "groups": {
-      "alt": "群组插画",
-      "tagline": "群组聊天",
-      "lead": "与 Tox 的群组成员聊天、呼叫并分享视频和文件。"
+      "alt": "Groups illustration",
+      "tagline": "Group chats",
+      "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
     },
     "voice-call": {
-      "alt": "语音呼叫插图",
-      "tagline": "语音",
-      "lead": "使用 Tox 完全免费加密的语音呼叫与朋友与家人保持联络。"
+      "alt": "Voice call illustration",
+      "tagline": "Voice",
+      "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
     },
     "video-call": {
-      "alt": "视频呼叫插图",
-      "tagline": "视频",
-      "lead": "通过 Tox 的加密视频呼叫与朋友面对面沟通。"
+      "alt": "Video call illustration",
+      "tagline": "Video",
+      "lead": "Catch up face to face, over Tox's secure video calls."
     },
     "file-sharing": {
-      "alt": "文件共享插图",
-      "tagline": "文件共享",
-      "lead": "无限制地传输文件。"
+      "alt": "File sharing illustration",
+      "tagline": "File sharing",
+      "lead": "Trade files, with no artificial limits or caps."
     },
     "screen-sharing": {
-      "alt": "屏幕分享插图",
-      "tagline": "屏幕分享",
-      "lead": "使用 Tox 的屏幕分享与您的朋友共享桌面。"
+      "alt": "Screen sharing illustration",
+      "tagline": "Screen sharing",
+      "lead": "Share your desktop with your friends with Tox's screen sharing."
     }
   },
   "featured": {
-    "tagline": "他们谈论了我们！",
-    "lead": "因为我们值得一点宣传 😜"
+    "tagline": "They talks about us!",
+    "lead": "Because we merits a bit of promotion 😜"
   }
 }
