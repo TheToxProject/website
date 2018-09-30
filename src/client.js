@@ -7,8 +7,8 @@ import Routes from "./routes";
 import i18n from "./i18n/i18n";
 import SystemDetectorProvider from "./components/SystemDetector/Provider";
 
-const main = document.getElementById("root");
-const renderOrHydrate = main.innerHTML.trim().length ? hydrate : render;
+const rootNode = document.getElementById("root");
+const renderOrHydrate = rootNode.innerHTML.trim().length ? hydrate : render;
 
 i18n.init({
   loadPath: '/locales/{{lng}}/{{ns}}.json',
@@ -32,7 +32,7 @@ renderOrHydrate(
       </BrowserRouter>
     </I18nextProvider>
   </SystemDetectorProvider>,
-  document.getElementById("root")
+  rootNode
 );
 
 if (module.hot) {

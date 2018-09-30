@@ -5,7 +5,6 @@ import XHR from "i18next-xhr-backend";
 
 // Language Folders
 import languages from "./languages";
-const moment = require("moment");
 
 const options = {
   fallbackLng: "en",
@@ -18,11 +17,7 @@ const options = {
     addPath: `/locales/{{lng}}/{{ns}}.missing.json`
   },
   interpolation: {
-    escapeValue: false,
-    function(value, format, lng) {
-      if (value instanceof Date) return moment(value).format(format);
-      return value;
-    }
+    escapeValue: false
   },
   react: {
     wait: true,
@@ -35,15 +30,10 @@ i18n.use(XHR)
 
 if (process && !process.release) {
   i18n.use(LanguageDetector);
-  //moment.locale(LanguageDetector.);
 }
 
 if (!i18n.isInitialized) {
   i18n.init(options);
 }
-
-i18n.on("languageChanged", currentLang => {
-  moment.locale(currentLang);
-});
 
 export default i18n;

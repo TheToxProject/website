@@ -1,5 +1,9 @@
-import { FaLinux, FaWindows, FaApple, FaAndroid } from "react-icons/lib/fa";
 import { SystemOS } from "../../components/SystemDetector";
+
+import FaLinux from "react-icons/lib/fa/linux";
+import FaWindows from "react-icons/lib/fa/windows";
+import FaApple from "react-icons/lib/fa/apple";
+import FaAndroid from "react-icons/lib/fa/android";
 
 import PlayStoreIcon from "../../assets/icons/google-play.png";
 import AppleIcon from "../../assets/icons/apple.svg";

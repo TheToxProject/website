@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  FaGithub,
-  FaTwitter,
-  FaFacebook,
-  FaForumbee, // No Spectrum icon :(
-  FaReddit,
-  FaHashtag
-} from "react-icons/lib/fa";
+
+import FaGithub from "react-icons/lib/fa/github";
+import FaTwitter from "react-icons/lib/fa/twitter";
+import FaFacebook from "react-icons/lib/fa/facebook";
+import FaForumbee from "react-icons/lib/fa/forumbee";
+import FaReddit from "react-icons/lib/fa/reddit";
+import FaHashtag from "react-icons/lib/fa/hashtag";
 
 import styles from "./styles";
 import Theme from "../../config/theme";

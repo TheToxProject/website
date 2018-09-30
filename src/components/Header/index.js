@@ -2,14 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import MediaQuery from "react-responsive";
-import { FaConnectdevelop } from "react-icons/lib/fa";
-import {
-  MdMenu,
-  MdFileDownload,
-  MdInfoOutline,
-  MdLightbulbOutline,
-  MdChatBubbleOutline
-} from "react-icons/lib/md";
+
+import FaConnectdevelop from "react-icons/lib/fa/connectdevelop";
+import MdMenu from "react-icons/lib/md/menu";
+import MdFileDownload from "react-icons/lib/md/file-download";
+import MdInfoOutline from "react-icons/lib/md/info-outline";
+import MdLightbulbOutline from "react-icons/lib/md/lightbulb-outline";
+import MdChatBubbleOutline from "react-icons/lib/md/chat-bubble-outline";
 
 import styles from "./styles";
 import logo from "./../../assets/logo/logo-white.svg";
