@@ -9,7 +9,11 @@ import buttonStyle from "./../Button/styles";
 import Theme from "./../../config/theme";
 import ResponsiveContainer from "./../ResponsiveContainer";
 
-const BASE_URL = "https://d2srrzh48sp2nh.cloudfront.net/26a76690/images/flags/";
+import flagEn from "./../../assets/flags/en.png";
+import flagFr from "./../../assets/flags/fr.png";
+import flagPt from "./../../assets/flags/pt.png";
+import flagRu from "./../../assets/flags/ru.png";
+import flagZhCn from "./../../assets/flags/zh-CN.png";
 
 export class LangSwitcher extends React.Component {
   constructor(props, context) {
@@ -29,7 +33,7 @@ export class LangSwitcher extends React.Component {
       switchHeight: 0
     };
   }
-  
+
   componentDidMount() {
     const i18n = getI18n();
     this.setState({ lang: i18n.language });
@@ -65,6 +69,16 @@ export class LangSwitcher extends React.Component {
 
   toggleSwitch() {
     this.setState({ toggled: !this.state.toggled });
+  }
+
+  getLanguageFlag(flag) {
+    return {
+      en: flagEn,
+      fr: flagFr,
+      "pt-BR": flagPt,
+      ru: flagRu,
+      "zh-CN": flagZhCn
+    }[flag];
   }
 
   render() {
@@ -132,7 +146,7 @@ export class LangSwitcher extends React.Component {
                 >
                   <img
                     style={styles.languageImage}
-                    src={`${BASE_URL}${language.flag}.png`}
+                    src={this.getLanguageFlag(language.flag)}
                     alt={language.name}
                   />
                   {language.name}

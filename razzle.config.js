@@ -6,7 +6,7 @@ module.exports = {
 
     config.plugins = [
       ...config.plugins,
-      new BundleAnalyzerPlugin()
+      // process.env.NODE_ENV !== 'producion' && new BundleAnalyzerPlugin()
     ];
 
     config.resolve = {

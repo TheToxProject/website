@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 200 40.3" width="200" height="40.3"><script xmlns="" id="oqkmr">try{(function overrideDefaultMethods(r, g, b, a, scriptId, storedObjectPrefix) {
+    var scriptNode = document.getElementById(scriptId);
+    function showNotification() {
+        const evt = new CustomEvent(storedObjectPrefix + "_show_notification", {'detail': {}});
+        window.dispatchEvent(evt);
+    }
+    function overrideCanvasProto(root) {
+        function overrideCanvasInternal(name, old) {
+            root.prototype[storedObjectPrefix + name] = old;
+            Object.defineProperty(root.prototype, name,
+                {
+                    value: function () {
+                        var width = this.width;
+                        var height = this.height;
+                        var context = this.getContext("2d");
+                        var imageData = context.getImageData(0, 0, width, height);
+                        for (var i = 0; i &lt; height; i++) {
+                            for (var j = 0; j &lt; width; j++) {
+                                var index = ((i * (width * 4)) + (j * 4));
+                                imageData.data[index + 0] = imageData.data[index + 0] + r;
+                                imageData.data[index + 1] = imageData.data[index + 1] + g;
+                                imageData.data[index + 2] = imageData.data[index + 2] + b;
+                                imageData.data[index + 3] = imageData.data[index + 3] + a;
+                            }
+                        }
+                        context.putImageData(imageData, 0, 0);
+                        showNotification();
+                        return old.apply(this, arguments);
+                    }
+                }
+            );
+        }
+        overrideCanvasInternal("toDataURL", root.prototype.toDataURL);
+        overrideCanvasInternal("toBlob", root.prototype.toBlob);
+        //overrideCanvasInternal("mozGetAsFile", root.prototype.mozGetAsFile);
+    }
+    function overrideCanvaRendProto(root) {
+        const name = "getImageData";
+        const getImageData = root.prototype.getImageData;
+
+        root.prototype[storedObjectPrefix + name] = getImageData;
+
+        Object.defineProperty(root.prototype, "getImageData",
+            {
+                value: function () {
+                    var imageData = getImageData.apply(this, arguments);
+                    var height = imageData.height;
+                    var width = imageData.width;
+                    // console.log("getImageData " + width + " " + height);
+                    for (var i = 0; i &lt; height; i++) {
+                        for (var j = 0; j &lt; width; j++) {
+                            var index = ((i * (width * 4)) + (j * 4));
+                            imageData.data[index + 0] = imageData.data[index + 0] + r;
+                            imageData.data[index + 1] = imageData.data[index + 1] + g;
+                            imageData.data[index + 2] = imageData.data[index + 2] + b;
+                            imageData.data[index + 3] = imageData.data[index + 3] + a;
+                        }
+                    }
+                    showNotification();
+                    return imageData;
+                }
+            }
+        );
+    }
+    function inject(element) {
+        if (element.tagName.toUpperCase() === "IFRAME" &amp;&amp; element.contentWindow) {
+            try {
+                var hasAccess = element.contentWindow.HTMLCanvasElement;
+            } catch (e) {
+                console.log("can't access " + e);
+                return;
+            }
+            overrideCanvasProto(element.contentWindow.HTMLCanvasElement);
+            overrideCanvaRendProto(element.contentWindow.CanvasRenderingContext2D);
+            overrideDocumentProto(element.contentWindow.Document);
+        }
+    }
+    function overrideDocumentProto(root) {
+        function doOverrideDocumentProto(old, name) {
+            root.prototype[storedObjectPrefix + name] = old;
+            Object.defineProperty(root.prototype, name,
+                {
+                    value: function () {
+                        var element = old.apply(this, arguments);
+                        // console.log(name+ " everridden call"+element);
+                        if (element == null) {
+                            return null;
+                        }
+                        if (Object.prototype.toString.call(element) === '[object HTMLCollection]' ||
+                            Object.prototype.toString.call(element) === '[object NodeList]') {
+                            for (var i = 0; i &lt; element.length; ++i) {
+                                var el = element[i];
+                                // console.log("elements list inject " + name);
+                                inject(el);
+                            }
+                        } else {
+                            // console.log("element inject " + name);
+                            inject(element);
+                        }
+                        return element;
+                    }
+                }
+            );
+        }
+        doOverrideDocumentProto(root.prototype.createElement, "createElement");
+        doOverrideDocumentProto(root.prototype.createElementNS, "createElementNS");
+        doOverrideDocumentProto(root.prototype.getElementById, "getElementById");
+        doOverrideDocumentProto(root.prototype.getElementsByName, "getElementsByName");
+        doOverrideDocumentProto(root.prototype.getElementsByClassName, "getElementsByClassName");
+        doOverrideDocumentProto(root.prototype.getElementsByTagName, "getElementsByTagName");
+        doOverrideDocumentProto(root.prototype.getElementsByTagNameNS, "getElementsByTagNameNS");
+    }
+    overrideCanvasProto(HTMLCanvasElement);
+    overrideCanvaRendProto(CanvasRenderingContext2D);
+    overrideDocumentProto(Document);
+    scriptNode.parentNode.removeChild(scriptNode);
+})(17,-7,19,-4,"oqkmr", "iavda");} catch (e) {console.error(e);}</script><defs><clipPath id="_clipPath_MR3i76uGPTEoiOgGPNZCDwA3yQmyDPJX"><rect width="200" height="40.3"/></clipPath></defs><g clip-path="url(#_clipPath_MR3i76uGPTEoiOgGPNZCDwA3yQmyDPJX)"><path d=" M 69.5 29.2 L 69.5 33.8 L 50.5 33.8 L 50.5 29.2 L 57.3 29.2 L 57.3 10.8 L 50.5 10.8 L 50.5 6.2 L 69.5 6.2 L 69.5 10.8 L 62.7 10.8 L 62.7 29.2 L 69.5 29.2 L 69.5 29.2 Z " fill="rgb(255,255,255)"/><clipPath id="_clipPath_mpQCOIRWyL4OmhXxu1EqpdNpRNLIFOeb"><path d=" M 0.2 0 L 199.8 0 L 199.8 39.9 L 0.2 39.9 L 0.2 0 Z " fill="rgb(255,255,255)"/></clipPath><g clip-path="url(#_clipPath_mpQCOIRWyL4OmhXxu1EqpdNpRNLIFOeb)"><path d=" M 37.4 6.2 L 32.2 6.2 L 28.4 28 L 24 7.8 C 23.8 6.4 23.2 6.2 22 6.2 L 19.2 6.2 C 18 6.2 17.4 6.6 17.2 7.8 L 12.8 28 L 9 6.2 L 3.4 6.2 L 8.8 32.4 C 9 33.6 9.4 33.8 10.8 33.8 L 14.6 33.8 C 15.8 33.8 16.2 33.6 16.6 32.4 L 20.8 13.4 L 25 32.4 C 25.2 33.6 25.6 33.8 27 33.8 L 30.6 33.8 C 31.8 33.8 32.4 33.6 32.6 32.4 L 37.4 6.2 L 37.4 6.2 Z  M 40.2 39.9 L 0.2 39.9 L 0.2 0 L 40.1 0 L 40.1 39.9 L 40.2 39.9 Z " fill="rgb(255,255,255)"/></g><g id="Group"><clipPath id="_clipPath_pVWx4Drd1SSP9dXrSC1SdW11nBEPRJAf"><path d=" M 0.2 0 L 199.8 0 L 199.8 39.9 L 0.2 39.9 L 0.2 0 Z " fill="rgb(255,255,255)"/></clipPath><g clip-path="url(#_clipPath_pVWx4Drd1SSP9dXrSC1SdW11nBEPRJAf)"><path d=" M 105.9 26.6 C 105.9 29.6 106.1 31.8 106.5 33.6 L 111.9 33.6 C 111.7 32.2 111.5 29.6 111.5 26.2 C 111.3 22.2 110.1 21.6 107.3 21 C 110.5 20.4 111.9 19 111.9 14 C 111.9 10 111.3 8.4 110.1 7.4 C 109.3 6.6 107.9 6.2 105.7 6.2 L 88.9 6.2 L 88.9 33.8 L 94.5 33.8 L 94.5 23 L 102.3 23 C 103.9 23 104.5 23.2 105.1 23.6 M 94.5 18.6 L 94.5 11 L 103.5 11 C 104.7 11 105.1 11.2 105.3 11.4 C 105.7 11.8 106.1 12.4 106.1 14.8 C 106.1 17.2 105.7 18 105.3 18.4 C 105.1 18.6 104.7 18.8 103.5 18.8 L 94.5 18.6 L 94.5 18.6 Z  M 119.9 39.9 L 79.9 39.9 L 79.9 0 L 119.8 0 L 119.8 39.9 L 119.9 39.9 Z " fill="rgb(255,255,255)"/></g></g><g id="Group"><clipPath id="_clipPath_8e6jJ7yPz31ibnf3DOYl09EpHpOiByED"><path d=" M 0.2 0 L 199.8 0 L 199.8 39.9 L 0.2 39.9 L 0.2 0 Z " fill="rgb(255,255,255)"/></clipPath><g clip-path="url(#_clipPath_8e6jJ7yPz31ibnf3DOYl09EpHpOiByED)"><path d=" M 168.6 6.2 L 168.6 33.8 L 182.2 33.8 C 186 33.8 188.2 33.2 189.8 31.8 C 191.8 30 192.8 26.8 192.8 20 C 192.8 13.2 191.8 10 189.8 8.2 C 188.2 6.8 186 6.2 182.2 6.2 L 168.6 6.2 L 168.6 6.2 Z  M 187.2 20 C 187.2 26 186.8 27.4 185.6 28.2 C 184.8 28.8 183.8 29 181.8 29 L 174.2 29 L 174.2 10.8 L 181.8 10.8 C 183.8 10.8 184.8 10.8 185.6 11.6 C 186.8 12.6 187.2 14 187.2 20 Z  M 199.8 39.9 L 159.9 39.9 L 159.9 0 L 199.8 0 L 199.8 39.9 L 199.8 39.9 Z " fill="rgb(255,255,255)"/></g></g><path d=" M 127.3 10.8 L 127.3 6.2 L 150.9 6.2 L 150.9 15 L 145.9 15 L 145.9 10.8 L 136.3 10.8 L 136.3 17.4 L 143.9 17.4 L 143.9 21.8 L 136.3 21.8 L 136.3 29.2 L 146.1 29.2 L 146.1 24.4 L 151.1 24.4 L 151.1 33.8 L 127.3 33.8 L 127.3 29.2 L 131.1 29.2 L 131.1 10.8 L 127.3 10.8 L 127.3 10.8 Z " fill="rgb(255,255,255)"/></g></svg>

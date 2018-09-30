@@ -8,6 +8,12 @@ import fileSharing from "./../../assets/illustrations/file-sharing-illustration.
 import groupChats from "./../../assets/illustrations/group-chats-illustration.svg";
 import screenSharing from "./../../assets/illustrations/video-illustration.svg";
 
+import logoWired from "./../../assets/logo/featured-ins/wired.svg";
+import logoLinuxCom from "./../../assets/logo/featured-ins/linuxcom.png";
+import logoMakeUseOf from "./../../assets/logo/featured-ins/make-us-of.svg";
+import logoCoinTelegraph from "./../../assets/logo/featured-ins/cointelegraph.png";
+import logoNetzPolitik from "./../../assets/logo/featured-ins/netzpolitik.png";
+
 export const getFeatures = t => {
   return {
     main: [
@@ -75,11 +81,11 @@ export const getFeaturedIns = t => {
   return [
     {
       name: "Wired",
-      imageUrl: "https://svgshare.com/i/5wj.svg"
+      imageUrl: logoWired
     },
     {
       name: "Linux.com",
-      imageUrl: "https://i.imgur.com/aDlElFF.png"
+      imageUrl: logoLinuxCom
     },
     /*{
       name: "CCN",
@@ -98,17 +104,17 @@ export const getFeaturedIns = t => {
     },*/
     {
       name: "MakeUseOf",
-      imageUrl: "https://svgshare.com/i/5w0.svg",
+      imageUrl: logoMakeUseOf,
       size: { width: 75, height: 40 }
     },
     {
       name: "The CoinTelegraph",
-      imageUrl: "https://i.imgur.com/ktJAYGK.png"
+      imageUrl: logoCoinTelegraph
     },
 
     {
       name: "NetzPolitik",
-      imageUrl: "https://i.imgur.com/xgjnSHi.png"
+      imageUrl: logoNetzPolitik
     }
   ];
 };

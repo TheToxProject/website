@@ -78,7 +78,7 @@ i18n
         .use(device.capture())
         .get("/*", (req, res) => {
           const i18n_ = req.i18n.cloneInstance();
-          i18n_.changeLanguage(req.language); // TODO: Load from cookies first.
+          i18n_.changeLanguage(req.i18n.language); // TODO: Load from cookies first.
 
           const context = {};
           const Root = () => (
@@ -104,28 +104,26 @@ i18n
             req.i18n.languages.forEach(l => {
               initialI18nStore[l] = req.i18n.services.resourceStore.data[l];
             });
-
             const initialLanguage = req.i18n.language;
 
             res.status(200).send(
               `<!doctype html>
-    <html lang="">
+    <html lang="${initialLanguage}">
     <head>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
       ${helmet.meta.toString()}
       ${helmet.title.toString()}
-      ${helmet.link.toString()}
-      <link rel="manifest" href="/manifest.json">
-      <link rel="shortcut icon" href="/favicon.ico">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Fredoka+One">
-      <style>body,html{margin:0;padding:0;font-family:Roboto, sans-serif}*{box-sizing:border-box;text-rendering:optimizelegibility}#root{height:100%;width:100%}</style>
       ${
-        assets.client.css
+        process.env.NODE_ENV === "production"
           ? `<link rel="stylesheet" href="${assets.client.css}">`
           : ""
       }
+      ${helmet.link.toString()}
+      <link rel="manifest" href="/manifest.json">
+      <link rel="shortcut icon" href="/favicon.ico">
+      <style>body,html{margin:0;padding:0;font-family:Roboto, sans-serif}*{box-sizing:border-box;text-rendering:optimizelegibility}#root{height:100%;width:100%}</style>
     </head>
     <body ${helmet.bodyAttributes.toString()}>
       <div id="root">${markup}</div>
