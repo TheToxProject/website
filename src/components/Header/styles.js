@@ -21,7 +21,8 @@ const styles = {
   },
   mobileMenu: {
     marginRight: 24,
-    cursor: "pointer"
+    cursor: "pointer",
+    userSelect: "none"
   },
   logo: {
     height: Theme.Constants.LOGO_HEIGHT,
@@ -32,7 +33,7 @@ const styles = {
     flexDirection: "row",
     justifyContent: "flex-end",
     flex: 1,
-    width: '100%'
+    width: "100%"
   },
   link: {
     color: "white",
