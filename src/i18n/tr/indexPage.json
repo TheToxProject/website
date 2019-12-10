@@ -16,7 +16,7 @@
     "encrypted": {
       "alt": "Şifreli illüstrasyon",
       "tagline": "Şifreli",
-      "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
+      "lead": "Tox ile yaptığınız her şey açık kaynak kodlu kütüphaneler kullanılarak şifrelenir. Konuşmalarınızı görebilecek tek kişi, konuştuklarınızdır."
     },
     "distributed": {
       "alt": "Distributed illustration",
