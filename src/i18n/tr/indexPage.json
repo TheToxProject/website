@@ -40,27 +40,27 @@
     },
     "voice-call": {
       "alt": "Sesli arama illüstrasyonu",
-      "tagline": "Sesli arama",
+      "tagline": "Ses",
       "lead": "Tox'un tamamen ücretsiz ve şifreli sesli aramalarını kullanarak arkadaşlarınız ve ailenizle iletişiminizi sürdürün."
     },
     "video-call": {
       "alt": "Görüntülü arama illüstrasyonu",
-      "tagline": "Görüntülü arama",
-      "lead": "Catch up face to face, over Tox's secure video calls."
+      "tagline": "Görüntü",
+      "lead": "Tox'un güvenli görüntülü aramaları üzerinden yüz yüze görüşün."
     },
     "file-sharing": {
-      "alt": "File sharing illustration",
-      "tagline": "File sharing",
-      "lead": "Trade files, with no artificial limits or caps."
+      "alt": "Dosya paylaşımı illüstrasyonu",
+      "tagline": "Dosya paylaşımı",
+      "lead": "Herhangi bir suni limit olmadan dosya alışverişi yapın."
     },
     "screen-sharing": {
-      "alt": "Screen sharing illustration",
-      "tagline": "Screen sharing",
-      "lead": "Share your desktop with your friends with Tox's screen sharing."
+      "alt": "Ekran paylaşımı illüstrasyonu",
+      "tagline": "Ekran paylaşımı",
+      "lead": "Tox'un ekran paylaşımı ile masaüstünüzü arkadaşlarınızla paylaşın."
     }
   },
   "featured": {
-    "tagline": "They talks about us!",
-    "lead": "Because we merits a bit of promotion 😜"
+    "tagline": "Bizden bahsediyorlar!",
+    "lead": "Çünkü biraz tanıtımı hakediyoruz 😜"
   }
 }
