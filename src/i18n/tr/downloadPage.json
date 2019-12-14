@@ -5,9 +5,9 @@
     "lead": "Özgürlük ve mahremiyetinizi geri almaya hazır mısınız? Tox'u indirin ve gözetlenmekten hemen şimdi kurtulun!"
   },
   "download-for": "Şunun için indir",
-  "unavailable-platform": "It looks like you use a device/os that we do not support. Try to look at the download list bellow or submit an issue so that we can try to port Tox to your device if enough users ask for it",
+  "unavailable-platform": "Desteklemediğimiz bir cihaz/işletim sistemi kullanıyorsunuz. Aşağıdaki listeye bir göz atın ya da bir sorun raporu gönderin, böylece yeterli sayıda kullanıcı talep ederse, Tox'un cihazınıza uygun versiyonu için çalışabiliriz",
   "download": {
-    "getItOn": "Download Tox from",
-    "also-available-on": "Also available on..."
+    "getItOn": "Tox'u şuradan indir",
+    "also-available-on": "Ayrıca şuralarda mevcut..."
   }
 }
