@@ -19,7 +19,7 @@
       "lead": "Tox ile yaptığınız her şey açık kaynak kodlu kütüphaneler kullanılarak şifrelenir. Konuşmalarınızı görebilecek tek kişi, konuştuklarınızdır."
     },
     "distributed": {
-      "alt": "Distributed illustration",
+      "alt": "Dağıtık illüstrasyon",
       "tagline": "Distributed",
       "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
     },
