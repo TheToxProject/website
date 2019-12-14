@@ -19,33 +19,33 @@
       "lead": "Tox ile yaptığınız her şey açık kaynak kodlu kütüphaneler kullanılarak şifrelenir. Konuşmalarınızı görebilecek tek kişi, konuştuklarınızdır."
     },
     "distributed": {
-      "alt": "Dağıtık illüstrasyon",
-      "tagline": "Distributed",
-      "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
+      "alt": "Dağıtılmış illüstrasyon",
+      "tagline": "Dağıtılmış",
+      "lead": "Tox'un, baskın yapılabilecek, kapatılabilecek veya verileri vermeye zorlanabilecek merkezi bir sunucusu yoktur — ağ, kullanıcılarından oluşmaktadır. Sunucu kesintilerine elveda deyin!"
     },
     "free": {
-      "alt": "Free & libre illustration",
-      "tagline": "Free & Libre",
-      "lead": "Tox is free software. That's free as in freedom, as well as in price. This means Tox is yours — to use, modify, and share — because Tox is made by and for the users."
+      "alt": "Ücretsiz ve özgür illüstrasyon",
+      "tagline": "Ücretsiz ve Özgür",
+      "lead": "Tox özgür bir yazılımdır. Özgürlüğün yanı sıra ücretsizdir. Bu, Tox'un — kullanmak, değiştirmek ve paylaşmak için — sizin olduğu anlamına gelir çünkü Tox, kullanıcılar tarafından ve kendileri için oluşturulmaktadır."
     },
     "instant-messaging": {
-      "alt": "Instant messaging illustration",
-      "tagline": "Instant messaging",
-      "lead": "Chat instantly across the globe with Tox's secure messages."
+      "alt": "Anlık mesajlaşma illüstrasyonu",
+      "tagline": "Anlık mesajlaşma",
+      "lead": "Tox'un güvenli mesajlarıyla dünyanın her yerinde anında sohbet edin."
     },
     "groups": {
-      "alt": "Groups illustration",
-      "tagline": "Group chats",
-      "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
+      "alt": "Gruplar illüstrasyonu",
+      "tagline": "Grup sohbetleri",
+      "lead": "Tox'un grup sohbetlerinde, tüm ekiple sohbet edin, arayın ve video ve dosyaları paylaşın."
     },
     "voice-call": {
-      "alt": "Voice call illustration",
-      "tagline": "Voice",
-      "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
+      "alt": "Sesli arama illüstrasyonu",
+      "tagline": "Sesli arama",
+      "lead": "Tox'un tamamen ücretsiz ve şifreli sesli aramalarını kullanarak arkadaşlarınız ve ailenizle iletişiminizi sürdürün."
     },
     "video-call": {
-      "alt": "Video call illustration",
-      "tagline": "Video",
+      "alt": "Görüntülü arama illüstrasyonu",
+      "tagline": "Görüntülü arama",
       "lead": "Catch up face to face, over Tox's secure video calls."
     },
     "file-sharing": {
