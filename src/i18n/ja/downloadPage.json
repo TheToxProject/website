@@ -1,13 +1,13 @@
 {
   "hero": {
-    "alt": "Downloads illustration",
-    "tagline": "Download Tox",
-    "lead": "Ready to take back your freedom and privacy? Download Tox and escape surveillance right now!"
+    "alt": "ダウンロードのイラスト",
+    "tagline": "Tox をダウンロード",
+    "lead": "自由とプライバシーを取り戻す準備はできていますか。Tox をダウンロードして、今すぐ監視の目から逃れましょう！"
   },
-  "download-for": "Download for",
-  "unavailable-platform": "It looks like you use a device/os that we do not support. Try to look at the download list bellow or submit an issue so that we can try to port Tox to your device if enough users ask for it",
+  "download-for": "ダウンロード",
+  "unavailable-platform": "お使いのデバイス／OS はサポート対象外の可能性があります。以下のダウンロードの一覧をご覧になるか、ある程度のユーザーの要求に応じて Tox をお使いのデバイスに移植できるように、フィードバックを送信してください。",
   "download": {
-    "getItOn": "Download Tox from",
-    "also-available-on": "Also available on..."
+    "getItOn": "Tox をダウンロード",
+    "also-available-on": "以下のプラットフォームでもご利用いただけます"
   }
 }
