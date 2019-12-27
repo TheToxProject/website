@@ -16,7 +16,7 @@
     "encrypted": {
       "alt": "暗号化のイラスト",
       "tagline": "暗号化",
-      "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
+      "lead": "Tox ですることすべては、オープンソースのライブラリを用いて暗号化されます。今トークしている相手だけが、そのトーク内容を確認できます。"
     },
     "distributed": {
       "alt": "Distributed illustration",
@@ -36,31 +36,31 @@
     "groups": {
       "alt": "グループのイラスト",
       "tagline": "グループチャット",
-      "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
+      "lead": "Tox のグループチャットのメンバー間で、チャットや通話、動画やファイルの共有をしましょう。"
     },
     "voice-call": {
       "alt": "音声通話のイラスト",
       "tagline": "音声",
-      "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
+      "lead": "Tox の完全無料の暗号化音声通話を使って、友達や家族と連絡を取り合いましょう。"
     },
     "video-call": {
-      "alt": "Video call illustration",
-      "tagline": "Video",
-      "lead": "Catch up face to face, over Tox's secure video calls."
+      "alt": "ビデオ通話のイラスト",
+      "tagline": "ビデオ",
+      "lead": "Tox の安全なビデオ通話を使って、面と向かって話し合いましょう。"
     },
     "file-sharing": {
-      "alt": "File sharing illustration",
-      "tagline": "File sharing",
-      "lead": "Trade files, with no artificial limits or caps."
+      "alt": "ファイル共有のイラスト",
+      "tagline": "ファイル共有",
+      "lead": "ファイルを無制限にやりとりできます。"
     },
     "screen-sharing": {
-      "alt": "Screen sharing illustration",
-      "tagline": "Screen sharing",
-      "lead": "Share your desktop with your friends with Tox's screen sharing."
+      "alt": "画面共有のイラスト",
+      "tagline": "画面共有",
+      "lead": "Tox の画面共有機能で、友達にデスクトップ画面を共有できます。"
     }
   },
   "featured": {
-    "tagline": "They talks about us!",
-    "lead": "Because we merits a bit of promotion 😜"
+    "tagline": "メディアに取り上げられています！",
+    "lead": "サービスが宣伝に値するからです 😜"
   }
 }
