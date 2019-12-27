@@ -1,21 +1,21 @@
 {
   "hero": {
-    "alt": "Tox brand illustration",
-    "tagline": "A New Kind of Instant Messaging",
-    "lead": "Tox is a new kind of messenger app. Simple, secure and well-designed. Chat with people who matters to you, for free!"
+    "alt": "Tox ブランドロゴ",
+    "tagline": "新しいカタチのインスタントメッセージ",
+    "lead": "Tox は、新しいカタチのメッセージアプリです。シンプルかつ安全で、デザインがしっかりとしています。大切な人と無料でチャットしましょう！"
   },
   "1st-callout": {
     "download": "Download",
-    "try-the-app": "Try the web app"
+    "try-the-app": "Web アプリを使ってみる"
   },
   "2nd-callout": {
-    "tagline": "What makes Tox different?",
+    "tagline": "Tox の特徴",
     "lead": "Tox is made by the people who use it — people fed up with the existing options that spy on us, track us, censor us, and keep us from innovating. There are no corporate interests, and no hidden agendas. Just simple and secure messaging that is easy to use."
   },
   "features": {
     "encrypted": {
-      "alt": "Encrypted illustration",
-      "tagline": "Encrypted",
+      "alt": "暗号化を示す絵",
+      "tagline": "暗号化",
       "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
     },
     "distributed": {
