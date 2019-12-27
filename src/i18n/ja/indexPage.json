@@ -14,7 +14,7 @@
   },
   "features": {
     "encrypted": {
-      "alt": "暗号化を示す絵",
+      "alt": "暗号化のイラスト",
       "tagline": "暗号化",
       "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
     },
@@ -24,23 +24,23 @@
       "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
     },
     "free": {
-      "alt": "Free & libre illustration",
-      "tagline": "Free & Libre",
-      "lead": "Tox is free software. That's free as in freedom, as well as in price. This means Tox is yours — to use, modify, and share — because Tox is made by and for the users."
+      "alt": "無料、そしてフリーであることを示すイラスト",
+      "tagline": "無料、そしてフリー",
+      "lead": "Tox はフリーソフトです。ソフトウェアの改変という意味でもフリーですし、値段もフリー（無料）です。つまり、Tox は利用、改変、共有という点において、あなたの自由です。なぜなら、Tox はユーザーによって開発されている、ユーザーのためのアプリだからです。"
     },
     "instant-messaging": {
-      "alt": "Instant messaging illustration",
-      "tagline": "Instant messaging",
-      "lead": "Chat instantly across the globe with Tox's secure messages."
+      "alt": "インスタントメッセージのイラスト",
+      "tagline": "インスタントメッセージ",
+      "lead": "Tox の安全なメッセージを使って、世界中の人とすばやくチャットできます。"
     },
     "groups": {
-      "alt": "Groups illustration",
-      "tagline": "Group chats",
+      "alt": "グループのイラスト",
+      "tagline": "グループチャット",
       "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
     },
     "voice-call": {
-      "alt": "Voice call illustration",
-      "tagline": "Voice",
+      "alt": "音声通話のイラスト",
+      "tagline": "音声",
       "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
     },
     "video-call": {
