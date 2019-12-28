@@ -19,9 +19,9 @@
       "lead": "Tox ですることすべては、オープンソースのライブラリを用いて暗号化されます。今トークしている相手だけが、そのトーク内容を確認できます。"
     },
     "distributed": {
-      "alt": "Distributed illustration",
-      "tagline": "Distributed",
-      "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
+      "alt": "分散型であることを示すイラスト",
+      "tagline": "分散型",
+      "lead": "Tox には、中心となるサーバーがありません。つまり、攻撃やダウン、データの改ざんなどの可能性がないということです。そして、ユーザーによってネットワークが成立しています。サーバーの停電にも、もう悩まされません！"
     },
     "free": {
       "alt": "無料、そしてフリーであることを示すイラスト",
