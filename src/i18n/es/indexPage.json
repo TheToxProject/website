@@ -1,8 +1,8 @@
 {
   "hero": {
     "alt": "Tox brand illustration",
-    "tagline": "A New Kind of Instant Messaging",
-    "lead": "Tox is a new kind of messenger app. Simple, secure and well-designed. Chat with people who matters to you, for free!"
+    "tagline": "Un nuevo tipo de mensajería instantánea",
+    "lead": "Tox es un nuevo tipo de aplicación de mensajería. Es sencillo, seguro y bien diseñado. ¡Chatea con gente que te importa gratis!"
   },
   "1st-callout": {
     "download": "Download",
@@ -20,7 +20,7 @@
     },
     "distributed": {
       "alt": "Distributed illustration",
-      "tagline": "Distributed",
+      "tagline": "Distribuido",
       "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
     },
     "free": {
@@ -30,12 +30,12 @@
     },
     "instant-messaging": {
       "alt": "Instant messaging illustration",
-      "tagline": "Instant messaging",
+      "tagline": "Mensajería instantánea",
       "lead": "Chat instantly across the globe with Tox's secure messages."
     },
     "groups": {
       "alt": "Groups illustration",
-      "tagline": "Group chats",
+      "tagline": "Chats de grupo",
       "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
     },
     "voice-call": {
@@ -50,12 +50,12 @@
     },
     "file-sharing": {
       "alt": "File sharing illustration",
-      "tagline": "File sharing",
+      "tagline": "Intercambio de Archivos",
       "lead": "Trade files, with no artificial limits or caps."
     },
     "screen-sharing": {
       "alt": "Screen sharing illustration",
-      "tagline": "Screen sharing",
+      "tagline": "Pantalla compartida",
       "lead": "Share your desktop with your friends with Tox's screen sharing."
     }
   },
