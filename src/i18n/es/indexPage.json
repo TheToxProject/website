@@ -26,41 +26,41 @@
     "free": {
       "alt": "Ilustración gratis y libre",
       "tagline": "Gratis y Libre",
-      "lead": "Tox is free software. That's free as in freedom, as well as in price. This means Tox is yours — to use, modify, and share — because Tox is made by and for the users."
+      "lead": "Tox es software libre, es libre tanto libertad, así como en precio. Esto significa que Tox es tuyo — para usar, modificar y compartir — porque Tox está hecho por y para los usuarios."
     },
     "instant-messaging": {
-      "alt": "Instant messaging illustration",
+      "alt": "Ilustración de mensajería instantánea",
       "tagline": "Mensajería instantánea",
-      "lead": "Chat instantly across the globe with Tox's secure messages."
+      "lead": "Chatea instantáneamente en todo el mundo con los mensajes seguros de Tox."
     },
     "groups": {
       "alt": "Ilustración de grupos",
       "tagline": "Chats de grupo",
-      "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
+      "lead": "Chatee, llame y comparta vídeos y archivos con toda la gente en los chats de grupo de Tox."
     },
     "voice-call": {
-      "alt": "Voice call illustration",
+      "alt": "Ilustración de llamada de voz",
       "tagline": "Voz",
-      "lead": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls."
+      "lead": "Manténgase en contacto con amigos y familiares usando las llamadas de voz completamente gratuitas y cifradas."
     },
     "video-call": {
-      "alt": "Video call illustration",
+      "alt": "Ilustración de videollamada",
       "tagline": "Vídeo",
-      "lead": "Catch up face to face, over Tox's secure video calls."
+      "lead": "Ponte al día cara a cara, con las videollamadas seguras de Tox."
     },
     "file-sharing": {
-      "alt": "File sharing illustration",
+      "alt": "Ilustración de archivo compartido",
       "tagline": "Intercambio de Archivos",
       "lead": "Trade files, with no artificial limits or caps."
     },
     "screen-sharing": {
-      "alt": "Screen sharing illustration",
+      "alt": "Ilustración de pantalla compartida",
       "tagline": "Pantalla compartida",
-      "lead": "Share your desktop with your friends with Tox's screen sharing."
+      "lead": "Comparte tu escritorio con tus amigos compartiendo la pantalla mediante Tox."
     }
   },
   "featured": {
-    "tagline": "They talks about us!",
-    "lead": "Because we merits a bit of promotion 😜"
+    "tagline": "¡Ellos hablan de nosotros!",
+    "lead": "Porque merecemos un poco de promoción 😜"
   }
 }
