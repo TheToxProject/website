@@ -1,13 +1,13 @@
 {
   "hero": {
-    "alt": "Downloads illustration",
+    "alt": "Ilustración de descargas",
     "tagline": "Descargar Tox",
-    "lead": "Ready to take back your freedom and privacy? Download Tox and escape surveillance right now!"
+    "lead": "¿Listo para recuperar tu libertad y privacidad? ¡Descarga Tox y escapa de la vigilancia ahora mismo!"
   },
   "download-for": "Descargar para",
-  "unavailable-platform": "It looks like you use a device/os that we do not support. Try to look at the download list bellow or submit an issue so that we can try to port Tox to your device if enough users ask for it",
+  "unavailable-platform": "Parece que usas un dispositivo o sistema operativo que no soportamos. Intenta mirar la lista de descargas abajo o envíanos una incidencia para que podamos intentar portar Tox a tu dispositivo si hay suficientes usuarios que lo solicitan",
   "download": {
-    "getItOn": "Download Tox from",
-    "also-available-on": "Also available on..."
+    "getItOn": "Descargar Tox de",
+    "also-available-on": "También disponible en..."
   }
 }
