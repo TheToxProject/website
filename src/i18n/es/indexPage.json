@@ -1,6 +1,6 @@
 {
   "hero": {
-    "alt": "Tox brand illustration",
+    "alt": "Ilustración de marca",
     "tagline": "Un nuevo tipo de mensajería instantánea",
     "lead": "Tox es un nuevo tipo de aplicación de mensajería. Es sencillo, seguro y bien diseñado. ¡Chatea con gente que te importa gratis!"
   },
@@ -14,14 +14,14 @@
   },
   "features": {
     "encrypted": {
-      "alt": "Encrypted illustration",
+      "alt": "Ilustración cifrada",
       "tagline": "Encriptado",
-      "lead": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with."
+      "lead": "Todo lo que haces con Tox es cifrado usando librerías de código abierto. La única gente que puede ver tus conversaciones es la gente con la que estás hablando."
     },
     "distributed": {
-      "alt": "Distributed illustration",
+      "alt": "Ilustración distribuida",
       "tagline": "Distribuido",
-      "lead": "Tox has no central servers that can be raided, shut down, or forced to turn over data — the network is made up of its users. Say goodbye to server outages!"
+      "lead": "Tox no tiene servidores centrales que puedan ser atacados, apagados, o forzados a entregar datos — la red está formada por sus usuarios. ¡Di adiós a las interrupciones del servidor!"
     },
     "free": {
       "alt": "Ilustración gratis y libre",
@@ -34,7 +34,7 @@
       "lead": "Chat instantly across the globe with Tox's secure messages."
     },
     "groups": {
-      "alt": "Groups illustration",
+      "alt": "Ilustración de grupos",
       "tagline": "Chats de grupo",
       "lead": "Chat, call, and share video and files with the whole gang in Tox's group chats."
     },
